@@ -230,6 +230,13 @@
 					<p><mark>$ sudo apt-get remove indigosky-desktop</mark></p>
 					<p><mark>$ sudo apt-get autoremove</mark></p>
 
+					<h3 id="env">Environment Variables</h3>
+					<p>Some drivers may use environment variables to enable certain features. For this the file '/etc/systemd/system/multi-user.target.wants/indigo.service' needs to be edited. Add a line starting with 'Environment=' for each environment variable in the [Service] section. For example, to enable the CFW8A color wheel of the indigo_ccd_sbig driver, execute</p>
+					<p><mark>$ sudo vi /etc/systemd/system/multi-user.target.wants/indigo.service</mark></p>				
+					<p>and add the line</p>
+					<p><mark>Environment=SBIG_LEGACY_CFW=CFW8</mark></p>
+					<p>at the bottom of the [Service] section. After saving the file, restart the INDIGO Sky server.</p>
+
 					<h3 id="issues">Reporting issues</h3>
 					<h4><b>In case the server stops responding</b></h3>
 					<p>Please login to the	INDIGO Sky as descibed above and execute:</p>
