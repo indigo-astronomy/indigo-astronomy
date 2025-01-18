@@ -66,11 +66,8 @@
 			on Linux either automatically by apt-get or manually by dpkg.</p>
 
 			<p>To setup automatic installation and subsequent updates, you need to add our repository
-			URL to APT sources list. To do it from command line, create the file /etc/apt/sources.list.d/indigo.list
-			as root with you favourite editor, e.g. like this</p>
-			<p>$ <mark>sudo vi /etc/apt/sources.list.d/indigo.list</mark></p>
-			<p>add the following line</p>
-			<p><mark>deb [trusted=yes] https://indigo-astronomy.github.io/indigo_ppa/ppa indigo main</mark></p>
+			URL to APT sources list. To do this from command line execute:
+			<p><mark>echo "deb [trusted=yes] https://indigo-astronomy.github.io/indigo_ppa/ppa indigo main" | sudo tee /etc/apt/sources.list.d/indigo.list</mark></p>
 			<p>and execute the following commands</p>
 			<p>$ <mark>sudo apt-get update</mark></p>
 			<p>$ <mark>sudo apt-get install indigo</mark></p>
@@ -89,7 +86,7 @@
 
 			<p>To install INDIGO manually, download one of the following packages for your operating system and install it with a command like this:
 
-			<p>$ <mark>sudo dpkg -i --force-all ~/Downloads/indigo-2.0-XX-YYY.deb</mark></p>
+			<p>$ <mark>sudo apt-get install ~/Downloads/indigo-2.0-XX-YYY.deb</mark></p>
 					<ul>
 					<li>INDIGO for 32-bit Intel Linux: <a href="https://indigo-astronomy.github.io/indigo_ppa/ppa/pool/main/i/indigo/indigo-2.0-310-i386.deb">indigo-2.0-310-i386.deb</a></li>
 					<li>INDIGO for 64-bit Intel Linux: <a href="https://indigo-astronomy.github.io/indigo_ppa/ppa/pool/main/i/indigo/indigo-2.0-310-amd64.deb">indigo-2.0-310-amd64.deb</a></li>
@@ -98,7 +95,7 @@
 					</ul>
 
 					<h5><b>INDIGO Control Panel</b></h5>
-
+					<p>To install INDIGO Control Panel, you need to install indigo-2.0-XXX first.<p>
 					<p>One can also install INDIGO Control Panel, a GUI tool for managing and confiuring INDIGO Infrastructure:</p>
 					<ul>
 					<li>INDIGO Control Panel for 32-bit Intel Linux (Debian 9 or newer): <a href="https://indigo-astronomy.github.io/indigo_ppa/ppa/pool/main/i/indigo-control-panel/indigo-control-panel_0.15-0_i386.deb">indigo-control-panel_0.15-0_i386.deb</a></li>
@@ -109,6 +106,7 @@
 					</ul>
 
 					<h5><b>Ain INDIGO Imager</b></h5>
+					<p>To install Ain INDIGO Imager, you need to install indigo-2.0-XXX first.<p>
 					<p><font color="#ff0000"><b>Note:</b> Ain versions older than 1.8-0 will not work well with INDIGO 2.0-298 and above</font></p>
 					<p>Ain is an INDIGO imager application:</p>
 					<ul>
