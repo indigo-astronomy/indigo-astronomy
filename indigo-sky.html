@@ -73,22 +73,22 @@
 						<li><b>Raspberry Pi 4 Mod. B</b> runs with 32 and 64-bit images  (32-bit image recommended for 1GB model) </li>
 						<li><b>Raspberry Pi 5 </b> runs with 32 and 64-bit bookworm images  (64-bit image recommended, <b>only Bookworm images will work</b>) </li>
 					</ul>
-					<p>Download the appropriate image for Raspberry Pi 3, 4 and 5 (based on Debian 12 Bookworm):
+					<p>Download the appropriate image with INDIGO 3 for Raspberry Pi 3, 4 and 5 (based on Debian 12 Bookworm) <span class="label label-success" style="font-size:1em;">New</span>:
 					<ul>
-						<li><a href="https://github.com/indigo-astronomy/indigosky/releases/download/2025-09-26/2025-09-26-indigosky-armhf.zip">
-							2025-09-26-indigosky-armhf.zip</a> - 32-bit Operating system for RPi 3, RPi 4 and RPi 5
+						<li><a href="https://github.com/indigo-astronomy/indigosky/releases/download/2026-07-11/2026-07-11-indigosky-indigo3-armhf.zip">
+							2026-07-11-indigosky-indigo3-armhf.zip</a> - 32-bit Operating system for RPi 3, RPi 4 and RPi 5
 						</li>
-						<li><a href="https://github.com/indigo-astronomy/indigosky/releases/download/2025-09-26/2025-09-26-indigosky-arm64.zip">
-							2025-09-26-indigosky-arm64.zip</a> - 64-bit Operating system for RPi 3 (not recommended), RPi 4 (not recommended for 1GB RAM) and RPi5
+						<li><a href="https://github.com/indigo-astronomy/indigosky/releases/download/2026-07-11/2026-07-11-indigosky-indigo3-arm64.zip">
+							2026-07-11-indigosky-indigo3-arm64.zip</a> - 64-bit Operating system for RPi 3 (not recommended), RPi 4 (not recommended for 1GB RAM) and RPi 5
 						</li>
 					</ul>
-					<p>Download the appropriate image for Raspberry Pi 2, 3 and 4 (based on Debian 11 Bullseye):
+					<p>Download the appropriate image with INDIGO 2 for Raspberry Pi 3, 4 and 5 (based on Debian 12 Bookworm) <span class="label label-warning">Partially supported</span>:
 					<ul>
-						<li><a href="https://github.com/indigo-astronomy/indigosky/releases/download/2023-11-29/2023-11-29-indigosky-armhf.zip">
-							2023-11-29-indigosky-armhf.zip</a> - 32-bit Operating system for RPi 2, RPi 3 and RPi 4
+						<li><a href="https://github.com/indigo-astronomy/indigosky/releases/download/2026-07-11/2026-07-11-indigosky-armhf.zip">
+							2026-07-11-indigosky-armhf.zip</a> - 32-bit Operating system for RPi 3, RPi 4 and RPi 5
 						</li>
-						<li><a href="https://github.com/indigo-astronomy/indigosky/releases/download/2023-11-29/2023-11-29-indigosky-arm64.zip">
-							2023-11-29-indigosky-arm64.zip</a> - 64-bit Operating system for RPi 3 (not recommended) and RPi 4 (not recommended for 1GB RAM)
+						<li><a href="https://github.com/indigo-astronomy/indigosky/releases/download/2026-07-11/2026-07-11-indigosky-arm64.zip">
+							2026-07-11-indigosky-arm64.zip</a> - 64-bit Operating system for RPi 3 (not recommended), RPi 4 (not recommended for 1GB RAM) and RPi 5
 						</li>
 						<li>Older images are available <a target="_new" href="https://github.com/indigo-astronomy/indigosky/releases">here</a>
 						</li>
@@ -241,7 +241,7 @@
 
 					<h3 id="env">Environment Variables</h3>
 					<p>Some drivers may use environment variables to enable certain features. For this the file '/etc/systemd/system/multi-user.target.wants/indigo.service' needs to be edited. Add a line starting with 'Environment=' for each environment variable in the [Service] section. For example, to enable the CFW8A color wheel of the indigo_ccd_sbig driver, execute</p>
-					<p><mark>$ sudo vi /etc/systemd/system/multi-user.target.wants/indigo.service</mark></p>				
+					<p><mark>$ sudo vi /etc/systemd/system/multi-user.target.wants/indigo.service</mark></p>
 					<p>and add the line</p>
 					<p><mark>Environment=SBIG_LEGACY_CFW=CFW8</mark></p>
 					<p>at the bottom of the [Service] section. After saving the file, restart the INDIGO Sky server.</p>
