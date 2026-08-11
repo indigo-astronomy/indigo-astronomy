@@ -40,7 +40,7 @@
 						<li class="active"><a href="for-users.html">For Users</a></li>
 						<li><a href="for-developers.html">For Developers</a></li>
 						<li><a href="for-vendors.html">For Vendors</a></li>
-						<li><a href="hardware.html">Hardware</a></li>
+						<li><a href="hardware.html">Device drivers</a></li>
 						<li><a href="software.html">Software</a></li>
 						<li><a href="downloads.html">Downloads</a></li>
 						<li><a href="indigo-sky.html">INDIGO Sky</a></li>
@@ -71,7 +71,7 @@
 					
 					<p>The client application, the piece of the software you communicate with, can run virtually on any
 					operating system. For example Ain INDIGO Imager suite, runs on Linux and Windows and CloudMakers
-					INDIGO A1 runs on MacOS, iOS and iPadOS and maintain the highest compatibility with INDIGO, but there are
+					INDIGO A1 runs on macOS, iOS and iPadOS and maintain the highest compatibility with INDIGO, but there are
 					also third party clients with full (e.g. APT and PixInsight with an INDIGO plug-in) or limited compatibility (e.g. Ekos).
 					You can also use any ASCOM
 					6.5+ based software and use it with the so-called ALPACA agent, a bridge between INDIGO and ASCOM/ALPACA.<p>
@@ -103,7 +103,7 @@
 
 					
 					<h3>Supported hardware</h3>
-					<p>To check if your devices are supported by INDIGO visit <a href="hardware.html">Hardware</a>
+					<p>To check if your devices are supported by INDIGO visit <a href="hardware.html">Compatible hardware</a>
 					page.</p>
           
           				<h3>Running INDIGO server</h3>
@@ -112,19 +112,36 @@
           				<p>$ <mark>indigo_server indigo_driver1 indigo_driver2 ...</mark></p>
           				<p>where <b>indigo_driver</b> is a driver name from the list <a href="hardware.html">here</a>. More information about <b>indigo_server</b> and INDIGO drivers can be found in <a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SERVER_AND_DRIVERS_GUIDE.md">Guide to indigo_server and INDIGO Drivers</a>. You can also run indigo agents this way. More information about agents can be found in <a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_AGENTS.md">INDIGO Agents</a> document.</p>
 					<p>On the other hand Drivers can be loaded, unloaded and configured with GUI tools Like INDIGO Control Panel (available in our downliads section) or throught the built in web based Control Panel.</p>
-					<p>CloudMakers MacOS Applications have INDIGO server integrated, so no aditional actions are needed.</p> 
+					<p>CloudMakers macOS applications have INDIGO server integrated, so no aditional actions are needed.</p> 
 					
 					<h3>User Documents</h3>
-					<p><a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/POLAR_ALIGNMENT.md">INDIGO Polar Aalignment - Three Point Polar Alignment Guide</a></p>
-					<p><a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/IMAGING_AF_TUNING.md">INDIGO Imager Agent - Autofocus Tunning Guide</a></p>
-					<p><a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/GUIDING_PI_CONTROLLER_TUNING.md">INDIGO Guider Agent - PI Controller Tuning</a></p>
-					<p><a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PLATE_SOLVING.md">INDIGO Astrometry Agent - Plate Solving Guide</a></p>
-					<p><a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SERVER_AND_DRIVERS_GUIDE.md">Guide to indigo_server and INDIGO Drivers</a></p>
-					<p><a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_AGENTS.md">INDIGO Agents</a></p>
-					<p><a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PROPERTY_MANIPULATION.md">INDIGO Property Manipulation in Examples</a></p>
+					<p>The complete documentation is available in the <a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/HOME.md">INDIGO documentation index</a>.</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/Introduction%20to%20INDIGO.pdf">Introduction to INDIGO</a> - an overview of INDIGO in PDF</p>
+					<h4>Imaging</h4>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/IMAGING_AF_TUNING.md">INDIGO Imager Agent - Autofocus Tuning Guide</a> - how to tune the autofocus process</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_IMAGER_MULTICAMERA_SYNCHRONIZATION.md">INDIGO Imager Agent - Multi-camera Synchronization</a> - imaging with several cameras at once</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/CCD_DRIVER_SAVED_IMAGES.md">Saving images from the camera driver</a> - how and where the drivers store the captured images</p>
+					<h4>Guiding</h4>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_GUIDER_DETECTION_MODES.md">INDIGO Guider Agent - Drift Detection Modes</a> - how the guider detects the drift</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_GUIDER_CORRECTION_MODES.md">INDIGO Guider Agent - Drift Correction Modes</a> - how the detected drift is corrected</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_GUIDER_DITHERING.md">INDIGO Guider Agent - Dithering</a> - dithering between the exposures</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/GUIDING_PI_CONTROLLER_TUNING.md">INDIGO Guider Agent - PI Controller Tuning</a> - tuning the guiding PI controller</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/GUIDING_CORRECTION_RESPONSE_TUNING.md">INDIGO Guider Agent - Correction Response Tuning</a> - tuning the response to the guiding corrections</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/GUIDING_MISCONCEPTIONS.md">Several Guiding Misconceptions Explained</a> - what auto guiding can and can not do for you</p>
+					<h4>Alignment and plate solving</h4>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/POLAR_ALIGNMENT.md">INDIGO Astrometry / ASTAP Agent - Polar Alignment Guide</a> - three point polar alignment step by step</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PLATE_SOLVING.md">INDIGO Astrometry Agent - Plate Solving Guide</a> - plate solving and telescope synchronization</p>
+					<h4>Documents for both users and developers</h4>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SERVER_AND_DRIVERS_GUIDE.md">Guide to indigo_server and INDIGO Drivers</a> - how to start the server, load and configure drivers</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_AGENTS.md">INDIGO Agents</a> - what the agents are and how to use them</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SCRIPT_GUIDE.md">INDIGO Scripting Guide</a> - writing scripts for the scripting agent</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/SCRIPTING_BASICS.md">Basics of INDIGO Scripting</a> - a short introduction to INDIGO scripting</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/agent_scripting/library/Sequencer.md">Script based Sequencer</a> - ready to use sequencer built on the scripting agent</p>
+					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PROPERTY_MANIPULATION.md">INDIGO Property Manipulation in Examples</a> - controlling INDIGO from the command line with indigo_prop_tool</p>
+
 					<h3>Supported software</h3>
 					<p>If your hardware is compatible with INDIGO, you can choose some free or commercial software for your
-					operating system. Some of them are listed on <a href="software.html">Software</a> page.
+					operating system. Some of them are listed on <a href="software.html">Compatible software</a> page.
 				</div>
 			</div>
 		</div>
