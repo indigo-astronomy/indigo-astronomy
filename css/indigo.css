@@ -166,3 +166,50 @@ span.icon-windows:before {
 	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20fill%3D%27%23a0a0a0%27%20d%3D%27M0%203.5%209.5%202.2v9.3H0zM11%202%2024%200v11.5H11zM0%2012.5h9.5v9.3L0%2020.5zM11%2012.5h13V24l-13-1.8z%27%2F%3E%3C%2Fsvg%3E") no-repeat center;
 	background-size: contain;
 }
+
+/* Foldable bullets - used for the "Why INDIGO?" list */
+details.why {
+	border-bottom: 1px solid #E4E0EA;
+	padding: 2px 0;
+}
+
+details.why > summary {
+	position: relative;
+	padding: 8px 0 8px 26px;
+	color: #000;
+	font-size: 16px;
+	font-weight: normal;
+	cursor: pointer;
+	list-style: none;
+}
+
+details.why > summary::-webkit-details-marker {
+	display: none;
+}
+
+/* the angle is drawn from two borders, so it needs no icon font */
+details.why > summary:before {
+	content: '';
+	position: absolute;
+	left: 6px;
+	top: 15px;
+	width: 7px;
+	height: 7px;
+	border-right: 2px solid #4B0082;
+	border-bottom: 2px solid #4B0082;
+	transform: rotate(45deg);
+	transition: transform .15s ease;
+}
+
+details.why[open] > summary:before {
+	top: 19px;
+	transform: rotate(-135deg);
+}
+
+details.why > summary:hover {
+	color: #4B0082;
+}
+
+details.why > p {
+	margin: 0 0 12px 26px;
+}

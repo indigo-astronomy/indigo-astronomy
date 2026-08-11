@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="INDIGO is the standard for astronomy software development.">
+		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
+		<link rel="icon" href="img/favicon.ico"/>
+		<title>INDIGO | INDIGO Astronomy</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/indigo.css?v=3" type="text/css"/>
+		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-30002305-4', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<meta name="google-site-verification" content="sn6qF-EZJv6OhHGyT_Hczdofj5laIXHRjDZ2oqpzb8I" />
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-left">
+						<li class="active"><a href="index.html">INDIGO</a></li>
+						<li><a href="for-users.html">For Users</a></li>
+						<li><a href="for-developers.html">For Developers</a></li>
+						<li><a href="for-vendors.html">For Vendors</a></li>
+						<li><a href="hardware.html">Device drivers</a></li>
+						<li><a href="software.html">Software</a></li>
+						<li><a href="downloads.html">Downloads</a></li>
+						<li><a href="indigo-sky.html">INDIGO Sky</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<li><a href="about.html">About</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div id="intro">
+			<img id="logo" src="img/logo.png"/>
+			<div class="container">
+				<h1><strong>Welcome to INDIGO</strong></h1>
+				<p>Astronomical imaging and instrument control software for observatories,
+				remote setups and backyard telescopes.</p>
+				<p><span class="label label-success" style="font-size:1em;">New</span> &nbsp;<strong>INDIGO 3 is now available!</strong> &nbsp;<a href="downloads.html" style="color:#fff;text-decoration:underline;">Download now &raquo;</a></p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h3>What is INDIGO?</h3>
+					<p>INDIGO is astronomical imaging and instrument control software for both professional
+					observatories and amateur astronomers. It controls cameras, mounts, focusers, filter
+					wheels, domes and the rest of the equipment, and it takes care of the imaging, guiding,
+					focusing and plate solving on its own.</p>
+					<p>It is built around a distributed architecture. Device drivers, automation agents and
+					client applications are all connected to a software bus, which can live inside a single
+					application or span several machines over a network. A camera attached to a small computer
+					at the telescope is controlled the same way as a camera plugged into your desktop.</p>
+					<p>Robustness is the point of the whole exercise. INDIGO is designed with stability as the
+					first priority, because a night of imaging that is interrupted by the software is a night
+					lost. That is also why INDIGO is used for the automation of professional telescopes and
+					remote observatories, not only for astrophotography at home.</p>
+
+					<h3>Why INDIGO?</h3>
+					<details class="why">
+						<summary>1. Fast and efficient</summary>
+						<p>INDIGO is a software bus, not a chain of pipes. Drivers, agents and clients can run in a single process, where a property change is a function call instead of a round trip through a socket &mdash; in the best case up to 1000 times faster than systems that run each driver as a separate process. Less CPU and less memory also mean longer battery life in the field.</p>
+					</details>
+					<details class="why">
+						<summary>2. Stability is priority</summary>
+						<p>Stability comes before features. The framework is written in ANSI C, the wire protocol is versioned and stays backward compatible, and the project is managed conservatively to protect the work of everybody who integrates with it. Drivers are tested against the real hardware whenever it is available.</p>
+					</details>
+					<details class="why">
+						<summary>3. Distributed</summary>
+						<p>Every part of a setup runs where it makes sense: the server on a small computer next to the mount, the client on your desktop, laptop or tablet. Services announce themselves on the network, so clients discover them without any configuration. Bigger setups are not limited to a single server either: one INDIGO server can attach the bus of another, so a mount controlled by one computer and cameras attached to another appear as a single setup, and a client can be connected to several servers at the same time. The very same drivers can also be linked directly into an application when no network is involved.</p>
+					</details>
+					<details class="why">
+						<summary>4. Multiplatform</summary>
+						<p>Servers and drivers run on Linux and macOS, and the Windows server is on its way &mdash; most drivers are already ported to it. Client applications run on Linux, macOS, Windows, iOS and iPadOS. The same code scales from a Raspberry Pi to a workstation.</p>
+					</details>
+					<details class="why">
+						<summary>5. Open source & Permissive license</summary>
+						<p>INDIGO is open source under the INDIGO Astronomy open-source license, a BSD style, business friendly license. No GPL, so hardware vendors and commercial applications can build on INDIGO and ship it, including through application stores.</p>
+					</details>
+					<details class="why">
+						<summary>6. Headless operation</summary>
+						<p>INDIGO Server needs no display. Start it on a headless machine and control it from any INDIGO application on your desktop, laptop or tablet &mdash; or from the built-in web panel, when a browser is all you have at hand. Imaging sequences, guiding, focusing, mount control and plate solving are carried out by INDIGO agents running on the server itself, so once started they keep running on their own, with no client connected at all. You can close the application, put the laptop to sleep or lose the WiFi, and connect again later to check how the night is going.</p>
+					</details>
+					<details class="why">
+						<summary>7. Wide hardware support</summary>
+						<p>Over 130 device drivers and 10 agents are distributed with INDIGO 3.0, covering cameras, mounts, focusers, filter wheels, domes, rotators, adaptive optics, GPS and auxiliary devices. Legacy INDI style drivers can be used as well, and the ALPACA agent exposes INDIGO devices to ASCOM clients. <a href="hardware.html">See the full list &raquo;</a></p>
+					</details>
+					<details class="why">
+						<summary>8. Made to be automated</summary>
+						<p>Whole observing sequences can be written as scripts and executed by the scripting agent on the server, and any property can be manipulated straight from the command line with indigo_prop_tool &mdash; handy for cron jobs, remote observatories and roll-off roof setups.</p>
+					</details>
+
+					<h3>Getting started</h3>
+					<p>Install INDIGO from the <a href="downloads.html">Downloads</a> page, check that your
+					equipment is supported in the <a href="hardware.html">list of device drivers</a> and pick
+					an application from the <a href="software.html">compatible software</a> page. If you are a
+					developer or a hardware vendor, the <a href="for-developers.html">For Developers</a> and
+					<a href="for-vendors.html">For Vendors</a> pages are the place to start.</p>
+					<br/>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<p class="social">
+					<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
+					<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
+					<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
+				</p>
+				<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+			</div>
+		</footer>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+
+</html>
