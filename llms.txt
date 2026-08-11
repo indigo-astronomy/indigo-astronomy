@@ -1,0 +1,52 @@
+# INDIGO
+
+> INDIGO is a system of standards and frameworks for multiplatform and distributed astronomy software development. It is a software bus connecting device drivers, agents and client applications, either linked into a single process or distributed over a network. INDIGO is developed by the INDIGO Initiative, a group of amateur and professional astronomers, software developers and hardware vendors, and is released under the business friendly INDIGO Astronomy open-source license (version 2.0).
+
+Key facts:
+
+- Website: https://www.indigo-astronomy.org/ — source code: https://github.com/indigo-astronomy/indigo
+- Current release: INDIGO 3 (backward compatible with INDIGO 2, which now receives bugfixes and security updates only).
+- Written in ANSI C for portability; no GPL code is used, so it can be shipped commercially and through application stores.
+- Servers and drivers run on Linux and macOS. Clients run on Linux, macOS, Windows, iOS and iPadOS. `indigo_server` listens on TCP port 7624 and serves a built-in web control panel.
+- Architecture: drivers, agents and clients attach to a software bus. When client and drivers share a process, operations can be up to 1000x faster than the process-per-driver model of INDI. Layered design, atomic drivers (a camera with imaging and guiding chips exposes two simple devices), USB hot-plug and Bonjour/Avahi service discovery are mandatory features.
+- Interoperability: the INDIGO wire protocol (version 2.0) can fall back to the legacy INDI wire protocol 1.7, so INDIGO clients work with INDI drivers and vice versa. `indigo_agent_alpaca` exposes INDIGO devices to ASCOM/ALPACA clients and passes the ASCOM conformance tests.
+- Over 130 device drivers ship with INDIGO, covering CCD/CMOS cameras, mounts, focusers, filter wheels, domes, rotators, adaptive optics, GPS, guiders and auxiliary devices, plus 12 agents (imager, guider, mount, alignment, astrometry, ASTAP, alpaca, scripting, config, auxiliary, snoop, lx200_server).
+
+## Site pages
+
+- [INDIGO](https://www.indigo-astronomy.org/index.html): Home page — what INDIGO is, with a short overview for users, developers and vendors.
+- [For Users](https://www.indigo-astronomy.org/for-users.html): Supported operating systems, running `indigo_server` with drivers, distributed setups and links to the user documentation.
+- [For Developers](https://www.indigo-astronomy.org/for-developers.html): Build prerequisites and instructions, links to client/driver development guides, protocol and property documents, and the full license text.
+- [For Vendors](https://www.indigo-astronomy.org/for-vendors.html): Information for hardware manufacturers who want a driver for their device or an embedded INDIGO server, plus the license text.
+- [FAQ](https://www.indigo-astronomy.org/faq.html): Why another standard, design requirements, INDIGO vs INDI, INDIGO vs ASCOM/ALPACA, driver interoperability and supported platforms.
+- [About](https://www.indigo-astronomy.org/about.html): The INDIGO Initiative — core developers Peter Polakovič and Rumen Bogdanovski, contributors and supporting companies and institutions.
+- [Compatible hardware](https://www.indigo-astronomy.org/hardware.html): Complete table of device drivers and agents distributed with INDIGO, per platform, each linking to its README.
+- [Compatible software](https://www.indigo-astronomy.org/software.html): Applications that work with INDIGO — Ain INDIGO Imager, INDIGO Control Panel, INDIGO A1, INDIGO Dashboard, PixInsight, APT, CCDciel, Ekos, PHD2.
+- [Downloads](https://www.indigo-astronomy.org/downloads.html): APT repository setup, Debian packages for i386/amd64/armhf/arm64, macOS and Windows installers, the Windows client SDK, and how to build from source.
+- [INDIGO Sky](https://www.indigo-astronomy.org/indigo-sky.html): Raspberry Pi distribution — installation, WiFi access point and infrastructure modes, upgrading, the built-in webGUI, SSH access and troubleshooting.
+
+## Documentation
+
+- [Guide to indigo_server and INDIGO Drivers](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SERVER_AND_DRIVERS_GUIDE.md): Starting the server, loading and configuring drivers.
+- [INDIGO Agents](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_AGENTS.md): What agents are and how to use them.
+- [Basics of INDIGO Client Development](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/CLIENT_DEVELOPMENT_BASICS.md): Client development guide with examples.
+- [Basics of INDIGO Driver Development](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/DRIVER_DEVELOPMENT_BASICS.md): Driver development guide with examples.
+- [INDIGO Device Access Control and Exclusive Lock System](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_DEVICE_ACCESS_CONTROL_AND_LOCKING.md): How device locking works.
+- [Basics of INDIGO Scripting](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/SCRIPTING_BASICS.md): Writing scripts with the INDIGO scripting agent.
+- [INDIGO Protocols](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PROTOCOLS.md): Description of the INDIGO wire protocols.
+- [INDIGO Properties](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PROPERTIES.md): List of INDIGO properties and items and their mapping to the legacy INDI protocol.
+- [INDIGO Property Manipulation in Examples](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PROPERTY_MANIPULATION.md): Introduction to `indigo_prop_tool`.
+- [Three Point Polar Alignment Guide](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/POLAR_ALIGNMENT.md): Polar alignment with INDIGO.
+- [Imager Agent Autofocus Tuning Guide](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/IMAGING_AF_TUNING.md): Tuning autofocus.
+- [Guider Agent PI Controller Tuning](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/GUIDING_PI_CONTROLLER_TUNING.md): Tuning the guiding PI controller.
+- [Plate Solving Guide](https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PLATE_SOLVING.md): Using the astrometry agent.
+- [Ain Imager users guide](https://github.com/indigo-astronomy/indigo_imager/blob/master/ain_users_guide/ain_v2_users_guide.md): User guide for Ain INDIGO Imager v2.
+
+## Optional
+
+- [CHANGELOG](https://github.com/indigo-astronomy/indigo/blob/master/CHANGELOG.md): Release notes for INDIGO 3.
+- [INDIGO Sky releases](https://github.com/indigo-astronomy/indigosky/releases): Raspberry Pi images.
+- [INDIGO Sky installation notes](https://github.com/indigo-astronomy/indigosky/blob/master/INSTALL.md): How to write and set up the image.
+- [INDIGO user group](http://bb.cloudmakers.eu/): Community forum for questions and support.
+- [CloudMakers](https://www.cloudmakers.eu/): macOS, iOS and iPadOS INDIGO applications (INDIGO A1, INDIGO Control Panel, INDIGO Dashboard) and the macOS INDIGO Server.
+- Contact: indigo@cloudmakers.eu
