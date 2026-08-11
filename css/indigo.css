@@ -62,12 +62,31 @@ iframe {
 
 .navbar {
 	background: #4B0082;
-	height: 70px;
+	min-height: 70px;
 	margin-bottom: 3px;
+	border: 0;
 }
 
 .nav > li > a {
-	padding: 10px 15px 0px 15px;
+	padding: 7px 10px;
+	font-size: 13px;
+	letter-spacing: .02em;
+	white-space: nowrap;
+	border-radius: 3px;
+	transition: background-color .15s ease, color .15s ease;
+}
+
+.navbar-nav > li {
+	margin: 0 1px;
+}
+
+/* keep the menu on a single line on narrower desktop windows */
+@media (min-width: 768px) and (max-width: 1199px) {
+	.nav > li > a {
+		padding: 7px 6px;
+		font-size: 12px;
+		letter-spacing: 0;
+	}
 }
 
 .navbar-collapse {
@@ -78,13 +97,18 @@ iframe {
   margin-top: 0px;
 }
 
-.navbar-static-top .navbar-nav > li > a, .navbar-static-top .navbar-nav > li > a:focus, .navbar-static-top .navbar-nav > li > a:hover {
-	background: #4B0082;
-	color: #C0C0C0;
+.navbar-static-top .navbar-nav > li > a {
+	background: transparent;
+	color: #C8BEDC;
+}
+
+.navbar-static-top .navbar-nav > li > a:focus, .navbar-static-top .navbar-nav > li > a:hover {
+	background: rgba(255, 255, 255, 0.15);
+	color: white;
 }
 
 .navbar-static-top .navbar-nav > .active > a, .navbar-static-top .navbar-nav > .active > a:focus, .navbar-static-top .navbar-nav > .active > a:hover {
-	background: #4B0082;
+	background: rgba(255, 255, 255, 0.22);
 	color: white;
 }
 
