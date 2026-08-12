@@ -96,6 +96,17 @@
 				driver is running, its properties should appear/disappear on the bus.</li>
 				</ol>
 
+		<a name="indigo_is_not_indi"></a>
+		<h3>Is INDIGO a fork of INDI?</h3>
+		<p>No. INDIGO is not INDI and it is not a fork, a rewrite or a branch of it. It is
+		a separate and independent project, written from the ground up, and it is an
+		alternative to INDI rather than a part of it.</p>
+		<p>The two share one thing only, the wire format: an INDIGO server or client can fall
+		down to the legacy INDI wire protocol 1.7, which is what makes INDI drivers and INDI
+		clients usable with INDIGO. Everything above that line is INDIGO's own - the properties
+		and their items, the API and the whole architecture are different, and they are designed
+		around scalability, stability and robustness.</p>
+
 		<a name="indigo_vs_indi"></a>
 		<h3>What are the differences between INDIGO and INDI?</h3>
 		<p>The most important technical difference is the architecture. While in INDI drivers
@@ -150,6 +161,16 @@
 				<p>Partially, INDIGO client or application can use INDI Server for Windows as
 				ASCOM-to-INDI bridge out-of-the-box, but probably much more efficient ASCOM driver
 				wrapper for direct linking will come soon.</p>
+
+		<a name="ain_vs_ekos"></a>
+		<h3>Are Ain INDIGO Imager and INDIGO A1 related to Ekos?</h3>
+		<p>No, they are independent applications. INDIGO has two native all-in-one clients:
+		<a href="software.html">Ain INDIGO Imager</a> for Linux and Windows and
+		<a href="software.html">INDIGO A1</a> for macOS, iOS and iPadOS. Together they are the
+		INDIGO counterpart of what Ekos is in the INDI world.</p>
+		<p>Ekos is a part of KStars, it is built on INDI and it is only partially compatible
+		with INDIGO. Neither Ain nor INDIGO A1 is derived from it and neither shares any code
+		with it.</p>
 
 		<a name="platforms"></a>
 				<h3>What platforms are supported?</h3>
