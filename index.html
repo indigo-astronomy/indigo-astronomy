@@ -57,48 +57,73 @@
 			<img id="logo" src="img/logo.png"/>
 			<div class="container">
 				<h1><strong>Welcome to INDIGO</strong></h1>
-				<p>INDIGO is a system of standards and frameworks for multiplatform and
-				distributed astronomy software development designed to scale with your needs.</p>
+				<p>Astronomical imaging and instrument control software for observatories,
+				remote setups and backyard telescopes.</p>
 				<p><span class="label label-success" style="font-size:1em;">New</span> &nbsp;<strong>INDIGO 3 is now available!</strong> &nbsp;<a href="downloads.html" style="color:#fff;text-decoration:underline;">Download now &raquo;</a></p>
 			</div>
 		</div>
 
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4">
-					<h3>For users</h3>
-					<p>Just start your favorite INDIGO powered application on your favorite operating
-					system and use your astro gadgets. INDIGO will find and configure most of them
-					for you automatically and even if it is not possible, it will help you to do it easily.</p>
-					<p>If you want to use some kind of distributed setup, start INDIGO server on
-					remote machine and let it detect connected devices. They will be discovered by client
-					applications the same way as if they will be connected directly to your desktop.
-					<a class="pull-right" href="for-users.html">Read more »</a></p><br>
-				</div>
-				<div class="col-sm-4">
-					<h3>For developers</h3>
-					<p>INDIGO is a kind of distributed software bus connecting device drivers on one side
-					and application code on another.</p>
-					<p>You can link device drivers directly to your application developed in any programming
-					language, load them on demand or to let application to connect to drivers on remote INDIGO
-					server.</p>
-					<p>INDIGO is open source project, but it can be used for free under business friendly
-					license.<a class="pull-right" href="for-developers.html">Read more »</a></p><br>
-				</div>
-				<div class="col-sm-4">
-					<h3>For vendors</h3>
-					<p>If you are hardware manufacturer, INDIGO can help you to make your devices compatible
-					with any INDIGO or INDI powered application on any Unix based operating system including
-					Linux and Apple macOS. Also INDIGO - ASCOM/ALPACA bridge for interoperability with Windows
-					clients is available.</p>
-					<p>If your device can be connected over any kind of network connection, you can embed INDIGO
-					server to your CCD camera, mount controller or other device to make it discoverable and
-					accessible directly from any application.
-					<a class="pull-right" href="for-vendors.html">Read more »</a></p><br>
+				<div class="col-sm-12">
+					<h3>What is INDIGO?</h3>
+					<p>INDIGO is astronomical imaging and instrument control software for both professional
+					observatories and amateur astronomers. It controls cameras, mounts, focusers, filter
+					wheels, domes and the rest of the equipment, and it takes care of the imaging, guiding,
+					focusing and plate solving on its own.</p>
+					<p>It is built around a distributed architecture. Device drivers, automation agents and
+					client applications are all connected to a software bus, which can live inside a single
+					application or span several machines over a network. A camera attached to a small computer
+					at the telescope is controlled the same way as a camera plugged into your desktop.</p>
+					<p>Robustness is the point of the whole exercise. INDIGO is designed with stability as the
+					first priority, because a night of imaging that is interrupted by the software is a night
+					lost. That is also why INDIGO is used for the automation of professional telescopes and
+					remote observatories, not only for astrophotography at home.</p>
+
+					<h3>Why INDIGO?</h3>
+					<details class="why">
+						<summary>1. Fast and efficient</summary>
+						<p>INDIGO is a software bus, not a chain of pipes. Drivers, agents and clients can run in a single process, where a property change is a function call instead of a round trip through a socket &mdash; in the best case up to 1000 times faster than systems that run each driver as a separate process. Less CPU and less memory also mean longer battery life in the field.</p>
+					</details>
+					<details class="why">
+						<summary>2. Stability is priority</summary>
+						<p>Stability comes before features. The framework is written in ANSI C, the wire protocol is versioned and stays backward compatible, and the project is managed conservatively to protect the work of everybody who integrates with it. Drivers are tested against the real hardware whenever it is available.</p>
+					</details>
+					<details class="why">
+						<summary>3. Distributed</summary>
+						<p>Every part of a setup runs where it makes sense: the server on a small computer next to the mount, the client on your desktop, laptop or tablet. Services announce themselves on the network, so clients discover them without any configuration. Bigger setups are not limited to a single server either: one INDIGO server can attach the bus of another, so a mount controlled by one computer and cameras attached to another appear as a single setup, and a client can be connected to several servers at the same time. The very same drivers can also be linked directly into an application when no network is involved.</p>
+					</details>
+					<details class="why">
+						<summary>4. Multiplatform</summary>
+						<p>Servers and drivers run on Linux and macOS, and the Windows server is on its way &mdash; most drivers are already ported to it. Client applications run on Linux, macOS, Windows, iOS and iPadOS. The same code scales from a Raspberry Pi to a workstation.</p>
+					</details>
+					<details class="why">
+						<summary>5. Open source & Permissive license</summary>
+						<p>INDIGO is open source under the INDIGO Astronomy open-source license, a BSD style, business friendly license. No GPL, so hardware vendors and commercial applications can build on INDIGO and ship it, including through application stores.</p>
+					</details>
+					<details class="why">
+						<summary>6. Headless operation</summary>
+						<p>INDIGO Server needs no display. Start it on a headless machine and control it from any INDIGO application on your desktop, laptop or tablet &mdash; or from the built-in web panel, when a browser is all you have at hand. Imaging sequences, guiding, focusing, mount control and plate solving are carried out by INDIGO agents running on the server itself, so once started they keep running on their own, with no client connected at all. You can close the application, put the laptop to sleep or lose the WiFi, and connect again later to check how the night is going.</p>
+					</details>
+					<details class="why">
+						<summary>7. Wide hardware support</summary>
+						<p>Over 130 device drivers and 10 agents are distributed with INDIGO 3.0, covering cameras, mounts, focusers, filter wheels, domes, rotators, adaptive optics, GPS and auxiliary devices. Legacy INDI style drivers can be used as well, and the ALPACA agent exposes INDIGO devices to ASCOM clients. <a href="hardware.html">See the full list &raquo;</a></p>
+					</details>
+					<details class="why">
+						<summary>8. Made to be automated</summary>
+						<p>Whole observing sequences can be written as scripts and executed by the scripting agent on the server, and any property can be manipulated straight from the command line with indigo_prop_tool &mdash; handy for cron jobs, remote observatories and roll-off roof setups.</p>
+					</details>
+
+					<h3>Getting started</h3>
+					<p>Install INDIGO from the <a href="downloads.html">Downloads</a> page, check that your
+					equipment is supported in the <a href="hardware.html">list of device drivers</a> and pick
+					an application from the <a href="software.html">compatible software</a> page. If you are a
+					developer or a hardware vendor, the <a href="for-developers.html">For Developers</a> and
+					<a href="for-vendors.html">For Vendors</a> pages are the place to start.</p>
+					<br/>
 				</div>
 			</div>
 		</div>
-
 
 		<footer class="footer">
 			<div class="container">
