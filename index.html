@@ -85,12 +85,13 @@
 						<button type="button" id="gallery-prev" class="gallery-nav prev" aria-label="Previous images"><span class="arrow"></span></button>
 						<div class="gallery-viewport" id="gallery-viewport">
 							<div class="gallery">
-								<a class="gallery-item" href="img/gallery/large-1.jpg" data-title="Heart Nebula (IC 1805)" data-info="emission nebula in Cassiopeia, some 7,500 light years away, lit by the young star cluster Melotte 15 at its centre"><img src="img/gallery/thumb-1.jpg" alt="Heart Nebula (IC 1805)"/></a>
-								<a class="gallery-item" href="img/gallery/large-2.jpg" data-title="Lagoon Nebula (M8, NGC 6523)" data-info="star forming region in Sagittarius, some 4,100 light years away and one of the few visible to the naked eye"><img src="img/gallery/thumb-2.jpg" alt="Lagoon Nebula (M8, NGC 6523)"/></a>
-								<a class="gallery-item" href="img/gallery/large-3.jpg" data-title="Rosette Nebula (NGC 2237)" data-info="emission nebula in Monoceros, some 5,200 light years away, with the young cluster NGC 2244 in the middle"><img src="img/gallery/thumb-3.jpg" alt="Rosette Nebula (NGC 2237)"/></a>
-								<a class="gallery-item" href="img/gallery/large-4.jpg" data-title="Elephant's Trunk Nebula (IC 1396A)" data-info="dense globule in Cepheus, some 2,400 light years away, where new stars are being born"><img src="img/gallery/thumb-4.jpg" alt="Elephant's Trunk Nebula (IC 1396A)"/></a>
-								<a class="gallery-item" href="img/gallery/large-5.jpg" data-title="Christmas Tree Cluster (NGC 2264)" data-info="young cluster in Monoceros, some 2,300 light years away, next to the Cone Nebula"><img src="img/gallery/thumb-5.jpg" alt="Christmas Tree Cluster (NGC 2264)"/></a>
-								<a class="gallery-item" href="img/gallery/large-6.jpg" data-title="Jellyfish Nebula (IC 443)" data-info="supernova remnant in Gemini, some 5,000 light years away, left by a star that exploded about 30,000 years ago"><img src="img/gallery/thumb-6.jpg" alt="Jellyfish Nebula (IC 443)"/></a>
+								<a class="gallery-item" href="img/gallery/large-1.jpg" data-title="Heart Nebula (IC 1805)" data-info="emission nebula in Cassiopeia, some 7,500 light years away, lit by the young star cluster Melotte 15 at its centre" data-credit="taken by Rumen Bogdanovski with INDIGO and Ain Imager"><img src="img/gallery/thumb-1.jpg" alt="Heart Nebula (IC 1805)"/></a>
+								<a class="gallery-item" href="img/gallery/large-2.jpg" data-title="Lagoon Nebula (M8, NGC 6523)" data-info="star forming region in Sagittarius, some 4,100 light years away and one of the few visible to the naked eye" data-credit="taken by Rumen Bogdanovski with INDIGO and Ain Imager"><img src="img/gallery/thumb-2.jpg" alt="Lagoon Nebula (M8, NGC 6523)"/></a>
+								<a class="gallery-item" href="img/gallery/large-3.jpg" data-title="Sun" data-info="our own star in the light of the hydrogen alpha line, which shows the chromosphere and the prominences at the limb" data-credit="taken by Johan Bakker with INDIGO and INDIGO A1"><img src="img/gallery/thumb-3.jpg" alt="Sun in Hydrogen Alpha"/></a>
+								<a class="gallery-item" href="img/gallery/large-4.jpg" data-title="Rosette Nebula (NGC 2237)" data-info="emission nebula in Monoceros, some 5,200 light years away, with the young cluster NGC 2244 in the middle" data-credit="taken by Rumen Bogdanovski with INDIGO and Ain Imager"><img src="img/gallery/thumb-4.jpg" alt="Rosette Nebula (NGC 2237)"/></a>
+								<a class="gallery-item" href="img/gallery/large-5.jpg" data-title="Elephant's Trunk Nebula (IC 1396A)" data-info="dense globule in Cepheus, some 2,400 light years away, where new stars are being born" data-credit="taken by Rumen Bogdanovski with INDIGO and Ain Imager"><img src="img/gallery/thumb-5.jpg" alt="Elephant's Trunk Nebula (IC 1396A)"/></a>
+								<a class="gallery-item" href="img/gallery/large-6.jpg" data-title="Christmas Tree Cluster (NGC 2264)" data-info="young cluster in Monoceros, some 2,300 light years away, next to the Cone Nebula" data-credit="taken by Rumen Bogdanovski with INDIGO and Ain Imager"><img src="img/gallery/thumb-6.jpg" alt="Christmas Tree Cluster (NGC 2264)"/></a>
+								<a class="gallery-item" href="img/gallery/large-7.jpg" data-title="Jellyfish Nebula (IC 443)" data-info="supernova remnant in Gemini, some 5,000 light years away, left by a star that exploded about 30,000 years ago" data-credit="taken by Rumen Bogdanovski with INDIGO and Ain Imager"><img src="img/gallery/thumb-7.jpg" alt="Jellyfish Nebula (IC 443)"/></a>
 							</div>
 						</div>
 						<button type="button" id="gallery-next" class="gallery-nav next" aria-label="Next images"><span class="arrow"></span></button>
@@ -155,7 +156,7 @@
 			<div class="lightbox-inner">
 				<img id="lightbox-image" src="" alt=""/>
 				<button type="button" id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
-				<p class="lightbox-caption"><span id="lightbox-title"></span> &mdash; <span id="lightbox-info"></span><span class="lightbox-credit">taken by Rumen Bogdanovski with INDIGO and Ain Imager</span></p>
+				<p class="lightbox-caption"><span id="lightbox-title"></span> &mdash; <span id="lightbox-info"></span><span class="lightbox-credit" id="lightbox-credit"></span></p>
 			</div>
 		</div>
 
@@ -169,11 +170,13 @@
 				if (!box || !items.length) return;
 				var title = document.getElementById("lightbox-title");
 				var info = document.getElementById("lightbox-info");
+				var credit = document.getElementById("lightbox-credit");
 				function show(item) {
 					image.src = item.getAttribute("href");
 					image.alt = item.getAttribute("data-title") || "";
 					title.innerHTML = item.getAttribute("data-title") || "";
 					info.innerHTML = item.getAttribute("data-info") || "";
+					credit.innerHTML = item.getAttribute("data-credit") || "";
 					box.className = "lightbox open";
 				}
 				function hide() {
