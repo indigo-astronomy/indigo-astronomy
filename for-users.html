@@ -1,59 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<meta name="description" content="INDIGO is the standard for astronomy software development.">
-		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
-		<link rel="icon" href="img/favicon.ico"/>
-		<title>INDIGO | INDIGO Astronomy</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/indigo.css?v=10" type="text/css"/>
-		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
-		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
-			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-30002305-4', 'auto');
-			ga('send', 'pageview');
-		</script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Get started with INDIGO Astronomy</title>
+		<meta name="description" content="Install INDIGO, connect astronomy equipment and start imaging on Linux, macOS, Windows or Raspberry Pi.">
+		<link rel="canonical" href="https://www.indigo-astronomy.org/for-users.html">
+		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="INDIGO Astronomy">
+		<meta property="og:title" content="Get started with INDIGO Astronomy">
+		<meta property="og:description" content="Install INDIGO, connect astronomy equipment and start imaging on Linux, macOS, Windows or Raspberry Pi.">
+		<meta property="og:url" content="https://www.indigo-astronomy.org/for-users.html">
+		<meta property="og:image" content="https://www.indigo-astronomy.org/img/logo.png">
+		<meta name="twitter:card" content="summary_large_image">
+		<link rel="icon" href="img/favicon.ico" sizes="any">
+		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+		<link rel="stylesheet" href="css/fontello.css">
+		<link rel="stylesheet" href="css/indigo.css?v=11">
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default navbar-static-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-left">
-						<li><a href="index.html">INDIGO</a></li>
-						<li class="active"><a href="for-users.html">For Users</a></li>
-						<li><a href="for-developers.html">For Developers</a></li>
-						<li><a href="for-vendors.html">For Vendors</a></li>
-						<li><a href="hardware.html">Device drivers</a></li>
-						<li><a href="software.html">Software</a></li>
-						<li><a href="downloads.html">Downloads</a></li>
-						<li><a href="indigo-sky.html">INDIGO Sky</a></li>
-						<li><a href="faq.html">FAQ</a></li>
-						<li><a href="about.html">About</a></li>
-
+		<a class="skip-link" href="#main-content">Skip to content</a>
+		<header class="site-header">
+			<div class="container site-header__inner">
+				<a class="site-brand" href="./" aria-label="INDIGO Astronomy home">
+					<img src="img/logo.png" width="32" height="44" alt="">
+					<span>INDIGO <span>Astronomy</span></span>
+				</a>
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+					<span class="sr-only">Open navigation</span><span></span><span></span><span></span>
+				</button>
+				<nav class="primary-nav" id="primary-nav" aria-label="Primary">
+					<ul>
+					<li><a href="./">Overview</a></li>
+					<li><a href="for-users.html" aria-current="page">Get started</a></li>
+					<li><a href="hardware.html">Hardware</a></li>
+					<li><a href="software.html">Software</a></li>
+					<li><a href="for-developers.html">Documentation</a></li>
+					<li><a href="about.html">About</a></li>
+						<li><a class="nav-download" href="downloads.html">Downloads</a></li>
 					</ul>
-				</div>
+				</nav>
 			</div>
-		</nav>
+		</header>
 
 		<div id="intro">
-		<img id="logo" src="img/logo.png"/>
+		<img alt="" id="logo" src="img/logo.png"/>
 			<div class="container">
 						<h1><strong>For users</strong></h1>
 						<p>INDIGO is designed for the users, not just for the computers. Everything is as easy to use
@@ -62,10 +56,15 @@
 			</div>
 		</div>
 
-		<div class="container">
+		<main class="container site-main" id="main-content">
+			<div class="card-grid">
+				<article class="card"><div class="card__icon" aria-hidden="true">1</div><h2>Install</h2><p>Download the server and a client application for your operating system.</p><p><a href="downloads.html">Choose a download →</a></p></article>
+				<article class="card"><div class="card__icon" aria-hidden="true">2</div><h2>Connect</h2><p>Check that INDIGO supports your camera, mount and other equipment.</p><p><a href="hardware.html">Search supported hardware →</a></p></article>
+				<article class="card"><div class="card__icon" aria-hidden="true">3</div><h2>Observe</h2><p>Pick an imaging, guiding or control application for your workflow.</p><p><a href="software.html">Explore compatible software →</a></p></article>
+			</div>
 			<div class="row">
 				<div class="col-sm-12">
-					<h3>Supported operating systems</h3>
+					<h2>Supported operating systems</h2>
 					<p>Even though INDIGO is truly multi platform framework, some of its parts are tied to POSIX operating
 					systems, so first make sure INDIGO is really what you need.</p>
 					
@@ -74,13 +73,13 @@
 					INDIGO A1 runs on macOS, iOS and iPadOS and maintain the highest compatibility with INDIGO, but there are
 					also third party clients with full (e.g. APT and PixInsight with an INDIGO plug-in) or limited compatibility (e.g. Ekos).
 					You can also use any ASCOM
-					6.5+ based software and use it with the so-called ALPACA agent, a bridge between INDIGO and ASCOM/ALPACA.<p>
+					6.5+ based software and use it with the so-called ALPACA agent, a bridge between INDIGO and ASCOM/ALPACA.</p>
 					
-					<p><center>
-						<img height="300" src="img/ain_desktop.png"/>
-						<img height="300" src="https://www.cloudmakers.eu/images/A1_M.jpeg"/>
-						<!-- <img width="30%" src="img/ekos.jpg"/> -->
-					</center></p>
+					<p>
+						<img height="300" src="img/ain_desktop.png" loading="lazy" alt="Ain INDIGO Imager desktop application">
+						<img height="300" src="https://www.cloudmakers.eu/images/A1_M.jpeg" loading="lazy" alt="INDIGO A1 application on Apple platforms">
+						<!-- <img alt="" width="30%" src="img/ekos.jpg"/> -->
+					</p>
 					
 					<p>On the other hand the server, the piece of software which communicates with the devices, can run
 					only in Linux or macOS for now.</p>
@@ -95,18 +94,18 @@
 					can be used even without true client software. It contains a nearly full featured webGUI which can be used
 					on any computer or mobile device.
 					
-					<p><center>
-						<img height="200" src="img/indigosky1.jpg"/>
-						<img height="200" src="img/indigosky2.jpg"/>
-						<img height="200" src="img/indigosky4.jpg"/>
-					</center></p>
+					<p>
+						<img alt="" height="200" src="img/indigosky1.jpg"/>
+						<img alt="" height="200" src="img/indigosky2.jpg"/>
+						<img alt="" height="200" src="img/indigosky4.jpg"/>
+					</p>
 
 					
-					<h3>Supported hardware</h3>
+					<h2>Supported hardware</h2>
 					<p>To check if your devices are supported by INDIGO visit <a href="hardware.html">Compatible hardware</a>
 					page.</p>
           
-          				<h3>Running INDIGO server</h3>
+					<h2>Running INDIGO server</h2>
           				<p>INDIGO can be obtained from our <a href="downloads.html">Downloads</a> section.</p>
           				<p>On Ubuntu / Debian / Raspbian start INDIGO server with the following command:</p>
           				<p><mark>$ indigo_server indigo_driver1 indigo_driver2 ...</mark></p>
@@ -114,50 +113,62 @@
 					<p>On the other hand Drivers can be loaded, unloaded and configured with GUI tools Like INDIGO Control Panel (available in our downliads section) or throught the built in web based Control Panel.</p>
 					<p>CloudMakers macOS applications have INDIGO server integrated, so no aditional actions are needed.</p> 
 					
-					<h3>User Documents</h3>
-					<p>The complete documentation is available in the <a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/HOME.md">INDIGO documentation index</a>.</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/Introduction%20to%20INDIGO.pdf">Introduction to INDIGO</a> - an overview of INDIGO in PDF</p>
+					<h2>User Documents</h2>
+					<p>The complete documentation is available in the <a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/HOME.md">INDIGO documentation index</a>.</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/Introduction%20to%20INDIGO.pdf">Introduction to INDIGO</a> - an overview of INDIGO in PDF</p>
 					<h4>Imaging</h4>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/IMAGING_AF_TUNING.md">INDIGO Imager Agent - Autofocus Tuning Guide</a> - how to tune the autofocus process</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_IMAGER_MULTICAMERA_SYNCHRONIZATION.md">INDIGO Imager Agent - Multi-camera Synchronization</a> - imaging with several cameras at once</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/CCD_DRIVER_SAVED_IMAGES.md">Saving images from the camera driver</a> - how and where the drivers store the captured images</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/IMAGING_AF_TUNING.md">INDIGO Imager Agent - Autofocus Tuning Guide</a> - how to tune the autofocus process</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_IMAGER_MULTICAMERA_SYNCHRONIZATION.md">INDIGO Imager Agent - Multi-camera Synchronization</a> - imaging with several cameras at once</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/CCD_DRIVER_SAVED_IMAGES.md">Saving images from the camera driver</a> - how and where the drivers store the captured images</p>
 					<h4>Guiding</h4>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_GUIDER_DETECTION_MODES.md">INDIGO Guider Agent - Drift Detection Modes</a> - how the guider detects the drift</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_GUIDER_CORRECTION_MODES.md">INDIGO Guider Agent - Drift Correction Modes</a> - how the detected drift is corrected</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_GUIDER_DITHERING.md">INDIGO Guider Agent - Dithering</a> - dithering between the exposures</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/GUIDING_PI_CONTROLLER_TUNING.md">INDIGO Guider Agent - PI Controller Tuning</a> - tuning the guiding PI controller</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/GUIDING_CORRECTION_RESPONSE_TUNING.md">INDIGO Guider Agent - Correction Response Tuning</a> - tuning the response to the guiding corrections</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/GUIDING_MISCONCEPTIONS.md">Several Guiding Misconceptions Explained</a> - what auto guiding can and can not do for you</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_GUIDER_DETECTION_MODES.md">INDIGO Guider Agent - Drift Detection Modes</a> - how the guider detects the drift</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_GUIDER_CORRECTION_MODES.md">INDIGO Guider Agent - Drift Correction Modes</a> - how the detected drift is corrected</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_GUIDER_DITHERING.md">INDIGO Guider Agent - Dithering</a> - dithering between the exposures</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/GUIDING_PI_CONTROLLER_TUNING.md">INDIGO Guider Agent - PI Controller Tuning</a> - tuning the guiding PI controller</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/GUIDING_CORRECTION_RESPONSE_TUNING.md">INDIGO Guider Agent - Correction Response Tuning</a> - tuning the response to the guiding corrections</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/GUIDING_MISCONCEPTIONS.md">Several Guiding Misconceptions Explained</a> - what auto guiding can and can not do for you</p>
 					<h4>Alignment and plate solving</h4>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/POLAR_ALIGNMENT.md">INDIGO Astrometry / ASTAP Agent - Polar Alignment Guide</a> - three point polar alignment step by step</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PLATE_SOLVING.md">INDIGO Astrometry Agent - Plate Solving Guide</a> - plate solving and telescope synchronization</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/POLAR_ALIGNMENT.md">INDIGO Astrometry / ASTAP Agent - Polar Alignment Guide</a> - three point polar alignment step by step</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PLATE_SOLVING.md">INDIGO Astrometry Agent - Plate Solving Guide</a> - plate solving and telescope synchronization</p>
 					<h4>Documents for both users and developers</h4>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SERVER_AND_DRIVERS_GUIDE.md">Guide to indigo_server and INDIGO Drivers</a> - how to start the server, load and configure drivers</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_AGENTS.md">INDIGO Agents</a> - what the agents are and how to use them</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SCRIPT_GUIDE.md">INDIGO Scripting Guide</a> - writing scripts for the scripting agent</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/SCRIPTING_BASICS.md">Basics of INDIGO Scripting</a> - a short introduction to INDIGO scripting</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/agent_scripting/library/Sequencer.md">Script based Sequencer</a> - ready to use sequencer built on the scripting agent</p>
-					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PROPERTY_MANIPULATION.md">INDIGO Property Manipulation in Examples</a> - controlling INDIGO from the command line with indigo_prop_tool</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SERVER_AND_DRIVERS_GUIDE.md">Guide to indigo_server and INDIGO Drivers</a> - how to start the server, load and configure drivers</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_AGENTS.md">INDIGO Agents</a> - what the agents are and how to use them</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SCRIPT_GUIDE.md">INDIGO Scripting Guide</a> - writing scripts for the scripting agent</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/SCRIPTING_BASICS.md">Basics of INDIGO Scripting</a> - a short introduction to INDIGO scripting</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/agent_scripting/library/Sequencer.md">Script based Sequencer</a> - ready to use sequencer built on the scripting agent</p>
+					<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PROPERTY_MANIPULATION.md">INDIGO Property Manipulation in Examples</a> - controlling INDIGO from the command line with indigo_prop_tool</p>
 
-					<h3>Supported software</h3>
+					<h2>Supported software</h2>
 					<p>If your hardware is compatible with INDIGO, you can choose some free or commercial software for your
 					operating system. Some of them are listed on <a href="software.html">Compatible software</a> page.
 				</div>
 			</div>
-		</div>
+		</main>
 
-		<footer class="footer">
+		<footer class="site-footer">
 			<div class="container">
-				<p class="social">
-					<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
-					<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
-					<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
-				</p>
-				<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+				<div class="site-footer__grid">
+					<div class="site-footer__about">
+						<h2>INDIGO Astronomy</h2>
+						<p>Open-source astronomical imaging and instrument control software for observatories, remote setups and backyard telescopes.</p>
+					</div>
+					<div>
+						<h2>Explore</h2>
+						<ul><li><a href="for-users.html">Get started</a></li><li><a href="hardware.html">Supported hardware</a></li><li><a href="software.html">Compatible software</a></li></ul>
+					</div>
+					<div>
+						<h2>Resources</h2>
+						<ul><li><a href="for-developers.html">Documentation</a></li><li><a href="faq.html">FAQ</a></li><li><a href="indigo-sky.html">INDIGO Sky</a></li></ul>
+					</div>
+					<div>
+						<h2>Community</h2>
+						<ul><li><a href="https://github.com/indigo-astronomy/indigo" rel="noopener noreferrer">GitHub</a></li><li><a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" rel="noopener noreferrer">Facebook</a></li><li><a href="http://bb.cloudmakers.eu/">User group</a></li><li><a href="mailto:indigo@cloudmakers.eu">Contact</a></li></ul>
+					</div>
+				</div>
+				<div class="site-footer__bottom">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</div>
 			</div>
 		</footer>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="js/site.js"></script>
 	</body>
 
 </html>

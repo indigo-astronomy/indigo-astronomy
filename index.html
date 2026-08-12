@@ -1,72 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<meta name="description" content="INDIGO is the standard for astronomy software development.">
-		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
-		<link rel="icon" href="img/favicon.ico"/>
-		<title>INDIGO | INDIGO Astronomy</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/indigo.css?v=10" type="text/css"/>
-		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
-		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
-			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-30002305-4', 'auto');
-			ga('send', 'pageview');
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>INDIGO Astronomy — Open-source telescope control and imaging</title>
+		<meta name="description" content="INDIGO is open-source astronomical imaging and instrument control software for observatories, remote setups and backyard telescopes.">
+		<link rel="canonical" href="https://www.indigo-astronomy.org/">
+		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="INDIGO Astronomy">
+		<meta property="og:title" content="INDIGO Astronomy — Open-source telescope control and imaging">
+		<meta property="og:description" content="INDIGO is open-source astronomical imaging and instrument control software for observatories, remote setups and backyard telescopes.">
+		<meta property="og:url" content="https://www.indigo-astronomy.org/">
+		<meta property="og:image" content="https://www.indigo-astronomy.org/img/logo.png">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="google-site-verification" content="sn6qF-EZJv6OhHGyT_Hczdofj5laIXHRjDZ2oqpzb8I">
+		<link rel="icon" href="img/favicon.ico" sizes="any">
+		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+		<link rel="stylesheet" href="css/fontello.css">
+		<link rel="stylesheet" href="css/indigo.css?v=11">
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "Organization",
+					"@id": "https://www.indigo-astronomy.org/#organization",
+					"name": "The INDIGO Initiative",
+					"url": "https://www.indigo-astronomy.org/",
+					"logo": "https://www.indigo-astronomy.org/img/logo.png",
+					"sameAs": ["https://github.com/indigo-astronomy/indigo"]
+				},
+				{
+					"@type": "WebSite",
+					"@id": "https://www.indigo-astronomy.org/#website",
+					"url": "https://www.indigo-astronomy.org/",
+					"name": "INDIGO Astronomy",
+					"publisher": { "@id": "https://www.indigo-astronomy.org/#organization" }
+				}
+			]
+		}
 		</script>
-		<meta name="google-site-verification" content="sn6qF-EZJv6OhHGyT_Hczdofj5laIXHRjDZ2oqpzb8I" />
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default navbar-static-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-left">
-						<li class="active"><a href="index.html">INDIGO</a></li>
-						<li><a href="for-users.html">For Users</a></li>
-						<li><a href="for-developers.html">For Developers</a></li>
-						<li><a href="for-vendors.html">For Vendors</a></li>
-						<li><a href="hardware.html">Device drivers</a></li>
-						<li><a href="software.html">Software</a></li>
-						<li><a href="downloads.html">Downloads</a></li>
-						<li><a href="indigo-sky.html">INDIGO Sky</a></li>
-						<li><a href="faq.html">FAQ</a></li>
-						<li><a href="about.html">About</a></li>
-
+		<a class="skip-link" href="#main-content">Skip to content</a>
+		<header class="site-header">
+			<div class="container site-header__inner">
+				<a class="site-brand" href="./" aria-label="INDIGO Astronomy home">
+					<img src="img/logo.png" width="32" height="44" alt="">
+					<span>INDIGO <span>Astronomy</span></span>
+				</a>
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+					<span class="sr-only">Open navigation</span><span></span><span></span><span></span>
+				</button>
+				<nav class="primary-nav" id="primary-nav" aria-label="Primary">
+					<ul>
+					<li><a href="./" aria-current="page">Overview</a></li>
+					<li><a href="for-users.html">Get started</a></li>
+					<li><a href="hardware.html">Hardware</a></li>
+					<li><a href="software.html">Software</a></li>
+					<li><a href="for-developers.html">Documentation</a></li>
+					<li><a href="about.html">About</a></li>
+						<li><a class="nav-download" href="downloads.html">Downloads</a></li>
 					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section class="page-hero">
+			<div class="container">
+				<p class="eyebrow">Open source · Multiplatform · Distributed</p>
+				<h1>Astronomy control that stays out of your way.</h1>
+				<p>INDIGO connects cameras, mounts, focusers and observatory equipment with the applications and automation agents that run your imaging session.</p>
+				<div class="button-row">
+					<a class="button button--light" href="downloads.html">Download INDIGO 3</a>
+					<a class="button button--ghost" href="hardware.html">Check your hardware</a>
 				</div>
 			</div>
-		</nav>
+		</section>
 
-		<div id="intro">
-			<img id="logo" src="img/logo.png"/>
-			<div class="container">
-				<h1><strong>Welcome to INDIGO</strong></h1>
-				<p>Astronomical imaging and instrument control software for observatories,
-				remote setups and backyard telescopes.</p>
-				<p><span class="label label-success" style="font-size:1em;">New</span> &nbsp;<strong>INDIGO 3 is now available!</strong> &nbsp;<a href="downloads.html" style="color:#fff;text-decoration:underline;">Download now &raquo;</a></p>
+		<div class="container">
+			<div class="stat-strip" aria-label="INDIGO project highlights">
+				<div class="stat"><strong>135</strong><span>device drivers</span></div>
+				<div class="stat"><strong>10</strong><span>automation agents</span></div>
+				<div class="stat"><strong>6</strong><span>client platforms</span></div>
+				<div class="stat"><strong>Open</strong><span>business-friendly license</span></div>
 			</div>
 		</div>
 
-		<div class="container">
+		<main class="container site-main" id="main-content">
 			<div class="row">
 				<div class="col-sm-12">
-					<h3>What is INDIGO?</h3>
+					<h2>What is INDIGO?</h2>
 					<p>INDIGO is astronomical imaging and instrument control software for both professional
 					observatories and amateur astronomers. It controls cameras, mounts, focusers, filter
 					wheels, domes and the rest of the equipment, and it takes care of the imaging, guiding,
@@ -79,6 +106,28 @@
 					first priority, because a night of imaging that is interrupted by the software is a night
 					lost. That is also why INDIGO is used for the automation of professional telescopes and
 					remote observatories, not only for astrophotography at home.</p>
+
+					<h2>Choose your path</h2>
+					<div class="card-grid">
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">01</div>
+							<h2>Astronomers</h2>
+							<p>Install INDIGO, connect your equipment and choose an imaging or control application.</p>
+							<p><a href="for-users.html">Get started with INDIGO →</a></p>
+						</article>
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">02</div>
+							<h2>Developers</h2>
+							<p>Build clients, device drivers and automation agents on a portable ANSI C framework.</p>
+							<p><a href="for-developers.html">Read developer documentation →</a></p>
+						</article>
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">03</div>
+							<h2>Hardware vendors</h2>
+							<p>Support Linux, macOS and Windows clients through one permissively licensed integration.</p>
+							<p><a href="for-vendors.html">Integrate your hardware →</a></p>
+						</article>
+					</div>
 
 					<!-- thumbnail strip, skipped on phones -->
 					<div class="gallery-strip hidden-xs">
@@ -97,7 +146,7 @@
 						<button type="button" id="gallery-next" class="gallery-nav next" aria-label="Next images"><span class="arrow"></span></button>
 					</div>
 
-					<h3>Why INDIGO?</h3>
+					<h2>Why INDIGO?</h2>
 					<details class="why">
 						<summary>1. Fast and efficient</summary>
 						<p>INDIGO is a software bus, not a chain of pipes. Drivers, agents and clients can run in a single process, where a property change is a function call instead of a round trip through a socket &mdash; in the best case up to 1000 times faster than systems that run each driver as a separate process. Less CPU and less memory also mean longer battery life in the field.</p>
@@ -131,7 +180,7 @@
 						<p>INDIGO is open source under the INDIGO Astronomy open-source license, a BSD style, business friendly license. No GPL, so hardware vendors and commercial applications can build on INDIGO and ship it, including through application stores.</p>
 					</details>
 
-					<h3>Getting started</h3>
+					<h2>Getting started</h2>
 					<p>Install INDIGO from the <a href="downloads.html">Downloads</a> page, check that your
 					equipment is supported in the <a href="hardware.html">list of device drivers</a> and pick
 					an application from the <a href="software.html">compatible software</a> page. If you are a
@@ -140,90 +189,32 @@
 					<br/>
 				</div>
 			</div>
-		</div>
+		</main>
 
-		<footer class="footer">
+		<footer class="site-footer">
 			<div class="container">
-				<p class="social">
-					<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
-					<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
-					<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
-				</p>
-				<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+				<div class="site-footer__grid">
+					<div class="site-footer__about">
+						<h2>INDIGO Astronomy</h2>
+						<p>Open-source astronomical imaging and instrument control software for observatories, remote setups and backyard telescopes.</p>
+					</div>
+					<div>
+						<h2>Explore</h2>
+						<ul><li><a href="for-users.html">Get started</a></li><li><a href="hardware.html">Supported hardware</a></li><li><a href="software.html">Compatible software</a></li></ul>
+					</div>
+					<div>
+						<h2>Resources</h2>
+						<ul><li><a href="for-developers.html">Documentation</a></li><li><a href="faq.html">FAQ</a></li><li><a href="indigo-sky.html">INDIGO Sky</a></li></ul>
+					</div>
+					<div>
+						<h2>Community</h2>
+						<ul><li><a href="https://github.com/indigo-astronomy/indigo" rel="noopener noreferrer">GitHub</a></li><li><a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" rel="noopener noreferrer">Facebook</a></li><li><a href="http://bb.cloudmakers.eu/">User group</a></li><li><a href="mailto:indigo@cloudmakers.eu">Contact</a></li></ul>
+					</div>
+				</div>
+				<div class="site-footer__bottom">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</div>
 			</div>
 		</footer>
-		<div id="lightbox" class="lightbox">
-			<div class="lightbox-inner">
-				<img id="lightbox-image" src="" alt=""/>
-				<button type="button" id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
-				<p class="lightbox-caption"><span id="lightbox-title"></span> &mdash; <span id="lightbox-info"></span><span class="lightbox-credit" id="lightbox-credit"></span></p>
-			</div>
-		</div>
-
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script>
-			(function () {
-				var box = document.getElementById("lightbox");
-				var image = document.getElementById("lightbox-image");
-				var items = document.querySelectorAll(".gallery-item");
-				if (!box || !items.length) return;
-				var title = document.getElementById("lightbox-title");
-				var info = document.getElementById("lightbox-info");
-				var credit = document.getElementById("lightbox-credit");
-				function show(item) {
-					image.src = item.getAttribute("href");
-					image.alt = item.getAttribute("data-title") || "";
-					title.innerHTML = item.getAttribute("data-title") || "";
-					info.innerHTML = item.getAttribute("data-info") || "";
-					credit.innerHTML = item.getAttribute("data-credit") || "";
-					box.className = "lightbox open";
-				}
-				function hide() {
-					box.className = "lightbox";
-					image.src = "";
-				}
-				for (var i = 0; i < items.length; i++) {
-					items[i].addEventListener("click", function (event) {
-						event.preventDefault();
-						show(this);
-					});
-				}
-				document.getElementById("lightbox-close").addEventListener("click", hide);
-				box.addEventListener("click", function (event) {
-					if (event.target !== image) hide();
-				});
-				document.addEventListener("keydown", function (event) {
-					if (event.keyCode === 27) hide();
-				});
-
-				var viewport = document.getElementById("gallery-viewport");
-				var prev = document.getElementById("gallery-prev");
-				var next = document.getElementById("gallery-next");
-				if (!viewport) return;
-				function slide(direction) {
-					var step = Math.max(180, viewport.clientWidth * 0.8) * direction;
-					if (viewport.scrollTo) {
-						viewport.scrollTo({ left: viewport.scrollLeft + step, behavior: "smooth" });
-					} else {
-						viewport.scrollLeft += step;
-					}
-				}
-				function update() {
-					var max = viewport.scrollWidth - viewport.clientWidth;
-					var fits = max < 2;
-					prev.style.display = next.style.display = fits ? "none" : "";
-					prev.disabled = viewport.scrollLeft < 2;
-					next.disabled = viewport.scrollLeft > max - 2;
-				}
-				prev.addEventListener("click", function () { slide(-1); });
-				next.addEventListener("click", function () { slide(1); });
-				viewport.addEventListener("scroll", update);
-				window.addEventListener("resize", update);
-				window.addEventListener("load", update);
-				update();
-			})();
-		</script>
+		<script src="js/site.js"></script>
 	</body>
 
 </html>

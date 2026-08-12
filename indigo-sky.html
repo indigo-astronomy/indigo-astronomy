@@ -1,69 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<meta name="description" content="INDIGO is the standard for astronomy software development.">
-		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
-		<link rel="icon" href="img/favicon.ico"/>
-		<title>INDIGO | INDIGO Astronomy</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/indigo.css?v=10" type="text/css"/>
-		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
-		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
-			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-30002305-4', 'auto');
-			ga('send', 'pageview');
-		</script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>INDIGO Sky for Raspberry Pi</title>
+		<meta name="description" content="Run a preconfigured INDIGO astronomy server on Raspberry Pi with INDIGO Sky, including Wi-Fi setup and remote control guides.">
+		<link rel="canonical" href="https://www.indigo-astronomy.org/indigo-sky.html">
+		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="INDIGO Astronomy">
+		<meta property="og:title" content="INDIGO Sky for Raspberry Pi">
+		<meta property="og:description" content="Run a preconfigured INDIGO astronomy server on Raspberry Pi with INDIGO Sky, including Wi-Fi setup and remote control guides.">
+		<meta property="og:url" content="https://www.indigo-astronomy.org/indigo-sky.html">
+		<meta property="og:image" content="https://www.indigo-astronomy.org/img/logo.png">
+		<meta name="twitter:card" content="summary_large_image">
+		<link rel="icon" href="img/favicon.ico" sizes="any">
+		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+		<link rel="stylesheet" href="css/fontello.css">
+		<link rel="stylesheet" href="css/indigo.css?v=11">
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default navbar-static-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-left">
-						<li><a href="index.html">INDIGO</a></li>
-						<li><a href="for-users.html">For Users</a></li>
-						<li><a href="for-developers.html">For Developers</a></li>
-						<li><a href="for-vendors.html">For Vendors</a></li>
-						<li><a href="hardware.html">Device drivers</a></li>
-						<li><a href="software.html">Software</a></li>
-						<li><a href="downloads.html">Downloads</a></li>
-						<li class="active"><a href="indigo-sky.html">INDIGO Sky</a></li>
-						<li><a href="faq.html">FAQ</a></li>
-						<li><a href="about.html">About</a></li>
-
+		<a class="skip-link" href="#main-content">Skip to content</a>
+		<header class="site-header">
+			<div class="container site-header__inner">
+				<a class="site-brand" href="./" aria-label="INDIGO Astronomy home">
+					<img src="img/logo.png" width="32" height="44" alt="">
+					<span>INDIGO <span>Astronomy</span></span>
+				</a>
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+					<span class="sr-only">Open navigation</span><span></span><span></span><span></span>
+				</button>
+				<nav class="primary-nav" id="primary-nav" aria-label="Primary">
+					<ul>
+					<li><a href="./">Overview</a></li>
+					<li><a href="for-users.html">Get started</a></li>
+					<li><a href="hardware.html">Hardware</a></li>
+					<li><a href="software.html" aria-current="page">Software</a></li>
+					<li><a href="for-developers.html">Documentation</a></li>
+					<li><a href="about.html">About</a></li>
+						<li><a class="nav-download" href="downloads.html">Downloads</a></li>
 					</ul>
-				</div>
+				</nav>
 			</div>
-		</nav>
+		</header>
 
 		<div id="intro">
-			<img id="logo" src="img/logo.png"/>
+			<img alt="" id="logo" src="img/logo.png"/>
 			<div class="container">
 				<h1><strong>INDIGO Sky</strong></h1>
 				<p>RaspberryPI image with a pre-configured INDIGO server.</p>
 			</div>
 		</div>
 
-		<div class="container">
+		<main class="container site-main" id="main-content">
+			<nav class="on-this-page" aria-label="On this page">
+				<strong>On this page:</strong>
+				<a href="#wifi">Wi-Fi setup</a>
+				<a href="#remote-control">Remote control</a>
+				<a href="#env">Environment variables</a>
+				<a href="#issues">Troubleshooting</a>
+			</nav>
 			<div class="row">
 				<div class="col-sm-12">
-					<h3>Introduction</h3>
+					<h2>Introduction</h2>
 					<p>INDIGO Sky is a free <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian</a>
 					based image customized for running INDIGO easily and seamlessly on a Raspberry Pi.</p>
 					<p>We provide 32 and 64-bit OS images. The images work with Raspberry Pi generations:</p>
@@ -84,7 +85,7 @@
 							2026-07-11-indigosky-indigo3-arm64.zip</a> - 64-bit Operating system for RPi 3 (not recommended), RPi 4 (not recommended for 1GB RAM) and RPi 5
 						</li>
 					</ul>
-					<p>Download the appropriate image with INDIGO 2 for Raspberry Pi 3, 4 and 5 (based on Debian 12 Bookworm) <span class="label label-warning">Partially supported</span>:
+					<p>Download the appropriate image with INDIGO 2 for Raspberry Pi 3, 4 and 5 (based on Debian 12 Bookworm) <span class="label label-warning">Partially supported</span>:</p>
 					<ul>
 						<li><a href="https://github.com/indigo-astronomy/indigosky/releases/download/2026-07-11/2026-07-11-indigosky-armhf.zip">
 							2026-07-11-indigosky-armhf.zip</a> - 32-bit Operating system for RPi 3, RPi 4 and RPi 5
@@ -92,11 +93,11 @@
 						<li><a href="https://github.com/indigo-astronomy/indigosky/releases/download/2026-07-11/2026-07-11-indigosky-arm64.zip">
 							2026-07-11-indigosky-arm64.zip</a> - 64-bit Operating system for RPi 3 (not recommended), RPi 4 (not recommended for 1GB RAM) and RPi 5
 						</li>
-						<li>Older images are available <a target="_new" href="https://github.com/indigo-astronomy/indigosky/releases">here</a>
+						<li>Older images are available <a target="_blank" rel="noopener noreferrer" href="https://github.com/indigo-astronomy/indigosky/releases">here</a>
 						</li>
 					</ul>
-					Unpack it, copy it to SD card following the
-					<a target="_new" href="https://www.raspberrypi.org/documentation/installation/installing-images/">instructions</a>
+					<p>Unpack it, copy it to SD card following the
+					<a target="_blank" rel="noopener noreferrer" href="https://www.raspberrypi.org/documentation/installation/installing-images/">instructions</a>
 					at Raspberry Pi site and boot from it. First boot will take longer (several minutes) as INDIGO Sky will automatically
 					expand the file system to the size of the SD card and after that it will start INDIGO and provide a WiFi access point.</p>
 					<p>INDIGO Sky access point has the following default credentials:</p>
@@ -114,20 +115,20 @@
 
 					<p>If you want to boot INDIGO Sky from USB please see the instructions
 					<a href="https://github.com/indigo-astronomy/indigosky/blob/master/INSTALL.md">here</a>.</p>
-					<p><center><img width="50%" src="img/indigo-sky.jpg"></center></p>
+					<p><img alt="" width="50%" src="img/indigo-sky.jpg"></p>
 
-					<h3>Change Password or SSID</h3>
+					<h2 id="wifi">Change password, SSID and Wi-Fi settings</h2>
 					<p>It is strongly recommended to change the password. Open your browser and visit
 					web GUI to open the INDIGO web manager.</p>
 
-					<p><center><img width="50%" src="img/indigo-sky-wifi-ap.jpg"></center></p>
+					<p><img alt="" width="50%" src="img/indigo-sky-wifi-ap.jpg"></p>
 
 					<p>Select "Configure access point" and enter a the network name and the password.
 					Then click on the "Submit" button. If the operation cannot be committed, e.g.
 					due to a too short password, you should see an alert. In this case start over and
 					if everything is fine, wait for reboot with the new WiFi configuration.</p>
 
-					<h3>Selecting the WiFI channel in AP mode</h3>
+					<h2>Selecting the WiFI channel in AP mode</h2>
 					Since INDIGO 2.0-178 INDIGO Sky in Access Point mode can operate in 2.4 GHz and 5 GHz ranges.
 					Switching between rabges is done by choosing the WiFi channel. Channels from 1 to 13 are 2.4 GHz.
 					Channels from 36 to 116 are 5GHz. Choosing channel 0 will automatically select the
@@ -141,10 +142,10 @@
 					<li><b>40, 48, 56, 64, 104, 112</b> - 5 GHz range, 40 MHz span</li>
 					</ul>
 
-					<h3>Connect INDIGO Sky to an Infrastructure Access Point</h3>
+					<h2>Connect INDIGO Sky to an Infrastructure Access Point</h2>
 					<p>INDIGO Sky can also be configured for connecting to an infrastructure access point.</p>
 
-					<p><center><img width="50%" src="img/indigo-sky-wifi-infra.jpg"></center></p>
+					<p><img alt="" width="50%" src="img/indigo-sky-wifi-infra.jpg"></p>
 
 					<p>Select "Join existing network" and enter the network name and the password.
 					Once done, click on the "Submit" button and wait for reboot with the new WiFi
@@ -152,20 +153,20 @@
 					to the infrastructure access point, then connect via ethernet cable to INDIGO Sky
 					and update the credentials.</p>
 
-					<h3>Share Internet connection between interfaces</h3>
+					<h2>Share Internet connection between interfaces</h2>
 					<p>INDIGO Sky can share Internet connection avalable on one of its interfaces.
 					For example, if the Wi-Fi interface is configured in Access Point (AP) mode,
 					and the Ethernet interface is connected to a local network with Internet access,
 					this Internet access can be shared with the devices connected to the INDIGO Sky AP.</p>
 
-					<p><center><img width="50%" src="img/internet-sharing.png"></center></p>
+					<p><img alt="" width="50%" src="img/internet-sharing.png"></p>
 
 					<p>To enable or disable Internet sharing, set "Server->Main->Internet Sharing" to
 					"Enabled" or "Disabled" respectively.</p>
 					<p><b>NOTE:</b> Use this fearure with care and enable Internet sharing only after
 					changing the default Indigo AP password.</p>
 
-					<h3>Upgrade or downgrade INDIGO</h3>
+					<h2>Upgrade or downgrade INDIGO</h2>
 					<p>INDIGO Sky allows to downgrade or upgrade INDIGO versions easily.</p>
 
 					<p>Whenever INDIGO Sky is started, the Internet connection is checked and new update package
@@ -176,8 +177,8 @@
 					INDIGO version, e.g. 2.0-79. Wait until INDIGO Sky downloads and installs the package.
 					If installation is successful, the INDIGO Sky will reboot afterwards automatically.</p>
 
-					<p><center><img width="50%" src="img/indigo-sky-upgrade.jpg"></center></p>
-					<h3>Timezone and Date</h3>
+					<p><img alt="" width="50%" src="img/indigo-sky-upgrade.jpg"></p>
+					<h2>Timezone and Date</h2>
 					<p>INDIGO Sky timezone is UTC. This timezone is suitable for precise astronomical calculations and
 					representations of timestamps in FITS data.</p>
 
@@ -189,26 +190,26 @@
 					is available, then the time and date information is received from Internet time servers.
 					The time and date of INDIGO client is still used as the reference for INDIGO Sky.</p>
 
-					<h3>Remote control with built-in webGUI</h3>
+					<h2 id="remote-control">Remote control with the built-in web interface</h2>
 					<p>The server can be configured and used with a built-in webGUI providing the basic control of imager, guider and mount agents.</p>
 
-					<p><center><img width="50%" src="img/indigosky1.jpg"/></center></p>
-					<p><center><img width="50%" src="img/indigosky2.jpg"/></center></p>
-					<p><center><img width="50%" src="img/indigosky4.jpg"/></center></p>
-					<p><center><img width="50%" src="img/indigosky3.jpg"/></center></p>
+					<p><img alt="" width="50%" src="img/indigosky1.jpg"/></p>
+					<p><img alt="" width="50%" src="img/indigosky2.jpg"/></p>
+					<p><img alt="" width="50%" src="img/indigosky4.jpg"/></p>
+					<p><img alt="" width="50%" src="img/indigosky3.jpg"/></p>
 
-					<h3>Remote control with INDIGO Control Panel</h3>
+					<h2>Remote control with INDIGO Control Panel</h2>
 					<p>The server can be configured with INDIGO Control Panel (avalilable on our <a href="downloads.html">Downloads page</a>).
 					In this case it should automatically detect and connect to INDIGO Sky.</p>
-					<p><center><img width="50%" src="img/icp_indigosky.jpg"></center></p>
+					<p><img alt="" width="50%" src="img/icp_indigosky.jpg"></p>
 
-					<h3>Remote console with SSH</h3>
+					<h2>Remote console with SSH</h2>
 					<p>INDIGO Sky has SSH server enabled by default and can be accessed with the following credentials:</p>
 					<p><mark>username: indigo</mark></p>
 					<p><mark>password: indigo</mark></p>
 					<p><b>NOTE:</b> Windows users need to install SSH client like <a href="https://www.putty.org/">PuTTY</a></p>
 
-					<h3>Use INDIGO Sky with mobile devices </h3>
+					<h2>Use INDIGO Sky with mobile devices </h2>
 					<p>There are still no native INDIGO clients for mobile devices but we offer a workaround - using a lightweight
 					desktop on the Raspberry Pi which can be accessed using a Remote desktop. This is not the best approach but
 					several similar distributions offer similar solutions. In contrast we do not want to bloat our operating
@@ -223,7 +224,7 @@
 					so it will take some time to complete. When finished you can access your INDIGO Sky box with any VNC client.
 					This is how it looks in action:</p>
 
-					<p><center><img width="50%" src="img/indigosky_desktop.png"></center></p>
+					<p><img alt="" width="50%" src="img/indigosky_desktop.png"></p>
 
 					<p>The credentials to access the desktop are standard. If your VNC client supports authentication with system
 					credentials (TLSplan) you can access the desktop with the credentials used for SSH and when you change the default
@@ -234,22 +235,22 @@
 					<p><b>NOTE:</b> With CPU intensive tasks on Raspberry Pi4 you may experience cooling issues.
 					One symptom is the degraded system responsiveness, because the tempearture raised above +80&deg;C and the CPU frequency
 					is being throttled down in order to cool. To avid this issue we highly recommend using a cooling solution. If you are
-					uing the official Pi4 case the <a target="_blank" href="https://www.raspberrypi.org/products/raspberry-pi-4-case-fan">Pi4 case fan</a>
+					uing the official Pi4 case the <a target="_blank" rel="noopener noreferrer" href="https://www.raspberrypi.org/products/raspberry-pi-4-case-fan">Pi4 case fan</a>
 					should work.</p>
 
 					<p>To remove the remote desktop access and the related software you should execute the following commands:</p>
 					<p><mark>$ sudo apt-get remove indigosky-desktop</mark></p>
 					<p><mark>$ sudo apt-get autoremove</mark></p>
 
-					<h3 id="env">Environment Variables</h3>
+					<h2 id="env">Environment Variables</h2>
 					<p>Some drivers may use environment variables to enable certain features. For this the file '/etc/systemd/system/multi-user.target.wants/indigo.service' needs to be edited. Add a line starting with 'Environment=' for each environment variable in the [Service] section. For example, to enable the CFW8A color wheel of the indigo_ccd_sbig driver, execute</p>
 					<p><mark>$ sudo vi /etc/systemd/system/multi-user.target.wants/indigo.service</mark></p>
 					<p>and add the line</p>
 					<p><mark>Environment=SBIG_LEGACY_CFW=CFW8</mark></p>
 					<p>at the bottom of the [Service] section. After saving the file, restart the INDIGO Sky server.</p>
 
-					<h3 id="issues">Reporting issues</h3>
-					<h4><b>In case the server stops responding</b></h3>
+					<h2 id="issues">Reporting issues</h2>
+					<h3>In case the server stops responding</h3>
 					<p>Please login to the	INDIGO Sky as descibed above and execute:</p>
 					<p><mark>$ indigo_deadlock_detector >indigo_deadlock.txt</mark></p>
 					<p>This will create a file named 'indigo_deadlock.txt', please send it to
@@ -264,7 +265,7 @@
 
 					<br>
 
-					<h4><b>Getting INDIGO log from INDIGO Sky</b></h3>
+					<h3>Getting an INDIGO log from INDIGO Sky</h3>
 					In case some device or INDIGO framework does not behave as expected sending us "Trace log" from indigo will help us pinpoint and resolve the issue. To do so please follow the steps:
 					<ol>
 						<li>
@@ -288,11 +289,11 @@
 
 					<br>
 					<br>
-					<h4><b>Getting INDIGO log if you start INDIGO server from the command line</b></h3>
+					<h3>Getting an INDIGO log from the command line</h3>
 					<ol>
 						<li>
 							Stop all other instances of INDIGO server and start it so that it will save the trace log (switch -vvv) in the file <b>indigo.log</b> with the command:
-							<p><mark>$ indigo_server -vvv [drivers] >indigo.log 2>&1</mark></p>
+							<p><mark>$ indigo_server -vvv [drivers] &gt;indigo.log 2&gt;&amp;1</mark></p>
 							<p><b>NOTE:</b> You may need to specify the full path to INDIGO server. If you ommit drivers it will load the drivers that were loaded last time.
 						</li>
 						<li>
@@ -305,20 +306,32 @@
 					</ol>
 				</div>
 			</div>
-		</div>
+		</main>
 
-		<footer class="footer">
+		<footer class="site-footer">
 			<div class="container">
-				<p class="social">
-					<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
-					<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
-					<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
-				</p>
-				<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+				<div class="site-footer__grid">
+					<div class="site-footer__about">
+						<h2>INDIGO Astronomy</h2>
+						<p>Open-source astronomical imaging and instrument control software for observatories, remote setups and backyard telescopes.</p>
+					</div>
+					<div>
+						<h2>Explore</h2>
+						<ul><li><a href="for-users.html">Get started</a></li><li><a href="hardware.html">Supported hardware</a></li><li><a href="software.html">Compatible software</a></li></ul>
+					</div>
+					<div>
+						<h2>Resources</h2>
+						<ul><li><a href="for-developers.html">Documentation</a></li><li><a href="faq.html">FAQ</a></li><li><a href="indigo-sky.html">INDIGO Sky</a></li></ul>
+					</div>
+					<div>
+						<h2>Community</h2>
+						<ul><li><a href="https://github.com/indigo-astronomy/indigo" rel="noopener noreferrer">GitHub</a></li><li><a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" rel="noopener noreferrer">Facebook</a></li><li><a href="http://bb.cloudmakers.eu/">User group</a></li><li><a href="mailto:indigo@cloudmakers.eu">Contact</a></li></ul>
+					</div>
+				</div>
+				<div class="site-footer__bottom">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</div>
 			</div>
 		</footer>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="js/site.js"></script>
 	</body>
 
 </html>
