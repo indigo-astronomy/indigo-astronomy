@@ -9,7 +9,7 @@
 		<link rel="icon" href="img/favicon.ico"/>
 		<title>INDIGO | INDIGO Astronomy</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/indigo.css?v=3" type="text/css"/>
+		<link rel="stylesheet" href="css/indigo.css?v=10" type="text/css"/>
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
@@ -80,6 +80,22 @@
 					lost. That is also why INDIGO is used for the automation of professional telescopes and
 					remote observatories, not only for astrophotography at home.</p>
 
+					<!-- thumbnail strip, skipped on phones -->
+					<div class="gallery-strip hidden-xs">
+						<button type="button" id="gallery-prev" class="gallery-nav prev" aria-label="Previous images"><span class="arrow"></span></button>
+						<div class="gallery-viewport" id="gallery-viewport">
+							<div class="gallery">
+								<a class="gallery-item" href="img/gallery/large-1.jpg" data-title="Heart Nebula (IC 1805)" data-info="emission nebula in Cassiopeia, some 7,500 light years away, lit by the young star cluster Melotte 15 at its centre"><img src="img/gallery/thumb-1.jpg" alt="Heart Nebula (IC 1805)"/></a>
+								<a class="gallery-item" href="img/gallery/large-2.jpg" data-title="Lagoon Nebula (M8, NGC 6523)" data-info="star forming region in Sagittarius, some 4,100 light years away and one of the few visible to the naked eye"><img src="img/gallery/thumb-2.jpg" alt="Lagoon Nebula (M8, NGC 6523)"/></a>
+								<a class="gallery-item" href="img/gallery/large-3.jpg" data-title="Rosette Nebula (NGC 2237)" data-info="emission nebula in Monoceros, some 5,200 light years away, with the young cluster NGC 2244 in the middle"><img src="img/gallery/thumb-3.jpg" alt="Rosette Nebula (NGC 2237)"/></a>
+								<a class="gallery-item" href="img/gallery/large-4.jpg" data-title="Elephant's Trunk Nebula (IC 1396A)" data-info="dense globule in Cepheus, some 2,400 light years away, where new stars are being born"><img src="img/gallery/thumb-4.jpg" alt="Elephant's Trunk Nebula (IC 1396A)"/></a>
+								<a class="gallery-item" href="img/gallery/large-5.jpg" data-title="Christmas Tree Cluster (NGC 2264)" data-info="young cluster in Monoceros, some 2,300 light years away, next to the Cone Nebula"><img src="img/gallery/thumb-5.jpg" alt="Christmas Tree Cluster (NGC 2264)"/></a>
+								<a class="gallery-item" href="img/gallery/large-6.jpg" data-title="Jellyfish Nebula (IC 443)" data-info="supernova remnant in Gemini, some 5,000 light years away, left by a star that exploded about 30,000 years ago"><img src="img/gallery/thumb-6.jpg" alt="Jellyfish Nebula (IC 443)"/></a>
+							</div>
+						</div>
+						<button type="button" id="gallery-next" class="gallery-nav next" aria-label="Next images"><span class="arrow"></span></button>
+					</div>
+
 					<h3>Why INDIGO?</h3>
 					<details class="why">
 						<summary>1. Fast and efficient</summary>
@@ -98,20 +114,20 @@
 						<p>Servers and drivers run on Linux and macOS, and the Windows server is on its way &mdash; most drivers are already ported to it. Client applications run on Linux, macOS, Windows, iOS and iPadOS. The same code scales from a Raspberry Pi to a workstation.</p>
 					</details>
 					<details class="why">
-						<summary>5. Open source & Permissive license</summary>
-						<p>INDIGO is open source under the INDIGO Astronomy open-source license, a BSD style, business friendly license. No GPL, so hardware vendors and commercial applications can build on INDIGO and ship it, including through application stores.</p>
-					</details>
-					<details class="why">
-						<summary>6. Headless operation</summary>
+						<summary>5. Headless operation</summary>
 						<p>INDIGO Server needs no display. Start it on a headless machine and control it from any INDIGO application on your desktop, laptop or tablet &mdash; or from the built-in web panel, when a browser is all you have at hand. Imaging sequences, guiding, focusing, mount control and plate solving are carried out by INDIGO agents running on the server itself, so once started they keep running on their own, with no client connected at all. You can close the application, put the laptop to sleep or lose the WiFi, and connect again later to check how the night is going.</p>
 					</details>
 					<details class="why">
-						<summary>7. Wide hardware support</summary>
+						<summary>6. Wide hardware support</summary>
 						<p>Over 130 device drivers and 10 agents are distributed with INDIGO 3.0, covering cameras, mounts, focusers, filter wheels, domes, rotators, adaptive optics, GPS and auxiliary devices. Legacy INDI style drivers can be used as well, and the ALPACA agent exposes INDIGO devices to ASCOM clients. <a href="hardware.html">See the full list &raquo;</a></p>
 					</details>
 					<details class="why">
-						<summary>8. Made to be automated</summary>
+						<summary>7. Made to be automated</summary>
 						<p>Whole observing sequences can be written as scripts and executed by the scripting agent on the server, and any property can be manipulated straight from the command line with indigo_prop_tool &mdash; handy for cron jobs, remote observatories and roll-off roof setups.</p>
+					</details>
+					<details class="why">
+						<summary>8. Open source & Permissive license</summary>
+						<p>INDIGO is open source under the INDIGO Astronomy open-source license, a BSD style, business friendly license. No GPL, so hardware vendors and commercial applications can build on INDIGO and ship it, including through application stores.</p>
 					</details>
 
 					<h3>Getting started</h3>
@@ -135,8 +151,76 @@
 				<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
 			</div>
 		</footer>
+		<div id="lightbox" class="lightbox">
+			<div class="lightbox-inner">
+				<img id="lightbox-image" src="" alt=""/>
+				<button type="button" id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+				<p class="lightbox-caption"><span id="lightbox-title"></span> &mdash; <span id="lightbox-info"></span><span class="lightbox-credit">taken by Rumen Bogdanovski with INDIGO and Ain Imager</span></p>
+			</div>
+		</div>
+
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script>
+			(function () {
+				var box = document.getElementById("lightbox");
+				var image = document.getElementById("lightbox-image");
+				var items = document.querySelectorAll(".gallery-item");
+				if (!box || !items.length) return;
+				var title = document.getElementById("lightbox-title");
+				var info = document.getElementById("lightbox-info");
+				function show(item) {
+					image.src = item.getAttribute("href");
+					image.alt = item.getAttribute("data-title") || "";
+					title.innerHTML = item.getAttribute("data-title") || "";
+					info.innerHTML = item.getAttribute("data-info") || "";
+					box.className = "lightbox open";
+				}
+				function hide() {
+					box.className = "lightbox";
+					image.src = "";
+				}
+				for (var i = 0; i < items.length; i++) {
+					items[i].addEventListener("click", function (event) {
+						event.preventDefault();
+						show(this);
+					});
+				}
+				document.getElementById("lightbox-close").addEventListener("click", hide);
+				box.addEventListener("click", function (event) {
+					if (event.target !== image) hide();
+				});
+				document.addEventListener("keydown", function (event) {
+					if (event.keyCode === 27) hide();
+				});
+
+				var viewport = document.getElementById("gallery-viewport");
+				var prev = document.getElementById("gallery-prev");
+				var next = document.getElementById("gallery-next");
+				if (!viewport) return;
+				function slide(direction) {
+					var step = Math.max(180, viewport.clientWidth * 0.8) * direction;
+					if (viewport.scrollTo) {
+						viewport.scrollTo({ left: viewport.scrollLeft + step, behavior: "smooth" });
+					} else {
+						viewport.scrollLeft += step;
+					}
+				}
+				function update() {
+					var max = viewport.scrollWidth - viewport.clientWidth;
+					var fits = max < 2;
+					prev.style.display = next.style.display = fits ? "none" : "";
+					prev.disabled = viewport.scrollLeft < 2;
+					next.disabled = viewport.scrollLeft > max - 2;
+				}
+				prev.addEventListener("click", function () { slide(-1); });
+				next.addEventListener("click", function () { slide(1); });
+				viewport.addEventListener("scroll", update);
+				window.addEventListener("resize", update);
+				window.addEventListener("load", update);
+				update();
+			})();
+		</script>
 	</body>
 
 </html>

@@ -14,7 +14,7 @@ Key facts:
 
 ## Site pages
 
-- [INDIGO](https://www.indigo-astronomy.org/index.html): Home page — what INDIGO is, with a short overview for users, developers and vendors.
+- [INDIGO](https://www.indigo-astronomy.org/index.html): Home page — what INDIGO is, a "Why INDIGO?" list covering speed, stability, the distributed architecture, platforms, licensing, headless operation, hardware support and automation, and a gallery of images taken with INDIGO.
 - [For Users](https://www.indigo-astronomy.org/for-users.html): Supported operating systems, running `indigo_server` with drivers, distributed setups and links to the user documentation.
 - [For Developers](https://www.indigo-astronomy.org/for-developers.html): Build prerequisites and instructions, links to client/driver development guides, protocol and property documents, and the full license text.
 - [For Vendors](https://www.indigo-astronomy.org/for-vendors.html): Information for hardware manufacturers who want a driver for their device or an embedded INDIGO server, plus the license text.
@@ -22,7 +22,7 @@ Key facts:
 - [About](https://www.indigo-astronomy.org/about.html): The INDIGO Initiative — core developers Peter Polakovič and Rumen Bogdanovski, contributors and supporting companies and institutions.
 - [Compatible hardware](https://www.indigo-astronomy.org/hardware.html): Complete table of the device drivers and agents distributed with INDIGO 3.0-3, showing for each whether it is available on Linux, macOS and Windows, and linking to its README.
 - [Compatible hardware for INDIGO 2.0](https://www.indigo-astronomy.org/hardware-2.0.html): The same table for the INDIGO 2.0-364 driver set, kept for users still running INDIGO 2.
-- [Compatible software](https://www.indigo-astronomy.org/software.html): Applications that work with INDIGO — Ain INDIGO Imager, INDIGO Control Panel, INDIGO A1, INDIGO Dashboard, PixInsight, APT, CCDciel, Ekos, PHD2.
+- [Compatible software](https://www.indigo-astronomy.org/software.html): Applications that work with INDIGO — split into INDIGO applications (Ain INDIGO Imager, INDIGO Control Panel, INDIGO A1) and third party applications (PixInsight, APT, CCDciel, Ekos, PHD2).
 - [Downloads](https://www.indigo-astronomy.org/downloads.html): APT repository setup, Debian packages for i386/amd64/armhf/arm64, macOS and Windows installers, the Windows client SDK, and how to build from source.
 - [INDIGO Sky](https://www.indigo-astronomy.org/indigo-sky.html): Raspberry Pi distribution — installation, WiFi access point and infrastructure modes, upgrading, the built-in webGUI, SSH access and troubleshooting.
 
@@ -49,5 +49,5 @@ Key facts:
 - [INDIGO Sky releases](https://github.com/indigo-astronomy/indigosky/releases): Raspberry Pi images.
 - [INDIGO Sky installation notes](https://github.com/indigo-astronomy/indigosky/blob/master/INSTALL.md): How to write and set up the image.
 - [INDIGO user group](http://bb.cloudmakers.eu/): Community forum for questions and support.
-- [CloudMakers](https://www.cloudmakers.eu/): macOS, iOS and iPadOS INDIGO applications (INDIGO A1, INDIGO Control Panel, INDIGO Dashboard) and the macOS INDIGO Server.
+- [CloudMakers](https://www.cloudmakers.eu/): macOS, iOS and iPadOS INDIGO applications (INDIGO A1, INDIGO Control Panel) and the macOS INDIGO Server.
 - Contact: indigo@cloudmakers.eu
