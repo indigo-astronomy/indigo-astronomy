@@ -556,3 +556,8 @@ details.why[open] > summary::after {
 	margin-top: -.15rem;
 	transform: rotate(-135deg);
 }
+
+/* the hero band is about a third shallower than the base shell */
+.page-hero .container, #intro .container {
+	padding-block: clamp(1.8rem, 4.6vw, 3.8rem);
+}
