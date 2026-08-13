@@ -8,8 +8,7 @@
 		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
 		<link rel="icon" href="img/favicon.ico"/>
 		<title>INDIGO | INDIGO Astronomy</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/indigo.css?v=10" type="text/css"/>
+		<link rel="stylesheet" href="css/indigo.css?v=25" type="text/css"/>
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
@@ -24,47 +23,43 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default navbar-static-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-left">
-						<li><a href="index.html">INDIGO</a></li>
+		<a class="skip-link" href="#main-content">Skip to content</a>
+		<header class="site-header">
+			<div class="container site-header__inner">
+				<a class="site-brand" href="index.html" aria-label="INDIGO Astronomy home">
+					<img src="img/logo.png" width="32" height="44" alt=""/>
+					<span>INDIGO <span>Astronomy</span></span>
+				</a>
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Open navigation</span><span></span><span></span><span></span></button>
+				<nav class="primary-nav" id="primary-nav" aria-label="Primary">
+					<ul>
+						<li><a href="index.html">Overview</a></li>
 						<li><a href="for-users.html">For Users</a></li>
-						<li><a href="for-developers.html">For Developers</a></li>
-						<li><a href="for-vendors.html">For Vendors</a></li>
-						<li class="active"><a href="hardware.html">Device drivers</a></li>
+						<li><a href="hardware.html" aria-current="page">Device drivers</a></li>
 						<li><a href="software.html">Software</a></li>
-						<li><a href="downloads.html">Downloads</a></li>
 						<li><a href="indigo-sky.html">INDIGO Sky</a></li>
 						<li><a href="faq.html">FAQ</a></li>
 						<li><a href="about.html">About</a></li>
-
+						<li><a class="nav-download" href="downloads.html">Downloads</a></li>
 					</ul>
-				</div>
+				</nav>
 			</div>
-		</nav>
+		</header>
 
 		<div id="intro">
 			<img id="logo" src="img/logo.png"/>
 			<div class="container">
 						<h1><strong>Device Drivers &amp; Agents</strong></h1>
-						<p>INDIGO distribution contains dozens device drivers and agents out of the box.</p>
+						<p>INDIGO distribution contains <span class="driver-total">135</span> device drivers and <span class="agent-total">10</span> agents out of the box.</p>
 			</div>
 		</div>
 
+		<main class="site-main" id="main-content">
 		<div class="container">
 			<div class="row">
-				<h3>Device drivers and agents distributed with INDIGO 3.0-3</h3>
 				<div class="col-sm-12">
-					<p>INDIGO 3.0-3 comes with 135 device drivers and 10 agents.
+					<h3>Device drivers and agents distributed with INDIGO 3.0-3</h3>
+					<p>INDIGO 3.0-3 comes with <span class="driver-total">135</span> device drivers and <span class="agent-total">10</span> agents.
 					The icons show on which platforms each of them is available:
 					<span class="icon-linux"></span> Linux, <span class="icon-apple"></span> macOS and
 					<span class="icon-windows"></span> Windows.</p>
@@ -74,15 +69,21 @@
 					<p>To check whether your device is supported by INDIGO, look for its driver in the
 					<a href="#drivers">list of device drivers</a> below.</p>
 					<p>The list of device drivers distributed with INDIGO 2.0 is available <a href="hardware-2.0.html">here</a>.</p>
-					<br/>
-				</div>
 
-				<h3><a id="drivers"></a>Device drivers</h3>
-				<div class="col-sm-12">
-					<table border="0">
+					<h3><a id="drivers"></a>Device drivers</h3>
+					<div class="table-tools">
+						<label for="driver-search">Search by manufacturer, device or driver
+							<input id="driver-search" type="search" placeholder="Try ZWO, mount, focuser&hellip;" autocomplete="off"/>
+						</label>
+						<span id="driver-count" aria-live="polite">135 results</span>
+					</div>
+					<table id="driver-table">
+						<caption class="sr-only">INDIGO 3.0-3 device drivers and the platforms they run on</caption>
+						<thead><tr><th scope="col">Driver</th><th scope="col">Linux</th><th scope="col">macOS</th><th scope="col">Windows</th><th scope="col">Device and documentation</th></tr></thead>
+						<tbody>
 
-						<tr><td width="200px">indigo_ccd_altair</td><td width="20px"><span class="icon-linux"></span></td><td width="20px"><span class="icon-apple"></span></td><td width="50px"><span class="icon-windows"></span></td>
-						<td width="700px">AltairAstro CCD camera, filter wheel and focuser driver
+						<tr><td>indigo_ccd_altair</td><td><span class="icon-linux"></span></td><td><span class="icon-apple"></span></td><td><span class="icon-windows"></span></td>
+						<td>AltairAstro CCD camera, filter wheel and focuser driver
 						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/ccd_altair/README.md">Read more »</a>
 						</td></tr>
 
@@ -756,16 +757,17 @@
 						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/system_ascol/README.md">Read more »</a>
 						</td></tr>
 
+						</tbody>
 					</table>
-					<br/>
-				</div>
 
-				<h3>Agents</h3>
-				<div class="col-sm-12">
-					<table border="0">
+					<h3>Agents</h3>
+					<table id="agent-table">
+						<caption class="sr-only">INDIGO 3.0-3 agents and the platforms they run on</caption>
+						<thead><tr><th scope="col">Agent</th><th scope="col">Linux</th><th scope="col">macOS</th><th scope="col">Windows</th><th scope="col">Device and documentation</th></tr></thead>
+						<tbody>
 
-						<tr><td width="200px">indigo_agent_alpaca</td><td width="20px"><span class="icon-linux"></span></td><td width="20px"><span class="icon-apple"></span></td><td width="50px"><span class="icon-windows"></span></td>
-						<td width="700px">ASCOM ALPACA bridge agent
+						<tr><td>indigo_agent_alpaca</td><td><span class="icon-linux"></span></td><td><span class="icon-apple"></span></td><td><span class="icon-windows"></span></td>
+						<td>ASCOM ALPACA bridge agent
 						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/agent_alpaca/README.md">Read more »</a>
 						</td></tr>
 
@@ -814,23 +816,50 @@
 						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/agent_snoop/README.md">Read more »</a>
 						</td></tr>
 
+						</tbody>
 					</table>
-					<br/>
 				</div>
 			</div>
 		</div>
+		</main>
 
 		<footer class="footer">
 			<div class="container">
-				<p class="social">
-					<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
-					<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
-					<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
-				</p>
-				<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+				<div class="footer-grid">
+					<div class="footer-about">
+						<h2>INDIGO Astronomy</h2>
+						<p>Open source astronomical imaging and instrument control software for
+						observatories, remote setups and backyard telescopes.</p>
+					</div>
+					<div>
+						<h2>Resources</h2>
+						<ul>
+							<li><a href="for-developers.html">For Developers</a></li>
+							<li><a href="for-vendors.html">For Vendors</a></li>
+							<li><a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/HOME.md" target="_new">Documentation</a></li>
+							<li><a href="https://github.com/indigo-astronomy/indigo/blob/master/CHANGELOG.md" target="_new">Release notes</a></li>
+						</ul>
+					</div>
+					<div>
+						<h2>Community</h2>
+						<ul>
+							<li><a href="https://github.com/indigo-astronomy/indigo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+							<li><a href="http://bb.cloudmakers.eu/" target="_blank" rel="noopener noreferrer">User group</a></li>
+							<li><a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+							<li><a href="mailto:indigo@cloudmakers.eu">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="social">
+						<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
+						<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
+						<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
+					</p>
+					<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+				</div>
 			</div>
 		</footer>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="js/site.js"></script>
 	</body>
 </html>

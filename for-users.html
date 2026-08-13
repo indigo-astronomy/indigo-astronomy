@@ -8,8 +8,7 @@
 		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
 		<link rel="icon" href="img/favicon.ico"/>
 		<title>INDIGO | INDIGO Astronomy</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/indigo.css?v=10" type="text/css"/>
+		<link rel="stylesheet" href="css/indigo.css?v=25" type="text/css"/>
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
@@ -24,33 +23,28 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default navbar-static-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-left">
-						<li><a href="index.html">INDIGO</a></li>
-						<li class="active"><a href="for-users.html">For Users</a></li>
-						<li><a href="for-developers.html">For Developers</a></li>
-						<li><a href="for-vendors.html">For Vendors</a></li>
+		<a class="skip-link" href="#main-content">Skip to content</a>
+		<header class="site-header">
+			<div class="container site-header__inner">
+				<a class="site-brand" href="index.html" aria-label="INDIGO Astronomy home">
+					<img src="img/logo.png" width="32" height="44" alt=""/>
+					<span>INDIGO <span>Astronomy</span></span>
+				</a>
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Open navigation</span><span></span><span></span><span></span></button>
+				<nav class="primary-nav" id="primary-nav" aria-label="Primary">
+					<ul>
+						<li><a href="index.html">Overview</a></li>
+						<li><a href="for-users.html" aria-current="page">For Users</a></li>
 						<li><a href="hardware.html">Device drivers</a></li>
 						<li><a href="software.html">Software</a></li>
-						<li><a href="downloads.html">Downloads</a></li>
 						<li><a href="indigo-sky.html">INDIGO Sky</a></li>
 						<li><a href="faq.html">FAQ</a></li>
 						<li><a href="about.html">About</a></li>
-
+						<li><a class="nav-download" href="downloads.html">Downloads</a></li>
 					</ul>
-				</div>
+				</nav>
 			</div>
-		</nav>
+		</header>
 
 		<div id="intro">
 		<img id="logo" src="img/logo.png"/>
@@ -62,12 +56,15 @@
 			</div>
 		</div>
 
+		<main class="site-main" id="main-content">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 					<h3>Supported operating systems</h3>
-					<p>Even though INDIGO is truly multi platform framework, some of its parts are tied to POSIX operating
-					systems, so first make sure INDIGO is really what you need.</p>
+					<p>INDIGO is a truly multi platform framework. Client applications run on every desktop and
+					mobile system, and the server side runs on Linux and macOS today. INDIGO 3 also builds and runs
+					on Windows and most of the drivers are already ported to it, but the Windows server is not
+					released yet, so for now a server needs Linux or macOS.</p>
 					
 					<p>The client application, the piece of the software you communicate with, can run virtually on any
 					operating system. For example Ain INDIGO Imager suite, runs on Linux and Windows and CloudMakers
@@ -82,12 +79,13 @@
 						<!-- <img width="30%" src="img/ekos.jpg"/> -->
 					</center></p>
 					
-					<p>On the other hand the server, the piece of software which communicates with the devices, can run
-					only in Linux or macOS for now.</p>
+					<p>On the other hand the server, the piece of software which communicates with the devices, runs
+					on Linux and macOS for now. The Windows version of the server is coming, and you can follow which
+					drivers are already ported to it in the <a href="hardware.html">list of device drivers</a>.</p>
 					
-					<p>So if both the server and client run on the same machine, you're limited to unix systems like Linux or
-					macOS.  If they run on different machines (it is often called a distributed setup) you can also use Windows, iOS or iPadOS
-					on the client side.</p>
+					<p>So if both the server and client run on the same machine, you are limited to Linux or macOS until
+					the Windows server is released. If they run on different machines (it is often called a distributed
+					setup) you can use Windows, iOS or iPadOS on the client side today.</p>
 					
 					<p>Even if you have only a Windows machine and if you're not a Linux guru, you're not necessarily out of luck.
 					With a tinny and cheap Linux microcomputer like RaspberryPi and <a href="indigo-sky.html">INDIGO Sky</a> software
@@ -146,18 +144,46 @@
 			</div>
 		</div>
 
+		</main>
+
 		<footer class="footer">
 			<div class="container">
-				<p class="social">
-					<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
-					<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
-					<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
-				</p>
-				<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+				<div class="footer-grid">
+					<div class="footer-about">
+						<h2>INDIGO Astronomy</h2>
+						<p>Open source astronomical imaging and instrument control software for
+						observatories, remote setups and backyard telescopes.</p>
+					</div>
+					<div>
+						<h2>Resources</h2>
+						<ul>
+							<li><a href="for-developers.html">For Developers</a></li>
+							<li><a href="for-vendors.html">For Vendors</a></li>
+							<li><a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/HOME.md" target="_new">Documentation</a></li>
+							<li><a href="https://github.com/indigo-astronomy/indigo/blob/master/CHANGELOG.md" target="_new">Release notes</a></li>
+						</ul>
+					</div>
+					<div>
+						<h2>Community</h2>
+						<ul>
+							<li><a href="https://github.com/indigo-astronomy/indigo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+							<li><a href="http://bb.cloudmakers.eu/" target="_blank" rel="noopener noreferrer">User group</a></li>
+							<li><a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+							<li><a href="mailto:indigo@cloudmakers.eu">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="social">
+						<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
+						<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
+						<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
+					</p>
+					<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+				</div>
 			</div>
 		</footer>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="js/site.js"></script>
 	</body>
 
 </html>

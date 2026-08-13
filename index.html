@@ -8,8 +8,7 @@
 		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
 		<link rel="icon" href="img/favicon.ico"/>
 		<title>INDIGO | INDIGO Astronomy</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/indigo.css?v=10" type="text/css"/>
+		<link rel="stylesheet" href="css/indigo.css?v=25" type="text/css"/>
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
@@ -25,44 +24,44 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default navbar-static-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-left">
-						<li class="active"><a href="index.html">INDIGO</a></li>
+		<a class="skip-link" href="#main-content">Skip to content</a>
+		<header class="site-header">
+			<div class="container site-header__inner">
+				<a class="site-brand" href="index.html" aria-label="INDIGO Astronomy home">
+					<img src="img/logo.png" width="32" height="44" alt=""/>
+					<span>INDIGO <span>Astronomy</span></span>
+				</a>
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Open navigation</span><span></span><span></span><span></span></button>
+				<nav class="primary-nav" id="primary-nav" aria-label="Primary">
+					<ul>
+						<li><a href="index.html" aria-current="page">Overview</a></li>
 						<li><a href="for-users.html">For Users</a></li>
-						<li><a href="for-developers.html">For Developers</a></li>
-						<li><a href="for-vendors.html">For Vendors</a></li>
 						<li><a href="hardware.html">Device drivers</a></li>
 						<li><a href="software.html">Software</a></li>
-						<li><a href="downloads.html">Downloads</a></li>
 						<li><a href="indigo-sky.html">INDIGO Sky</a></li>
 						<li><a href="faq.html">FAQ</a></li>
 						<li><a href="about.html">About</a></li>
-
+						<li><a class="nav-download" href="downloads.html">Downloads</a></li>
 					</ul>
-				</div>
+				</nav>
 			</div>
-		</nav>
+		</header>
 
 		<div id="intro">
 			<img id="logo" src="img/logo.png"/>
 			<div class="container">
+				<p class="eyebrow">Open source &middot; Multiplatform &middot; Distributed</p>
 				<h1><strong>Welcome to INDIGO</strong></h1>
 				<p>Astronomical imaging and instrument control software for observatories,
 				remote setups and backyard telescopes.</p>
-				<p><span class="label label-success" style="font-size:1em;">New</span> &nbsp;<strong>INDIGO 3 is now available!</strong> &nbsp;<a href="downloads.html" style="color:#fff;text-decoration:underline;">Download now &raquo;</a></p>
+				<div class="button-row">
+					<a class="button button--light" href="downloads.html">Download INDIGO 3</a>
+					<a class="button button--ghost" href="hardware.html">Check your hardware</a>
+				</div>
 			</div>
 		</div>
 
+		<main class="site-main" id="main-content">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -134,22 +133,69 @@
 					<h3>Getting started</h3>
 					<p>Install INDIGO from the <a href="downloads.html">Downloads</a> page, check that your
 					equipment is supported in the <a href="hardware.html">list of device drivers</a> and pick
-					an application from the <a href="software.html">compatible software</a> page. If you are a
-					developer or a hardware vendor, the <a href="for-developers.html">For Developers</a> and
-					<a href="for-vendors.html">For Vendors</a> pages are the place to start.</p>
+					an application from the <a href="software.html">compatible software</a> page.</p>
+					<div class="card-grid">
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">01</div>
+							<h2>Astronomers</h2>
+							<p>Install INDIGO, connect your equipment and choose an imaging or control application.</p>
+							<p><a href="for-users.html">Get started with INDIGO &rarr;</a></p>
+						</article>
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">02</div>
+							<h2>Developers</h2>
+							<p>Build clients, device drivers and automation agents on a portable ANSI C framework.</p>
+							<p><a href="for-developers.html">Read developer documentation &rarr;</a></p>
+						</article>
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">03</div>
+							<h2>Vendors</h2>
+							<p>Support Linux, macOS and Windows clients through one permissively licensed integration.</p>
+							<p><a href="for-vendors.html">Integrate your hardware &rarr;</a></p>
+						</article>
+					</div>
 					<br/>
 				</div>
 			</div>
 		</div>
 
+		</main>
+
 		<footer class="footer">
 			<div class="container">
-				<p class="social">
-					<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
-					<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
-					<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
-				</p>
-				<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+				<div class="footer-grid">
+					<div class="footer-about">
+						<h2>INDIGO Astronomy</h2>
+						<p>Open source astronomical imaging and instrument control software for
+						observatories, remote setups and backyard telescopes.</p>
+					</div>
+					<div>
+						<h2>Resources</h2>
+						<ul>
+							<li><a href="for-developers.html">For Developers</a></li>
+							<li><a href="for-vendors.html">For Vendors</a></li>
+							<li><a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/HOME.md" target="_new">Documentation</a></li>
+							<li><a href="https://github.com/indigo-astronomy/indigo/blob/master/CHANGELOG.md" target="_new">Release notes</a></li>
+						</ul>
+					</div>
+					<div>
+						<h2>Community</h2>
+						<ul>
+							<li><a href="https://github.com/indigo-astronomy/indigo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+							<li><a href="http://bb.cloudmakers.eu/" target="_blank" rel="noopener noreferrer">User group</a></li>
+							<li><a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+							<li><a href="mailto:indigo@cloudmakers.eu">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="social">
+						<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
+						<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
+						<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
+					</p>
+					<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+				</div>
 			</div>
 		</footer>
 		<div id="lightbox" class="lightbox">
@@ -160,70 +206,7 @@
 			</div>
 		</div>
 
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script>
-			(function () {
-				var box = document.getElementById("lightbox");
-				var image = document.getElementById("lightbox-image");
-				var items = document.querySelectorAll(".gallery-item");
-				if (!box || !items.length) return;
-				var title = document.getElementById("lightbox-title");
-				var info = document.getElementById("lightbox-info");
-				var credit = document.getElementById("lightbox-credit");
-				function show(item) {
-					image.src = item.getAttribute("href");
-					image.alt = item.getAttribute("data-title") || "";
-					title.innerHTML = item.getAttribute("data-title") || "";
-					info.innerHTML = item.getAttribute("data-info") || "";
-					credit.innerHTML = item.getAttribute("data-credit") || "";
-					box.className = "lightbox open";
-				}
-				function hide() {
-					box.className = "lightbox";
-					image.src = "";
-				}
-				for (var i = 0; i < items.length; i++) {
-					items[i].addEventListener("click", function (event) {
-						event.preventDefault();
-						show(this);
-					});
-				}
-				document.getElementById("lightbox-close").addEventListener("click", hide);
-				box.addEventListener("click", function (event) {
-					if (event.target !== image) hide();
-				});
-				document.addEventListener("keydown", function (event) {
-					if (event.keyCode === 27) hide();
-				});
-
-				var viewport = document.getElementById("gallery-viewport");
-				var prev = document.getElementById("gallery-prev");
-				var next = document.getElementById("gallery-next");
-				if (!viewport) return;
-				function slide(direction) {
-					var step = Math.max(180, viewport.clientWidth * 0.8) * direction;
-					if (viewport.scrollTo) {
-						viewport.scrollTo({ left: viewport.scrollLeft + step, behavior: "smooth" });
-					} else {
-						viewport.scrollLeft += step;
-					}
-				}
-				function update() {
-					var max = viewport.scrollWidth - viewport.clientWidth;
-					var fits = max < 2;
-					prev.style.display = next.style.display = fits ? "none" : "";
-					prev.disabled = viewport.scrollLeft < 2;
-					next.disabled = viewport.scrollLeft > max - 2;
-				}
-				prev.addEventListener("click", function () { slide(-1); });
-				next.addEventListener("click", function () { slide(1); });
-				viewport.addEventListener("scroll", update);
-				window.addEventListener("resize", update);
-				window.addEventListener("load", update);
-				update();
-			})();
-		</script>
+		<script src="js/site.js"></script>
 	</body>
 
 </html>

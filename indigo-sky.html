@@ -8,8 +8,7 @@
 		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
 		<link rel="icon" href="img/favicon.ico"/>
 		<title>INDIGO | INDIGO Astronomy</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/indigo.css?v=10" type="text/css"/>
+		<link rel="stylesheet" href="css/indigo.css?v=25" type="text/css"/>
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
@@ -24,33 +23,28 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default navbar-static-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-left">
-						<li><a href="index.html">INDIGO</a></li>
+		<a class="skip-link" href="#main-content">Skip to content</a>
+		<header class="site-header">
+			<div class="container site-header__inner">
+				<a class="site-brand" href="index.html" aria-label="INDIGO Astronomy home">
+					<img src="img/logo.png" width="32" height="44" alt=""/>
+					<span>INDIGO <span>Astronomy</span></span>
+				</a>
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Open navigation</span><span></span><span></span><span></span></button>
+				<nav class="primary-nav" id="primary-nav" aria-label="Primary">
+					<ul>
+						<li><a href="index.html">Overview</a></li>
 						<li><a href="for-users.html">For Users</a></li>
-						<li><a href="for-developers.html">For Developers</a></li>
-						<li><a href="for-vendors.html">For Vendors</a></li>
 						<li><a href="hardware.html">Device drivers</a></li>
 						<li><a href="software.html">Software</a></li>
-						<li><a href="downloads.html">Downloads</a></li>
-						<li class="active"><a href="indigo-sky.html">INDIGO Sky</a></li>
+						<li><a href="indigo-sky.html" aria-current="page">INDIGO Sky</a></li>
 						<li><a href="faq.html">FAQ</a></li>
 						<li><a href="about.html">About</a></li>
-
+						<li><a class="nav-download" href="downloads.html">Downloads</a></li>
 					</ul>
-				</div>
+				</nav>
 			</div>
-		</nav>
+		</header>
 
 		<div id="intro">
 			<img id="logo" src="img/logo.png"/>
@@ -60,7 +54,15 @@
 			</div>
 		</div>
 
+		<main class="site-main" id="main-content">
 		<div class="container">
+			<nav class="on-this-page" aria-label="On this page">
+				<strong>On this page:</strong>
+				<a href="#wifi">Wi-Fi setup</a>
+				<a href="#remote-control">Remote control</a>
+				<a href="#env">Environment variables</a>
+				<a href="#issues">Troubleshooting</a>
+			</nav>
 			<div class="row">
 				<div class="col-sm-12">
 					<h3>Introduction</h3>
@@ -75,7 +77,7 @@
 						<li><b>Raspberry Pi 4 Mod. B</b> runs with 32 and 64-bit images  (32-bit image recommended for 1GB model) </li>
 						<li><b>Raspberry Pi 5 </b> runs with 32 and 64-bit bookworm images  (64-bit image recommended, <b>only Bookworm images will work</b>) </li>
 					</ul>
-					<p>Download the appropriate image with INDIGO 3 for Raspberry Pi 3, 4 and 5 (based on Debian 12 Bookworm) <span class="label label-success" style="font-size:1em;">New</span>:
+					<p>Download the appropriate image with INDIGO 3 for Raspberry Pi 3, 4 and 5 (based on Debian 12 Bookworm) <span class="label label-success">New</span>:
 					<ul>
 						<li><a href="https://github.com/indigo-astronomy/indigosky/releases/download/2026-07-11/2026-07-11-indigosky-indigo3-armhf.zip">
 							2026-07-11-indigosky-indigo3-armhf.zip</a> - 32-bit Operating system for RPi 3, RPi 4 and RPi 5
@@ -116,7 +118,7 @@
 					<a href="https://github.com/indigo-astronomy/indigosky/blob/master/INSTALL.md">here</a>.</p>
 					<p><center><img width="50%" src="img/indigo-sky.jpg"></center></p>
 
-					<h3>Change Password or SSID</h3>
+					<h3 id="wifi">Change Password or SSID</h3>
 					<p>It is strongly recommended to change the password. Open your browser and visit
 					web GUI to open the INDIGO web manager.</p>
 
@@ -189,7 +191,7 @@
 					is available, then the time and date information is received from Internet time servers.
 					The time and date of INDIGO client is still used as the reference for INDIGO Sky.</p>
 
-					<h3>Remote control with built-in webGUI</h3>
+					<h3 id="remote-control">Remote control with built-in webGUI</h3>
 					<p>The server can be configured and used with a built-in webGUI providing the basic control of imager, guider and mount agents.</p>
 
 					<p><center><img width="50%" src="img/indigosky1.jpg"/></center></p>
@@ -307,18 +309,46 @@
 			</div>
 		</div>
 
+		</main>
+
 		<footer class="footer">
 			<div class="container">
-				<p class="social">
-					<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
-					<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
-					<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
-				</p>
-				<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+				<div class="footer-grid">
+					<div class="footer-about">
+						<h2>INDIGO Astronomy</h2>
+						<p>Open source astronomical imaging and instrument control software for
+						observatories, remote setups and backyard telescopes.</p>
+					</div>
+					<div>
+						<h2>Resources</h2>
+						<ul>
+							<li><a href="for-developers.html">For Developers</a></li>
+							<li><a href="for-vendors.html">For Vendors</a></li>
+							<li><a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/HOME.md" target="_new">Documentation</a></li>
+							<li><a href="https://github.com/indigo-astronomy/indigo/blob/master/CHANGELOG.md" target="_new">Release notes</a></li>
+						</ul>
+					</div>
+					<div>
+						<h2>Community</h2>
+						<ul>
+							<li><a href="https://github.com/indigo-astronomy/indigo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+							<li><a href="http://bb.cloudmakers.eu/" target="_blank" rel="noopener noreferrer">User group</a></li>
+							<li><a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+							<li><a href="mailto:indigo@cloudmakers.eu">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="social">
+						<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
+						<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
+						<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
+					</p>
+					<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+				</div>
 			</div>
 		</footer>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="js/site.js"></script>
 	</body>
 
 </html>
