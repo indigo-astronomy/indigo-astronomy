@@ -8,7 +8,7 @@
 		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
 		<link rel="icon" href="img/favicon.ico"/>
 		<title>INDIGO | INDIGO Astronomy</title>
-		<link rel="stylesheet" href="css/indigo.css?v=35" type="text/css"/>
+		<link rel="stylesheet" href="css/indigo.css?v=38" type="text/css"/>
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
@@ -48,7 +48,7 @@
 		<div id="intro">
 			<img id="logo" src="img/logo.png"/>
 			<div class="container">
-						<h1><strong>Device drivers &amp; agents</strong></h1>
+						<h1><strong>Device Drivers &amp; Agents</strong></h1>
 						<p>INDIGO distribution contains <span class="driver-total">135</span> device drivers and <span class="agent-total">10</span> agents out of the box.</p>
 			</div>
 		</div>
@@ -57,7 +57,23 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h3>Device drivers and agents distributed with INDIGO 3.0-3</h3>
+					<div class="card-grid cards-2">
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">D</div>
+
+							<h2>Device drivers</h2>
+							<p><span class="driver-total">135</span> drivers for cameras, mounts, focusers, filter wheels, domes, rotators, adaptive optics, GPS and auxiliary devices.</p>
+							<p><a href="#drivers">Browse the drivers &rarr;</a></p>
+						</article>
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">A</div>
+							<h2>Agents</h2>
+							<p><span class="agent-total">10</span> agents that carry out imaging, guiding, focusing and plate solving on the server itself.</p>
+							<p><a href="#agents">Browse the agents &rarr;</a></p>
+						</article>
+					</div>
+
+					<h2>Device drivers and agents distributed with INDIGO 3.0-3</h2>
 					<p>INDIGO 3.0-3 comes with <span class="driver-total">135</span> device drivers and <span class="agent-total">10</span> agents.
 					The icons show on which platforms each of them is available:
 					<span class="icon-linux"></span> Linux, <span class="icon-apple"></span> macOS and
@@ -69,7 +85,8 @@
 					<a href="#drivers">list of device drivers</a> below.</p>
 					<p>The list of device drivers distributed with INDIGO 2.0 is available <a href="hardware-2.0.html">here</a>.</p>
 
-					<h3><a id="drivers"></a>Device drivers</h3>
+
+					<h2><a id="drivers"></a>Device drivers</h2>
 					<div class="table-tools">
 						<label for="driver-search">Search by manufacturer, device or driver
 							<input id="driver-search" type="search" placeholder="Try ZWO, mount, focuser&hellip;" autocomplete="off"/>
@@ -759,7 +776,7 @@
 						</tbody>
 					</table>
 
-					<h3>Agents</h3>
+					<h2><a id="agents"></a>Agents</h2>
 					<table id="agent-table">
 						<caption class="sr-only">INDIGO 3.0-3 agents and the platforms they run on</caption>
 						<thead><tr><th scope="col">Agent</th><th scope="col">Linux</th><th scope="col">macOS</th><th scope="col">Windows</th><th scope="col">Device and documentation</th></tr></thead>

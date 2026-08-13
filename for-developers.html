@@ -8,7 +8,7 @@
 		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
 		<link rel="icon" href="img/favicon.ico"/>
 		<title>INDIGO | INDIGO Astronomy</title>
-		<link rel="stylesheet" href="css/indigo.css?v=35" type="text/css"/>
+		<link rel="stylesheet" href="css/indigo.css?v=38" type="text/css"/>
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
@@ -63,7 +63,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 
-					<h3>Obtaining and building the code</h3>
+					<h2>Obtaining and building the code</h2>
 					<p>Make sure that you have all prerequisites installed. On Ubuntu / Debian / Raspian use:</p>
 					<p><mark>$ sudo apt-get install build-essential autoconf autotools-dev libtool cmake libudev-dev libavahi-compat-libdnssd-dev libusb-1.0-0-dev libcurl4-gnutls-dev libgphoto2-dev libz-dev git curl patchelf bsdmainutils</mark></p>
 					<p>It is advised to remove libraw1394-dev as the build may fail if it is installed</p>
@@ -76,12 +76,12 @@
 					<p><mark>$ build/bin/indigo_server indigo_ccd_asi [other drivers]</mark></p>
 					<p>and connect from any INDIGO client or WEB browser to port 7624...</p>
 
-					<h3>INDIGO Development Documents</h3>
+					<h2>INDIGO Development Documents</h2>
 					<p>The complete documentation is available in the <a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/HOME.md">INDIGO documentation index</a>.</p>
-					<h4>Getting started</h4>
+					<h3>Getting started</h3>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/DEVELOPMENT.md">Introduction to INDIGO development</a> - the bus, devices, clients, agents and drivers explained</p>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/MAKEFILES.md">INDIGO makefiles</a> - how the build system is organized</p>
-					<h4>Driver development</h4>
+					<h3>Driver development</h3>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/DRIVER_DEVELOPMENT_BASICS.md">Basics of INDIGO Driver Development</a> - a brief <b>driver</b> development guide with examples</p>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/DRIVER_GENERATOR_MIGRATION.md">INDIGO Driver Generator - Migration Guide</a> - migrating a driver to the code generator</p>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_DEVICE_ACCESS_CONTROL_AND_LOCKING.md">INDIGO Device Access Control and Exclusive Lock System</a> - how device locking works</p>
@@ -89,13 +89,13 @@
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/CCD_DRIVER_SAVED_IMAGES.md">Saving images from the camera driver</a> - how a camera driver stores the captured images</p>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/SERIAL_DEVICE_SIMULATORS.md">Serial Device Simulators</a> - testing a driver without the real hardware</p>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDI-COMPARISON.md">INDI conversion</a> - mapping of the INDI properties and items to INDIGO</p>
-					<h4>Client development</h4>
+					<h3>Client development</h3>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/CLIENT_DEVELOPMENT_BASICS.md">Basics of INDIGO Client Development</a> - a brief <b>client</b> development guide with examples</p>
-					<h4>Protocols, properties and data formats</h4>
+					<h3>Protocols, properties and data formats</h3>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PROTOCOLS.md">INDIGO Protocols</a> - description of the INDIGO protocols</p>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PROPERTIES.md">INDIGO Properties</a> - list of INDIGO properties, their items and mapping to legacy INDI protocol</p>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_RAW_IMAGE_FORMAT.md">INDIGO Raw Image Format</a> - the raw image format used by INDIGO</p>
-					<h4>Documents for both users and developers</h4>
+					<h3>Documents for both users and developers</h3>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SERVER_AND_DRIVERS_GUIDE.md">Guide to indigo_server and INDIGO Drivers</a> - how to start the server, load and configure drivers</p>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_AGENTS.md">INDIGO Agents</a> - what the agents are and how to use them</p>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SCRIPT_GUIDE.md">INDIGO Scripting Guide</a> - writing scripts for the scripting agent</p>
@@ -103,8 +103,8 @@
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/agent_scripting/library/Sequencer.md">Script based Sequencer</a> - ready to use sequencer built on the scripting agent</p>
 					<p><a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/PROPERTY_MANIPULATION.md">INDIGO Property Manipulation in Examples</a> - controlling INDIGO from the command line with indigo_prop_tool</p>
 
-					<h3>This is INDIGO license if you want to use the code</h3>
-					<h4><strong>INDIGO Astronomy open-source license (version 2.0, December 2020)</strong></h4>
+					<h2>This is INDIGO license if you want to use the code</h2>
+					<h3><strong>INDIGO Astronomy open-source license (version 2.0, December 2020)</strong></h3>
 					<p>Copyright (c) 2020 CloudMakers, s. r. o.</p>
 					<p>Copyright (c) 2020 Rumen G.Bogdanovski</p>
 					<p>Redistribution and use in source and binary forms, with or without

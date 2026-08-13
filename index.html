@@ -8,7 +8,7 @@
 		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
 		<link rel="icon" href="img/favicon.ico"/>
 		<title>INDIGO | INDIGO Astronomy</title>
-		<link rel="stylesheet" href="css/indigo.css?v=35" type="text/css"/>
+		<link rel="stylesheet" href="css/indigo.css?v=38" type="text/css"/>
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
@@ -64,7 +64,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h3>What is INDIGO?</h3>
+					<h2>What is INDIGO?</h2>
 					<p>INDIGO is astronomical imaging and instrument control software for both professional
 					observatories and amateur astronomers. It controls cameras, mounts, focusers, filter
 					wheels, domes and the rest of the equipment, and it takes care of the imaging, guiding,
@@ -95,41 +95,19 @@
 						<button type="button" id="gallery-next" class="gallery-nav next" aria-label="Next images"><span class="arrow"></span></button>
 					</div>
 
-					<h3>Why INDIGO?</h3>
-					<details class="why">
-						<summary>1. Fast and efficient</summary>
-						<p>INDIGO is a software bus, not a chain of pipes. Drivers, agents and clients can run in a single process, where a property change is a function call instead of a round trip through a socket &mdash; in the best case up to 1000 times faster than systems that run each driver as a separate process. Less CPU and less memory also mean longer battery life in the field.</p>
-					</details>
-					<details class="why">
-						<summary>2. Stability is priority</summary>
-						<p>Stability comes before features. The framework is written in ANSI C, the wire protocol is versioned and stays backward compatible, and the project is managed conservatively to protect the work of everybody who integrates with it. Drivers are tested against the real hardware whenever it is available.</p>
-					</details>
-					<details class="why">
-						<summary>3. Distributed</summary>
-						<p>Every part of a setup runs where it makes sense: the server on a small computer next to the mount, the client on your desktop, laptop or tablet. Services announce themselves on the network, so clients discover them without any configuration. Bigger setups are not limited to a single server either: one INDIGO server can attach the bus of another, so a mount controlled by one computer and cameras attached to another appear as a single setup, and a client can be connected to several servers at the same time. The very same drivers can also be linked directly into an application when no network is involved.</p>
-					</details>
-					<details class="why">
-						<summary>4. Multiplatform</summary>
-						<p>Servers and drivers run on Linux and macOS, and the Windows server is on its way &mdash; most drivers are already ported to it. Client applications run on Linux, macOS, Windows, iOS and iPadOS. The same code scales from a Raspberry Pi to a workstation.</p>
-					</details>
-					<details class="why">
-						<summary>5. Headless operation</summary>
-						<p>INDIGO Server needs no display. Start it on a headless machine and control it from any INDIGO application on your desktop, laptop or tablet &mdash; or from the built-in web panel, when a browser is all you have at hand. Imaging sequences, guiding, focusing, mount control and plate solving are carried out by INDIGO agents running on the server itself, so once started they keep running on their own, with no client connected at all. You can close the application, put the laptop to sleep or lose the WiFi, and connect again later to check how the night is going.</p>
-					</details>
-					<details class="why">
-						<summary>6. Wide hardware support</summary>
-						<p>Over 130 device drivers and 10 agents are distributed with INDIGO 3.0, covering cameras, mounts, focusers, filter wheels, domes, rotators, adaptive optics, GPS and auxiliary devices. Legacy INDI style drivers can be used as well, and the ALPACA agent exposes INDIGO devices to ASCOM clients. <a href="hardware.html">See the full list &raquo;</a></p>
-					</details>
-					<details class="why">
-						<summary>7. Made to be automated</summary>
-						<p>Whole observing sequences can be written as scripts and executed by the scripting agent on the server, and any property can be manipulated straight from the command line with indigo_prop_tool &mdash; handy for cron jobs, remote observatories and roll-off roof setups.</p>
-					</details>
-					<details class="why">
-						<summary>8. Open source & Permissive license</summary>
-						<p>INDIGO is open source under the INDIGO Astronomy open-source license, a BSD style, business friendly license. No GPL, so hardware vendors and commercial applications can build on INDIGO and ship it, including through application stores.</p>
-					</details>
+					<h2>Why INDIGO?</h2>
+					<ul class="why-list">
+						<li><strong>Fast and efficient</strong> &mdash; INDIGO is a software bus, not a chain of pipes. Drivers, agents and clients can run in a single process, where a property change is a function call instead of a round trip through a socket &mdash; in the best case up to 1000 times faster than systems that run each driver as a separate process. Less CPU and less memory also mean longer battery life in the field.</li>
+						<li><strong>Stability is priority</strong> &mdash; Stability comes before features. The framework is written in ANSI C, the wire protocol is versioned and stays backward compatible, and the project is managed conservatively to protect the work of everybody who integrates with it. Drivers are tested against the real hardware whenever it is available.</li>
+						<li><strong>Distributed</strong> &mdash; Every part of a setup runs where it makes sense: the server on a small computer next to the mount, the client on your desktop, laptop or tablet. Services announce themselves on the network, so clients discover them without any configuration. Bigger setups are not limited to a single server either: one INDIGO server can attach the bus of another, so a mount controlled by one computer and cameras attached to another appear as a single setup, and a client can be connected to several servers at the same time. The very same drivers can also be linked directly into an application when no network is involved.</li>
+						<li><strong>Multiplatform</strong> &mdash; Servers and drivers run on Linux and macOS, and the Windows server is on its way &mdash; most drivers are already ported to it. Client applications run on Linux, macOS, Windows, iOS and iPadOS. The same code scales from a Raspberry Pi to a workstation.</li>
+						<li><strong>Headless operation</strong> &mdash; INDIGO Server needs no display. Start it on a headless machine and control it from any INDIGO application on your desktop, laptop or tablet &mdash; or from the built-in web panel, when a browser is all you have at hand. Imaging sequences, guiding, focusing, mount control and plate solving are carried out by INDIGO agents running on the server itself, so once started they keep running on their own, with no client connected at all. You can close the application, put the laptop to sleep or lose the WiFi, and connect again later to check how the night is going.</li>
+						<li><strong>Wide hardware support</strong> &mdash; Over 130 device drivers and 10 agents are distributed with INDIGO 3.0, covering cameras, mounts, focusers, filter wheels, domes, rotators, adaptive optics, GPS and auxiliary devices. Legacy INDI style drivers can be used as well, and the ALPACA agent exposes INDIGO devices to ASCOM clients. <a href="hardware.html">See the full list &raquo;</a></li>
+						<li><strong>Made to be automated</strong> &mdash; Whole observing sequences can be written as scripts and executed by the scripting agent on the server, and any property can be manipulated straight from the command line with indigo_prop_tool &mdash; handy for cron jobs, remote observatories and roll-off roof setups.</li>
+						<li><strong>Open source & Permissive license</strong> &mdash; INDIGO is open source under the INDIGO Astronomy open-source license, a BSD style, business friendly license. No GPL, so hardware vendors and commercial applications can build on INDIGO and ship it, including through application stores.</li>
+					</ul>
 
-					<h3>Getting started</h3>
+					<h2>Getting started</h2>
 					<p>Install INDIGO framework from the <a href="downloads.html">Downloads</a> page, check that your
 					equipment is supported in the <a href="hardware.html">list of device drivers</a> and pick
 					a client application from the <a href="software.html">compatible software</a> page.</p>

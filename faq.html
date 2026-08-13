@@ -8,7 +8,7 @@
 		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
 		<link rel="icon" href="img/favicon.ico"/>
 		<title>INDIGO | INDIGO Astronomy</title>
-		<link rel="stylesheet" href="css/indigo.css?v=35" type="text/css"/>
+		<link rel="stylesheet" href="css/indigo.css?v=38" type="text/css"/>
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
 			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
@@ -56,9 +56,9 @@
 		<main class="site-main" id="main-content">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm-12 faq">
 		<a name="why"></a>
-				<h3>First of all… why another standard?</h3>
+				<h2>First of all… why another standard?</h2>
 				<p>Yes, there are other standards and initiatives for astronomy software development.
 				Some of them well established, accepted by the industry, nevertheless Windows only,
 				locked to .Net technologies and without any clear strategy towards IoT and distributed
@@ -74,7 +74,7 @@
 				in INDI, INDIGO wire protocol version is coupled with the rest of framework.</p>
 
 		<a name="design"></a>
-				<h3>What are design requirements and limitations?</h3>
+				<h2>What are design requirements and limitations?</h2>
 				<p>This is a current list of requirements taken into consideration:</p>
 				<ol>
 				<li>No GPL code used to allow commercial use under application stores licenses.</li>
@@ -91,7 +91,7 @@
 				</ol>
 
 		<a name="indigo_is_not_indi"></a>
-		<h3>Is INDIGO a fork of INDI?</h3>
+		<h2>Is INDIGO a fork of INDI?</h2>
 		<p>No. INDIGO is not INDI and it is not a fork, a rewrite or a branch of it. It is
 		a separate and independent project, written from the ground up, and it is an
 		alternative to INDI rather than a part of it.</p>
@@ -102,7 +102,7 @@
 		around scalability, stability and robustness.</p>
 
 		<a name="indigo_vs_indi"></a>
-		<h3>What are the differences between INDIGO and INDI?</h3>
+		<h2>What are the differences between INDIGO and INDI?</h2>
 		<p>The most important technical difference is the architecture. While in INDI drivers
 		and clients are connected only over a pipe or network connection and each of them is
 		a standalone proces, in INDIGO drivers, agents and clients are connected to a software
@@ -118,7 +118,7 @@
 		to the integration.</p>
 
 		<a name="indigo_vs_ascom"></a>
-		<h3>What are the differences between INDIGO and ASCOM/ALPACA?</h3>
+		<h2>What are the differences between INDIGO and ASCOM/ALPACA?</h2>
 		<p>The most important difference is, that INDIGO is multiplatform, distributed and
 		asynchronous system by its nature, while ASCOM is Windows/.Net only framework for
 		synchronous control of local devices. ALPACA promises to be distibuted and platform
@@ -129,7 +129,7 @@
 		ALPACA is multilpatform and independant but in practice it is very tighly related to ASCOM. 
 
 		<a name="indigo_and_alpaca"></a>
-		<h3>Can I access INDIGO devices with ASCOM application?</h3>
+		<h2>Can I access INDIGO devices with ASCOM application?</h2>
 		<p>Yes, via ASCOM Remote. Starting with INDIGO version 2.0-146, there is an agent -
 		indigo_agent_alpaca, which exposes INDIGO devices to ALPACA clients, but 100% support is
 		impossible and some advanced features are not available, because they can not be mapped
@@ -138,7 +138,7 @@
 		the ASCOM comformance tests.</p>
 
 		<a name="drivers"></a>
-				<h3>Can INDIGO client or application use INDI driver?</h3>
+				<h2>Can INDIGO client or application use INDI driver?</h2>
 
 				<p>Yes, INDIGO wire protocol adapter has the ability to fall down to legacy INDI
 				wire protocol version 1.7 to maintain backward compatibility with INDI drivers.
@@ -147,17 +147,17 @@
 				<p>If you want use linked driver option or to use different wire protocol, you have
 				to use INDIGO driver.</p>
 
-				<h3>Can INDI client or application use INDIGO driver?</h3>
+				<h2>Can INDI client or application use INDIGO driver?</h2>
 				<p>Yes, if client or application will initiate communication over INDI wire protocol,
 				INDIGO driver will simulate behavior of INDI driver with common base set of properties.</p>
 
-				<h3>Can INDIGO client or application use ASCOM driver?</h3>
+				<h2>Can INDIGO client or application use ASCOM driver?</h2>
 				<p>Partially, INDIGO client or application can use INDI Server for Windows as
 				ASCOM-to-INDI bridge out-of-the-box, but probably much more efficient ASCOM driver
 				wrapper for direct linking will come soon.</p>
 
 		<a name="ain_vs_ekos"></a>
-		<h3>Are Ain INDIGO Imager and INDIGO A1 related to Ekos?</h3>
+		<h2>Are Ain INDIGO Imager and INDIGO A1 related to Ekos?</h2>
 		<p>No, they are independent applications. INDIGO has two native all-in-one clients:
 		<a href="software.html">Ain INDIGO Imager</a> for Linux and Windows and
 		<a href="software.html">INDIGO A1</a> for macOS, iOS and iPadOS. Together they are the
@@ -167,12 +167,12 @@
 		with it.</p>
 
 		<a name="platforms"></a>
-				<h3>What platforms are supported?</h3>
+				<h2>What platforms are supported?</h2>
 				<p>Currently on Linux and macOS both client and server components are supported. On Windows
 				only the client side is available so far, the server side will be available soon.</p>
 				
 		<a name="forum"></a>
-				<h3>Is there an INDIGO user group?</h3>
+				<h2>Is there an INDIGO user group?</h2>
 				<p>Yes, it is here: <a href="http://bb.cloudmakers.eu/" target="blank"><b>http://bb.cloudmakers.eu</b></span></a></p>
 
 				</div>

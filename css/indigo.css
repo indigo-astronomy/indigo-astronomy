@@ -562,7 +562,16 @@ details.why[open] > summary::after {
 	padding-block: clamp(1.8rem, 4.6vw, 3.8rem);
 }
 
-/* four section cards fit on one row on wide screens */
+/* card grids with a different number of columns than the default three */
 @media (min-width: 62.01rem) {
 	.card-grid.cards-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+	.card-grid.cards-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* the "Why INDIGO?" points: a plain list, with the lead-in picked out */
+.why-list { margin: .6rem 0 1.2rem; padding-left: 1.2rem; }
+.why-list li + li { margin-top: .5rem; }
+.why-list strong { color: var(--indigo-900); }
+
+/* the FAQ is a long list of questions, so its headings are a size down */
+.faq h2 { font-size: clamp(1.25rem, 2.1vw, 1.6rem); }
