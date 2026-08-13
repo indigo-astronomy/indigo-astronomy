@@ -561,3 +561,8 @@ details.why[open] > summary::after {
 .page-hero .container, #intro .container {
 	padding-block: clamp(1.8rem, 4.6vw, 3.8rem);
 }
+
+/* four section cards fit on one row on wide screens */
+@media (min-width: 62.01rem) {
+	.card-grid.cards-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
