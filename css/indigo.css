@@ -509,3 +509,50 @@ center img[height="200"] { width: auto; height: 200px; }
 
 /* the focus ring keeps its shape but is far less loud than the base amber */
 :focus-visible { outline: 3px solid rgba(224, 155, 53, .4); }
+
+/* the hero heading is set like the wordmark in the menu bar: same family, same
+   weight, and without the tight negative tracking that made it look condensed */
+.page-hero h1, #intro h1 {
+	font-weight: 800;
+	letter-spacing: normal;
+}
+
+/* a little more air between the eyebrow line and the hero title */
+.eyebrow { margin-bottom: 1.3rem; }
+
+/* the second word of the hero title is set exactly like the wordmark in the
+   menu bar: lighter colour, lighter weight */
+#intro h1 .brand-soft, .page-hero h1 .brand-soft {
+	color: #cbb8dd;
+	font-weight: 500;
+}
+
+/* the thumbnail strip is moved with the arrow buttons, so it needs no scrollbar */
+.gallery-viewport {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.gallery-viewport::-webkit-scrollbar { display: none; }
+
+/* the foldable items open and close with an arrow rather than a plus sign:
+   pointing down when collapsed, up when open */
+details.why > summary::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: .6rem;
+	width: .5rem;
+	height: .5rem;
+	margin-top: -.4rem;
+	border-right: 2px solid var(--indigo-700);
+	border-bottom: 2px solid var(--indigo-700);
+	transform: rotate(45deg);
+	transition: transform .15s ease;
+}
+
+details.why[open] > summary::after {
+	content: "";
+	margin-top: -.15rem;
+	transform: rotate(-135deg);
+}
