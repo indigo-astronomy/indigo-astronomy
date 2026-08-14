@@ -4,10 +4,54 @@
 		<meta charset="utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<meta name="description" content="INDIGO is the standard for astronomy software development.">
+		<title>INDIGO Astronomy - open source telescope control and imaging</title>
+		<meta name="description" content="INDIGO is open source astronomical imaging and instrument control software for observatories, remote setups and backyard telescopes, on Linux, macOS and Windows."/>
+		<link rel="canonical" href="https://www.indigo-astronomy.org/"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:site_name" content="INDIGO Astronomy"/>
+		<meta property="og:title" content="INDIGO Astronomy - open source telescope control and imaging"/>
+		<meta property="og:description" content="INDIGO is open source astronomical imaging and instrument control software for observatories, remote setups and backyard telescopes, on Linux, macOS and Windows."/>
+		<meta property="og:url" content="https://www.indigo-astronomy.org/"/>
+		<meta property="og:image" content="https://www.indigo-astronomy.org/img/logo.png"/>
+		<meta name="twitter:card" content="summary"/>
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "Organization",
+					"@id": "https://www.indigo-astronomy.org/#organization",
+					"name": "The INDIGO Initiative",
+					"url": "https://www.indigo-astronomy.org/",
+					"logo": "https://www.indigo-astronomy.org/img/logo.png",
+					"email": "indigo@cloudmakers.eu",
+					"sameAs": ["https://github.com/indigo-astronomy/indigo"]
+				},
+				{
+					"@type": "WebSite",
+					"@id": "https://www.indigo-astronomy.org/#website",
+					"url": "https://www.indigo-astronomy.org/",
+					"name": "INDIGO Astronomy",
+					"description": "Open source astronomical imaging and instrument control software.",
+					"publisher": { "@id": "https://www.indigo-astronomy.org/#organization" }
+				},
+				{
+					"@type": "SoftwareApplication",
+					"name": "INDIGO",
+					"applicationCategory": "Astronomy imaging and instrument control",
+					"operatingSystem": "Linux, macOS, Windows, iOS, iPadOS",
+					"url": "https://www.indigo-astronomy.org/",
+					"downloadUrl": "https://www.indigo-astronomy.org/downloads.html",
+					"softwareVersion": "3.0-3",
+					"license": "https://github.com/indigo-astronomy/indigo/blob/master/LICENSE.md",
+					"offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+					"publisher": { "@id": "https://www.indigo-astronomy.org/#organization" }
+				}
+			]
+		}
+		</script>
 		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
 		<link rel="icon" href="img/favicon.ico"/>
-		<title>INDIGO | INDIGO Astronomy</title>
 		<link rel="stylesheet" href="css/indigo.css?v=41" type="text/css"/>
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
@@ -48,7 +92,7 @@
 		</header>
 
 		<div id="intro">
-			<img id="logo" src="img/logo.png"/>
+			<img id="logo" src="img/logo.png" alt=""/>
 			<div class="container">
 				<p class="eyebrow">Free &middot; Open source &middot; Multiplatform &middot; Distributed</p>
 				<h1><strong>Welcome to INDIGO <span class="brand-soft">Astronomy</span></strong></h1>

@@ -4,10 +4,18 @@
 		<meta charset="utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<meta name="description" content="INDIGO is the standard for astronomy software development.">
+		<title>INDIGO Sky - a ready made INDIGO server for Raspberry Pi</title>
+		<meta name="description" content="Install and set up INDIGO Sky on a Raspberry Pi: WiFi access point and infrastructure modes, remote control from a browser or a client, and troubleshooting."/>
+		<link rel="canonical" href="https://www.indigo-astronomy.org/indigo-sky.html"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:site_name" content="INDIGO Astronomy"/>
+		<meta property="og:title" content="INDIGO Sky - a ready made INDIGO server for Raspberry Pi"/>
+		<meta property="og:description" content="Install and set up INDIGO Sky on a Raspberry Pi: WiFi access point and infrastructure modes, remote control from a browser or a client, and troubleshooting."/>
+		<meta property="og:url" content="https://www.indigo-astronomy.org/indigo-sky.html"/>
+		<meta property="og:image" content="https://www.indigo-astronomy.org/img/logo.png"/>
+		<meta name="twitter:card" content="summary"/>
 		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
 		<link rel="icon" href="img/favicon.ico"/>
-		<title>INDIGO | INDIGO Astronomy</title>
 		<link rel="stylesheet" href="css/indigo.css?v=41" type="text/css"/>
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
@@ -47,7 +55,7 @@
 		</header>
 
 		<div id="intro">
-			<img id="logo" src="img/logo.png"/>
+			<img id="logo" src="img/logo.png" alt=""/>
 			<div class="container">
 				<h1><strong>INDIGO <span class="brand-soft">Sky</span></strong></h1>
 				<p>RaspberryPI image with a pre-configured INDIGO server.</p>
@@ -135,13 +143,13 @@
 
 					<p>If you want to boot INDIGO Sky from USB please see the instructions
 					<a href="https://github.com/indigo-astronomy/indigosky/blob/master/INSTALL.md">here</a>.</p>
-					<p><center><img width="50%" src="img/indigo-sky.jpg"></center></p>
+					<p><center><img width="50%" src="img/indigo-sky.jpg" alt="The INDIGO Sky web panel in a browser"></center></p>
 
 					<h2 id="setup">Change Password or SSID</h2>
 					<p>It is strongly recommended to change the password. Open your browser and visit
 					web GUI to open the INDIGO web manager.</p>
 
-					<p><center><img width="50%" src="img/indigo-sky-wifi-ap.jpg"></center></p>
+					<p><center><img width="50%" src="img/indigo-sky-wifi-ap.jpg" alt="INDIGO Sky WiFi settings in access point mode"></center></p>
 
 					<p>Select "Configure access point" and enter a the network name and the password.
 					Then click on the "Submit" button. If the operation cannot be committed, e.g.
@@ -165,7 +173,7 @@
 					<h2>Connect INDIGO Sky to an Infrastructure Access Point</h2>
 					<p>INDIGO Sky can also be configured for connecting to an infrastructure access point.</p>
 
-					<p><center><img width="50%" src="img/indigo-sky-wifi-infra.jpg"></center></p>
+					<p><center><img width="50%" src="img/indigo-sky-wifi-infra.jpg" alt="INDIGO Sky WiFi settings for joining an existing network"></center></p>
 
 					<p>Select "Join existing network" and enter the network name and the password.
 					Once done, click on the "Submit" button and wait for reboot with the new WiFi
@@ -179,7 +187,7 @@
 					and the Ethernet interface is connected to a local network with Internet access,
 					this Internet access can be shared with the devices connected to the INDIGO Sky AP.</p>
 
-					<p><center><img width="50%" src="img/internet-sharing.png"></center></p>
+					<p><center><img width="50%" src="img/internet-sharing.png" alt="Sharing an internet connection with INDIGO Sky"></center></p>
 
 					<p>To enable or disable Internet sharing, set "Server->Main->Internet Sharing" to
 					"Enabled" or "Disabled" respectively.</p>
@@ -197,7 +205,7 @@
 					INDIGO version, e.g. 2.0-79. Wait until INDIGO Sky downloads and installs the package.
 					If installation is successful, the INDIGO Sky will reboot afterwards automatically.</p>
 
-					<p><center><img width="50%" src="img/indigo-sky-upgrade.jpg"></center></p>
+					<p><center><img width="50%" src="img/indigo-sky-upgrade.jpg" alt="Upgrading INDIGO from the INDIGO Sky web panel"></center></p>
 					<h2>Timezone and Date</h2>
 					<p>INDIGO Sky timezone is UTC. This timezone is suitable for precise astronomical calculations and
 					representations of timestamps in FITS data.</p>
@@ -213,15 +221,15 @@
 					<h2 id="remote-control">Remote control with built-in webGUI</h2>
 					<p>The server can be configured and used with a built-in webGUI providing the basic control of imager, guider and mount agents.</p>
 
-					<p><center><img width="50%" src="img/indigosky1.jpg"/></center></p>
-					<p><center><img width="50%" src="img/indigosky2.jpg"/></center></p>
-					<p><center><img width="50%" src="img/indigosky4.jpg"/></center></p>
-					<p><center><img width="50%" src="img/indigosky3.jpg"/></center></p>
+					<p><center><img width="50%" src="img/indigosky1.jpg" alt="A Raspberry Pi running INDIGO Sky at the telescope"/></center></p>
+					<p><center><img width="50%" src="img/indigosky2.jpg" alt="INDIGO Sky on a Raspberry Pi in its case"/></center></p>
+					<p><center><img width="50%" src="img/indigosky4.jpg" alt="INDIGO Sky powering an astrophotography setup"/></center></p>
+					<p><center><img width="50%" src="img/indigosky3.jpg" alt="A Raspberry Pi with INDIGO Sky mounted on a telescope"/></center></p>
 
 					<h2>Remote control with INDIGO Control Panel</h2>
 					<p>The server can be configured with INDIGO Control Panel (avalilable on our <a href="downloads.html">Downloads page</a>).
 					In this case it should automatically detect and connect to INDIGO Sky.</p>
-					<p><center><img width="50%" src="img/icp_indigosky.jpg"></center></p>
+					<p><center><img width="50%" src="img/icp_indigosky.jpg" alt="INDIGO Control Panel connected to an INDIGO Sky server"></center></p>
 
 					<h2>Remote console with SSH</h2>
 					<p>INDIGO Sky has SSH server enabled by default and can be accessed with the following credentials:</p>
@@ -244,7 +252,7 @@
 					so it will take some time to complete. When finished you can access your INDIGO Sky box with any VNC client.
 					This is how it looks in action:</p>
 
-					<p><center><img width="50%" src="img/indigosky_desktop.png"></center></p>
+					<p><center><img width="50%" src="img/indigosky_desktop.png" alt="The INDIGO Sky desktop with Ain Imager and INDIGO Control Panel"></center></p>
 
 					<p>The credentials to access the desktop are standard. If your VNC client supports authentication with system
 					credentials (TLSplan) you can access the desktop with the credentials used for SSH and when you change the default
