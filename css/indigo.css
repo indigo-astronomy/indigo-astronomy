@@ -575,3 +575,19 @@ details.why[open] > summary::after {
 
 /* the FAQ is a long list of questions, so its headings are a size down */
 .faq h2 { font-size: clamp(1.25rem, 2.1vw, 1.6rem); }
+
+/* the components table lists product names, not driver names, so it does not
+   want the monospace first column that the driver tables use */
+.components td:first-child {
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	white-space: nowrap;
+}
+
+/* The hero title is not capped at the reading width, and it is sized so that it
+   still fits on one line with a fallback font wider than Inter, which is what
+   happens on a Linux box without Inter installed. */
+#intro h1, .page-hero h1 { max-width: none; }
+#intro h1 { font-size: clamp(1.9rem, 4.4vw, 3.2rem); }
+#intro .container { padding-right: min(14vw, 8rem); }

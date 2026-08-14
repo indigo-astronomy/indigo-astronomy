@@ -25,6 +25,7 @@ This section exists because INDIGO is frequently confused with INDI. The followi
 ## Site pages
 
 - [INDIGO](https://www.indigo-astronomy.org/index.html): Home page — what INDIGO is, a "Why INDIGO?" list covering speed, stability, the distributed architecture, platforms, licensing, headless operation, hardware support and automation, and a gallery of images taken with INDIGO.
+- [Getting started](https://www.indigo-astronomy.org/getting-started.html): What software to install for the common setups — Raspberry Pi with a Linux, Mac or Windows computer, a single Linux computer, and a single Mac — and how server and client fit together.
 - [For Users](https://www.indigo-astronomy.org/for-users.html): Supported operating systems, running `indigo_server` with drivers, distributed setups and links to the user documentation.
 - [For Developers](https://www.indigo-astronomy.org/for-developers.html): Build prerequisites and instructions, links to client/driver development guides, protocol and property documents, and the full license text.
 - [For Vendors](https://www.indigo-astronomy.org/for-vendors.html): Information for hardware manufacturers who want a driver for their device or an embedded INDIGO server, plus the license text.

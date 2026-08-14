@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="INDIGO is the standard for astronomy software development.">
+		<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"/>
+		<link rel="icon" href="img/favicon.ico"/>
+		<title>INDIGO | INDIGO Astronomy</title>
+		<link rel="stylesheet" href="css/indigo.css?v=41" type="text/css"/>
+		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+			<link rel="stylesheet" href="css/fontello.css" type="text/css"/>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-30002305-4', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<meta name="google-site-verification" content="sn6qF-EZJv6OhHGyT_Hczdofj5laIXHRjDZ2oqpzb8I" />
+	</head>
+
+	<body>
+		<a class="skip-link" href="#main-content">Skip to content</a>
+		<header class="site-header">
+			<div class="container site-header__inner">
+				<a class="site-brand" href="index.html" aria-label="INDIGO Astronomy home">
+					<img src="img/logo.png" width="32" height="44" alt=""/>
+					<span>INDIGO <span>Astronomy</span></span>
+				</a>
+				<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Open navigation</span><span></span><span></span><span></span></button>
+				<nav class="primary-nav" id="primary-nav" aria-label="Primary">
+					<ul>
+						<li><a href="index.html">Overview</a></li>
+						<li><a href="getting-started.html" aria-current="page">Getting started</a></li>
+						<li><a href="hardware.html">Device drivers</a></li>
+						<li><a href="software.html">Software</a></li>
+						<li><a href="indigo-sky.html">INDIGO Sky</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a class="nav-download" href="downloads.html">Downloads</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div id="intro">
+			<img id="logo" src="img/logo.png"/>
+			<div class="container">
+				<h1><strong>Getting started</strong></h1>
+				<p>What to install for the setups people use most, from a Raspberry Pi at the telescope
+				to a single computer in the observatory.</p>
+			</div>
+		</div>
+
+		<main class="site-main" id="main-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<p>Choose one of the basic setups that looks like yours to see what you need to install, or read on for what the pieces are and how they fit together.</p>
+					<div class="card-grid">
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">1</div>
+							<h2>A single Linux computer</h2>
+							<p>Everything on one machine, with the drivers and the application in one place.</p>
+							<p><a href="#linux">What you need &rarr;</a></p>
+						</article>
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">2</div>
+							<h2>A single Mac</h2>
+							<p>Everything on one Mac, with the INDIGO Server running in the background.</p>
+							<p><a href="#mac">What you need &rarr;</a></p>
+						</article>
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">3</div>
+							<h2>Raspberry Pi + Linux PC</h2>
+							<p>The server runs on the Pi at the telescope, the application on your Linux computer.</p>
+							<p><a href="#pi-linux">What you need &rarr;</a></p>
+						</article>
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">4</div>
+							<h2>Raspberry Pi + Mac</h2>
+							<p>The server runs on the Pi, and you control it from macOS, iPadOS or iOS.</p>
+							<p><a href="#pi-mac">What you need &rarr;</a></p>
+						</article>
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">5</div>
+							<h2>Raspberry Pi + Windows PC</h2>
+							<p>The server runs on the Pi, and you control it from Windows or from a browser.</p>
+							<p><a href="#pi-windows">What you need &rarr;</a></p>
+						</article>
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">6</div>
+							<h2>More complex setups</h2>
+							<p>Several servers, a remote observatory, or drivers linked straight into your own
+							application.</p>
+							<p><a href="#advanced">What you need &rarr;</a></p>
+						</article>
+					</div>
+
+					<h2>The components</h2>
+					<p>Whatever the setup, it is built from the same few pieces. The server is the part that
+					talks to the equipment, and everything else is an application that connects to it, either
+					on the same computer or across the network.</p>
+					<table class="components">
+						<caption class="sr-only">The pieces of an INDIGO setup and the systems they run on</caption>
+						<thead><tr><th scope="col">Component</th><th scope="col">What it does</th><th scope="col">Runs on</th></tr></thead>
+						<tbody>
+							<tr>
+								<td><b>INDIGO Server</b></td>
+								<td>Runs the device drivers and the INDIGO agents that carry out imaging, guiding,
+								focusing and plate solving. Your cameras, mounts and the rest of the equipment are
+								plugged into the computer where the drivers run, so this is the machine that sits at
+								the telescope. See the
+								<a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SERVER_AND_DRIVERS_GUIDE.md">Guide
+								to indigo_server and INDIGO Drivers</a> and
+								<a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_AGENTS.md">INDIGO Agents</a>.</td>
+								<td>Linux and macOS. A Raspberry Pi with <a href="indigo-sky.html">INDIGO Sky</a> is
+								the usual choice. Windows is not released yet.</td>
+							</tr>
+							<tr>
+								<td><b>INDIGO Control Panel</b></td>
+								<td>Connects to INDIGO servers to load and unload drivers, to manage the
+								configuration and to read and change every property of every device. Sooner or later
+								you will want to tweak a property or add a driver, so on Linux and Windows treat it as
+								part of the basic installation rather than an extra. On Apple systems it is built into
+								INDIGO A1, so a separate application is not needed.</td>
+								<td>All platforms: Linux, Windows, macOS, iOS and iPadOS.</td>
+							</tr>
+							<tr>
+								<td><b>Ain INDIGO Imager</b></td>
+								<td>Connects to an INDIGO server and runs the observation itself: image acquisition,
+								focusing, guiding, plate solving and viewing the images as they arrive. See the
+								<a target="_new" href="https://github.com/indigo-astronomy/indigo_imager/blob/master/ain_users_guide/ain_v2_users_guide.md">Ain
+								users guide</a>.</td>
+								<td>Linux and Windows.</td>
+							</tr>
+							<tr>
+								<td><b>INDIGO A1</b></td>
+								<td>The all-in-one application for Apple systems. It runs the observation like Ain, and it
+								has both an INDIGO server and the control panel built in, so on a Mac it can drive
+								equipment attached to that Mac on its own, and it can just as well connect to a server
+								elsewhere on the network.</td>
+								<td>macOS, iOS and iPadOS.</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>On Windows, <b>INDIGO Control Panel</b> and <b>Ain INDIGO Imager</b> need the <b>Bonjour</b>
+					service installed separately before they can discover INDIGO servers on the network by
+					themselves. It is linked next to both of them on the
+					<a href="downloads.html#windowsdl">Downloads</a> page. Without it the applications still
+					work, but you have to type in the address of the server yourself.</p>
+					<p>Before you start, it is worth checking that your equipment is supported in the
+					<a href="hardware.html">list of device drivers</a>.</p>
+
+					<h2><a id="linux"></a>A single Linux computer</h2>
+					<p><b>Install:</b> add the DEB repository from the <a href="downloads.html#linuxdl">Downloads</a>
+					page and install the INDIGO infrastructure, which is the <b>INDIGO Server</b> together with all
+					the drivers, then <b>Ain INDIGO Imager</b> to run the observation and <b>INDIGO Control Panel</b>
+					to manage the drivers and the device properties. Your equipment is plugged into this
+					computer.</p>
+					<p><b>To run:</b> start the server as described on the <a href="for-users.html">For Users</a>
+					page, or in the <a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SERVER_AND_DRIVERS_GUIDE.md">Guide
+					to indigo_server and INDIGO Drivers</a> for the full detail. Then run <b>INDIGO Control
+					Panel</b> to load the drivers you need and configure them.</p>
+
+					<h2><a id="mac"></a>A single Mac</h2>
+					<p><b>Install:</b> <b>INDIGO A1</b> for macOS, from the
+					<a href="downloads.html#macosdl">Downloads</a> page. The INDIGO server in it is free, with an
+					optional paid interface for imaging, guiding, mount control and dashboards. Plug your
+					equipment into the Mac and this one application is the whole setup: it is the server, it runs
+					the observation, and it has the control panel built in for loading drivers and changing device
+					properties.</p>
+
+					<h2><a id="pi-linux"></a>Raspberry Pi + Linux PC</h2>
+					<p><b>On the Raspberry Pi:</b> write the <a href="indigo-sky.html">INDIGO Sky</a> image to an SD card. It is a ready made system with the INDIGO server, all the drivers and a web panel already set up, and on first boot it opens its own WiFi access point. Plug your cameras, mount and the rest of the equipment into the Pi.</p>
+					<p><b>On the Linux computer:</b> add the DEB repository from the
+					<a href="downloads.html#linuxdl">Downloads</a> page and install <b>Ain INDIGO Imager</b>,
+					which runs the observation, and <b>INDIGO Control Panel</b>, which loads the drivers you
+					need on the Pi and lets you change device properties. Nothing else has to be installed here,
+					because the server and the drivers are already on the Pi.</p>
+					<p><b>To connect:</b> the Linux computer has to be on the same network as the Pi, so either
+					join the WiFi access point that the Pi opens, or put both on the same router. The service
+					then announces itself and appears in the application on its own.</p>
+
+					<h2><a id="pi-mac"></a>Raspberry Pi + Mac</h2>
+					<p><b>On the Raspberry Pi:</b> write the <a href="indigo-sky.html">INDIGO Sky</a> image to an SD card. It is a ready made system with the INDIGO server, all the drivers and a web panel already set up, and on first boot it opens its own WiFi access point. Plug your cameras, mount and the rest of the equipment into the Pi.</p>
+					<p><b>On the Mac:</b> install <b>INDIGO A1</b> from the
+					<a href="downloads.html#macosdl">Downloads</a> page. It runs the observation and it has the
+					control panel built in, so it also loads the drivers on the Pi and changes device properties,
+					and nothing else has to be installed. A1 carries a server of its own, but here it is not
+					needed: it connects to the one running on the Pi. The same application is available for iOS
+					and iPadOS, so the setup can be driven from an iPad in the field.</p>
+					<p><b>To connect:</b> the Mac has to be on the same network as the Pi, so either join the
+					WiFi access point that the Pi opens, or put both on the same router. There is nothing else to
+					configure, because service discovery is built into macOS and the Pi shows up on its own.</p>
+
+					<h2><a id="pi-windows"></a>Raspberry Pi + Windows PC</h2>
+					<p><b>On the Raspberry Pi:</b> write the <a href="indigo-sky.html">INDIGO Sky</a> image to an SD card. It is a ready made system with the INDIGO server, all the drivers and a web panel already set up, and on first boot it opens its own WiFi access point. Plug your cameras, mount and the rest of the equipment into the Pi. This is the way to use INDIGO from Windows today,
+					because the INDIGO server itself is not released for Windows yet.</p>
+					<p><b>On the Windows computer:</b> install <b>Ain INDIGO Imager</b> to run the observation and
+					<b>INDIGO Control Panel</b> to load the drivers on the Pi and change device properties, both
+					from the <a href="downloads.html#windowsdl">Downloads</a> page. Install 64-bit <b>Bonjour</b>
+					as well, linked next to them, so that the Pi is discovered automatically.</p>
+					<p><b>To connect:</b> the Windows computer has to be on the same network as the Pi, so either
+					join the WiFi access point that the Pi opens, or put both on the same router.</p>
+					<p><b>Or install nothing at all:</b> the Pi serves a web panel, so you can point a browser at
+					it and control the whole setup from there.</p>
+
+					<h2><a id="advanced"></a>More complex setups</h2>
+					<p>The setups described above are only the simplest and common ones. INDIGO is a software bus, and the pieces
+					can be combined in any way that suits your observatory.</p>
+					<p>One server can attach the bus of another, so a mount driven by one computer and cameras
+					attached to a second appear as a single setup. A client can be connected to several servers at
+					once. An application can load the drivers directly, with no server at all. The agents run on
+					the server, so a sequence keeps going with no client connected, which is what makes a remote
+					observatory practical. And ASCOM clients can reach INDIGO devices through the ALPACA agent.</p>
+					<p>All of it is described in the documentation: start from the
+					<a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/HOME.md">INDIGO
+					documentation index</a>, and in particular the
+					<a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SERVER_AND_DRIVERS_GUIDE.md">Guide
+					to indigo_server and INDIGO Drivers</a> for attaching remote servers and choosing drivers,
+					<a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_AGENTS.md">INDIGO
+					Agents</a> for what the agents do, and the
+					<a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SCRIPT_GUIDE.md">INDIGO
+					Scripting Guide</a> for automating a whole night.</p>
+
+					<h2>Where to go next</h2>
+					<p>The <a href="for-users.html">For Users</a> page goes into detail about running the server
+					and collects the guides for polar alignment, autofocus, guiding and plate solving. If a
+					device does not behave as expected, its driver has a README of its own, linked from the
+					<a href="hardware.html">list of device drivers</a>.</p>
+				</div>
+			</div>
+		</div>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-grid">
+					<div class="footer-about">
+						<h2>INDIGO Astronomy</h2>
+						<p>Open source astronomical imaging and instrument control software for
+						observatories, remote setups and backyard telescopes.</p>
+					</div>
+					<div>
+						<h2>Resources</h2>
+						<ul>
+							<li><a href="for-users.html">For Users</a></li>
+							<li><a href="for-developers.html">For Developers</a></li>
+							<li><a href="for-vendors.html">For Vendors</a></li>
+							<li><a href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/HOME.md" target="_new">Documentation</a></li>
+							<li><a href="https://github.com/indigo-astronomy/indigo/blob/master/CHANGELOG.md" target="_new">Release notes</a></li>
+						</ul>
+					</div>
+					<div>
+						<h2>Community</h2>
+						<ul>
+							<li><a href="https://github.com/indigo-astronomy/indigo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+							<li><a href="http://bb.cloudmakers.eu/" target="_blank" rel="noopener noreferrer">User group</a></li>
+							<li><a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+							<li><a href="mailto:indigo@cloudmakers.eu">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="social">
+						<a href="https://github.com/indigo-astronomy/indigo" target="_blank" title="Visit us on GitHub"><span class="icon-github"></span></a>
+						<a href="https://www.facebook.com/Linux-Mac-Astronomy-1437544996488964/" target="_blank" title="Visit us on Facebook"><span class="icon-facebook"></span></a>
+						<a href="http://bb.cloudmakers.eu/" target="_blank" title="Visit INDIGO user group"><span class="icon-chat"></span></a>
+					</p>
+					<p class="copyright">Copyright &copy; 2016-2026, The INDIGO Initiative. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+		<div id="lightbox" class="lightbox">
+			<div class="lightbox-inner">
+				<img id="lightbox-image" src="" alt=""/>
+				<button type="button" id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+				<p class="lightbox-caption"><span id="lightbox-title"></span> &mdash; <span id="lightbox-info"></span><span class="lightbox-credit" id="lightbox-credit"></span></p>
+			</div>
+		</div>
+
+		<script src="js/site.js"></script>
+	</body>
+
+</html>
