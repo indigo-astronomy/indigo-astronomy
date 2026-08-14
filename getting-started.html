@@ -118,8 +118,10 @@
 								<a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SERVER_AND_DRIVERS_GUIDE.md">Guide
 								to indigo_server and INDIGO Drivers</a> and
 								<a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_AGENTS.md">INDIGO Agents</a>.</td>
-								<td>Linux and macOS. A Raspberry Pi with <a href="indigo-sky.html">INDIGO Sky</a> is
-								the usual choice. Windows is not released yet.</td>
+								<td>Linux and macOS. On Linux it is a package of its own, and a Raspberry Pi with
+								<a href="indigo-sky.html">INDIGO Sky</a> is the usual choice. On macOS it is not
+								distributed separately: it comes as part of INDIGO A1, free of charge. Windows is not
+								released yet.</td>
 							</tr>
 							<tr>
 								<td><b>INDIGO Control Panel</b></td>
@@ -140,9 +142,10 @@
 							</tr>
 							<tr>
 								<td><b>INDIGO A1</b></td>
-								<td>The all-in-one application for Apple systems. It runs the observation like Ain, and it
-								has both an INDIGO server and the control panel built in, so on a Mac it can drive
-								equipment attached to that Mac on its own, and it can just as well connect to a server
+								<td>The all-in-one application for Apple systems, and the only way to get the INDIGO
+								server on a Mac. The server and the control panel inside it are free; the paid part is the
+								imaging interface, which runs the observation the way Ain does. With the free part alone a
+								Mac can drive the equipment attached to it, and it can just as well connect to a server
 								elsewhere on the network.</td>
 								<td>macOS, iOS and iPadOS.</td>
 							</tr>
@@ -169,11 +172,12 @@
 
 					<h2><a id="mac"></a>A single Mac</h2>
 					<p><b>Install:</b> <b>INDIGO A1</b> for macOS, from the
-					<a href="downloads.html#macosdl">Downloads</a> page. The INDIGO server in it is free, with an
-					optional paid interface for imaging, guiding, mount control and dashboards. Plug your
-					equipment into the Mac and this one application is the whole setup: it is the server, it runs
-					the observation, and it has the control panel built in for loading drivers and changing device
-					properties.</p>
+					<a href="downloads.html#macosdl">Downloads</a> page. There is no separate INDIGO server for
+					macOS: the server is part of INDIGO A1 and is only available that way.</p>
+					<p><b>What it costs:</b> the server and the control panel inside INDIGO A1 are free, so installing
+					it gives you a complete working setup at no cost, with your equipment plugged into the Mac and the
+					drivers and properties managed from the built-in control panel. The paid part is the astrophotography
+					and macrophotography interface, which adds imaging, guiding, mount control and configurable dashboards.</p>
 
 					<h2><a id="pi-linux"></a>Raspberry Pi + Linux PC</h2>
 					<p><b>On the Raspberry Pi:</b> write the <a href="indigo-sky.html">INDIGO Sky</a> image to an SD card. It is a ready made system with the INDIGO server, all the drivers and a web panel already set up, and on first boot it opens its own WiFi access point. Plug your cameras, mount and the rest of the equipment into the Pi.</p>
@@ -193,7 +197,8 @@
 					control panel built in, so it also loads the drivers on the Pi and changes device properties,
 					and nothing else has to be installed. A1 carries a server of its own, but here it is not
 					needed: it connects to the one running on the Pi. The same application is available for iOS
-					and iPadOS, so the setup can be driven from an iPad in the field.</p>
+					and iPadOS, so the setup can be driven from an iPad in the field. The control panel part of
+					INDIGO A1 is free; the imaging interface that runs the observation is the paid part.</p>
 					<p><b>To connect:</b> the Mac has to be on the same network as the Pi, so either join the
 					WiFi access point that the Pi opens, or put both on the same router. There is nothing else to
 					configure, because service discovery is built into macOS and the Pi shows up on its own.</p>
