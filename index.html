@@ -19,13 +19,52 @@
 			"@context": "https://schema.org",
 			"@graph": [
 				{
+					"@type": "Person",
+					"@id": "https://www.indigo-astronomy.org/about.html#rumen",
+					"name": "Rumen G. Bogdanovski",
+					"email": "rumenastro@gmail.com",
+					"jobTitle": "Author and Core developer of INDIGO",
+					"url": "https://www.indigo-astronomy.org/about.html"
+				},
+				{
+					"@type": "Person",
+					"@id": "https://www.indigo-astronomy.org/about.html#peter",
+					"name": "Peter Polakovič",
+					"email": "peter.polakovic@cloudmakers.eu",
+					"jobTitle": "Author and Core developer of INDIGO",
+					"affiliation": {
+						"@type": "Organization",
+						"name": "CloudMakers, s. r. o.",
+						"url": "https://www.cloudmakers.eu"
+					},
+					"url": "https://www.indigo-astronomy.org/about.html"
+				},
+				{
 					"@type": "Organization",
 					"@id": "https://www.indigo-astronomy.org/#organization",
 					"name": "The INDIGO Initiative",
 					"url": "https://www.indigo-astronomy.org/",
 					"logo": "https://www.indigo-astronomy.org/img/logo.png",
 					"email": "indigo@cloudmakers.eu",
-					"sameAs": ["https://github.com/indigo-astronomy/indigo"]
+					"sameAs": [
+						"https://github.com/indigo-astronomy/indigo"
+					],
+					"founder": [
+						{
+							"@id": "https://www.indigo-astronomy.org/about.html#rumen"
+						},
+						{
+							"@id": "https://www.indigo-astronomy.org/about.html#peter"
+						}
+					],
+					"member": [
+						{
+							"@id": "https://www.indigo-astronomy.org/about.html#rumen"
+						},
+						{
+							"@id": "https://www.indigo-astronomy.org/about.html#peter"
+						}
+					]
 				},
 				{
 					"@type": "WebSite",
@@ -33,7 +72,9 @@
 					"url": "https://www.indigo-astronomy.org/",
 					"name": "INDIGO Astronomy",
 					"description": "Open source astronomical imaging and instrument control software.",
-					"publisher": { "@id": "https://www.indigo-astronomy.org/#organization" }
+					"publisher": {
+						"@id": "https://www.indigo-astronomy.org/#organization"
+					}
 				},
 				{
 					"@type": "SoftwareApplication",
@@ -44,8 +85,30 @@
 					"downloadUrl": "https://www.indigo-astronomy.org/downloads.html",
 					"softwareVersion": "3.0-4",
 					"license": "https://github.com/indigo-astronomy/indigo/blob/master/LICENSE.md",
-					"offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-					"publisher": { "@id": "https://www.indigo-astronomy.org/#organization" }
+					"offers": {
+						"@type": "Offer",
+						"price": "0",
+						"priceCurrency": "USD"
+					},
+					"publisher": {
+						"@id": "https://www.indigo-astronomy.org/#organization"
+					},
+					"author": [
+						{
+							"@id": "https://www.indigo-astronomy.org/about.html#rumen"
+						},
+						{
+							"@id": "https://www.indigo-astronomy.org/about.html#peter"
+						}
+					],
+					"maintainer": [
+						{
+							"@id": "https://www.indigo-astronomy.org/about.html#rumen"
+						},
+						{
+							"@id": "https://www.indigo-astronomy.org/about.html#peter"
+						}
+					]
 				}
 			]
 		}

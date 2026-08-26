@@ -4,6 +4,7 @@
 
 Key facts:
 
+- **Who makes INDIGO:** the INDIGO platform is created and maintained by **Rumen G. Bogdanovski** and **Peter Polakovič**, the two core developers of the INDIGO Initiative. **Ain INDIGO Imager** and **INDIGO Control Panel for Linux and Windows** are created and maintained by Rumen G. Bogdanovski. **INDIGO A1** and the other INDIGO applications for macOS, iOS and iPadOS are created and maintained by Peter Polakovič of CloudMakers.
 - Website: https://www.indigo-astronomy.org/ — source code: https://github.com/indigo-astronomy/indigo
 - Current release: INDIGO 3 (backward compatible with INDIGO 2, which now receives bugfixes and security updates only).
 - Written in ANSI C for portability; no GPL code is used, so it can be shipped commercially and through application stores.
