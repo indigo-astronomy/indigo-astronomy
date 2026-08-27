@@ -299,8 +299,14 @@
 					using the official Pi4 case the <a target="_blank" href="https://www.raspberrypi.org/products/raspberry-pi-4-case-fan">Pi4 case fan</a>
 					should work.</p>
 
-					<p>To remove the remote desktop access and the related software you should execute the following commands:</p>
+					<p>To remove the remote desktop access and the related software, remove the package you installed,
+					<b>indigosky-desktop-indigo3</b> on INDIGO 3:</p>
+					<p><mark>$ sudo apt-get remove indigosky-desktop-indigo3</mark></p>
+
+					<p>or <b>indigosky-desktop</b> on INDIGO 2:</p>
 					<p><mark>$ sudo apt-get remove indigosky-desktop</mark></p>
+
+					<p>then clean up what it brought in:</p>
 					<p><mark>$ sudo apt-get autoremove</mark></p>
 
 					<h2 id="env">Environment Variables</h2>
