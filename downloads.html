@@ -100,11 +100,16 @@
 			<p>To setup automatic installation and subsequent updates, you need to add our repository
 			URL to APT sources list. To do this from command line execute:
 			<p><mark>$ echo "deb [trusted=yes] https://indigo-astronomy.github.io/indigo_ppa/ppa indigo main" | sudo tee /etc/apt/sources.list.d/indigo.list</mark></p>
-			<p>and execute the following commands</p>
+			<p>and execute the following commands to install INDIGO 3, the current release:</p>
 			<p><mark>$ sudo apt-get update</mark></p>
-			<p><mark>$ sudo apt-get install indigo</mark></p>
-			<p><mark>$ sudo apt-get install ain-imager</mark></p>
-			<p><mark>$ sudo apt-get install indigo-control-panel</mark></p>
+			<p><mark>$ sudo apt-get install indigo3</mark></p>
+			<p><mark>$ sudo apt-get install ain-imager-indigo3</mark></p>
+			<p><mark>$ sudo apt-get install indigo-control-panel-indigo3</mark></p>
+
+			<p><b>indigo3</b> is the infrastructure, the server with all the drivers, and the two client
+			packages (<b>ain-imager-indigo3</b> and <b>indigo-control-panel-indigo3</b>) depend on it. The INDIGO 3 and the INDIGO 2 packages are mutually exclusive, so
+			installing one set removes the other; the INDIGO 2 packages are <b>indigo</b>,
+			<b>ain-imager</b> and <b>indigo-control-panel</b>.</p>
 
 			<p>To do it from e.g. Synaptic package manager, execute it, go to Settings > Repositories, click new and fill URI, distribution and sections with the following text:</p>
 
@@ -122,7 +127,7 @@
 
 				<p>To install INDIGO 3 manually, download one of the following packages for your operating system and install it with a command like this:
 
-				<p><mark>$ sudo apt-get install ~/Downloads/indigo3-3.0-1-YYY.deb</mark></p>
+				<p><mark>$ sudo apt-get install ~/Downloads/indigo3-3.0-4-YYY.deb</mark></p>
 				<ul>
 				<li>INDIGO 3 for 32-bit Intel Linux: <a href="https://indigo-astronomy.github.io/indigo_ppa/ppa/pool/main/i/indigo3/indigo3-3.0-4-i386.deb">indigo3-3.0-4-i386.deb</a></li>
 				<li>INDIGO 3 for 64-bit Intel Linux: <a href="https://indigo-astronomy.github.io/indigo_ppa/ppa/pool/main/i/indigo3/indigo3-3.0-4-amd64.deb">indigo3-3.0-4-amd64.deb</a></li>
@@ -138,7 +143,7 @@
 				<li>INDIGO 3 Control Panel for ARMHF (V6+) Debian Linux or Raspbian: <a href="https://indigo-astronomy.github.io/indigo_ppa/ppa/pool/main/i/indigo-control-panel-indigo3/indigo-control-panel-indigo3_1.3-2_armhf.deb">indigo-control-panel-indigo3_1.3-2_armhf.deb</a></li>
 				<li>INDIGO 3 Control Panel for ARM64 (V8) Debian Linux: <a href="https://indigo-astronomy.github.io/indigo_ppa/ppa/pool/main/i/indigo-control-panel-indigo3/indigo-control-panel-indigo3_1.3-2_arm64.deb">indigo-control-panel-indigo3_1.3-2_arm64.deb</a></li>
 				</ul>
-				<p>To install INDIGO 3 Control Panel, you need to install indigo3-3.0-1 infrastructure first.</p>
+				<p>To install INDIGO 3 Control Panel, you need to install the indigo3 infrastructure first.</p>
 
 				<h4><b>Ain INDIGO 3 Imager</b></h4>
 
@@ -149,7 +154,7 @@
 				<li>Ain Imager for ARMHF (V6+) Debian Linux or Raspbian: <a href="https://indigo-astronomy.github.io/indigo_ppa/ppa/pool/main/a/ain-imager-indigo3/ain-imager-indigo3_2.13-0_armhf.deb">ain-imager-indigo3_2.13-0_armhf.deb</a></li>
 				<li>Ain Imager for ARM64 (V8) Debian Linux: <a href="https://indigo-astronomy.github.io/indigo_ppa/ppa/pool/main/a/ain-imager-indigo3/ain-imager-indigo3_2.13-0_arm64.deb">ain-imager-indigo3_2.13-0_arm64.deb</a></li>
 				</ul>
-				<p>To install Ain INDIGO 3 Imager, you need to install indigo3-3.0-1 infrastructure first.</p>
+				<p>To install Ain INDIGO 3 Imager, you need to install the indigo3 infrastructure first.</p>
 
 				<h3><a id="indigo2dl"></a><b>INDIGO 2</b> <span class="label label-warning" style="font-size:0.7em;">Partially supported</span></h3>
 				<font color="#ff0000">INDIGO 2 will receive limited support. Only bugfixes and security updates will be provided. It is recommended to upgrade to INDIGO 3 for new features and improvements.</font>
