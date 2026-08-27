@@ -69,7 +69,7 @@
 					<div class="card__icon" aria-hidden="true">W</div>
 					<h2>Wi-Fi setup</h2>
 					<p>Change the password and the SSID, pick a WiFi channel or join an existing access point.</p>
-					<p><a href="#wifi">Read more &rarr;</a></p>
+					<p><a href="#setup">Read more &rarr;</a></p>
 				</article>
 				<article class="card">
 					<div class="card__icon" aria-hidden="true">R</div>
@@ -99,7 +99,7 @@
 					<ul>
 						<li><b>Raspberry Pi 2 Mod. B</b> runs with 32-bit image only (requires an external WiFi USB dongle when operated in WiFi mode)</li>
 						<li><b>Raspberry Pi 3 Mod. A+</b> runs with 32 and 64-bit images (32-bit image recommended)</li>
-						<li><b>Raspberry Pi 3 Mod. B</b> runs with 32 and 64-bit images  (32-bit image recommemded)</li>
+						<li><b>Raspberry Pi 3 Mod. B</b> runs with 32 and 64-bit images  (32-bit image recommended)</li>
 						<li><b>Raspberry Pi 3 Mod. B+</b> runs with 32 and 64-bit images (32-bit image recommended)</li>
 						<li><b>Raspberry Pi 4 Mod. B</b> runs with 32 and 64-bit images  (32-bit image recommended for 1GB model) </li>
 						<li><b>Raspberry Pi 5 </b> runs with 32 and 64-bit bookworm images  (64-bit image recommended, <b>only Bookworm images will work</b>) </li>
@@ -158,7 +158,7 @@
 
 					<h2>Selecting the WiFI channel in AP mode</h2>
 					Since INDIGO 2.0-178 INDIGO Sky in Access Point mode can operate in 2.4 GHz and 5 GHz ranges.
-					Switching between rabges is done by choosing the WiFi channel. Channels from 1 to 13 are 2.4 GHz.
+					Switching between ranges is done by choosing the WiFi channel. Channels from 1 to 13 are 2.4 GHz.
 					Channels from 36 to 116 are 5GHz. Choosing channel 0 will automatically select the
 					best 2.4 GHz channel.<br>
 
@@ -182,7 +182,7 @@
 					and update the credentials.</p>
 
 					<h2>Share Internet connection between interfaces</h2>
-					<p>INDIGO Sky can share Internet connection avalable on one of its interfaces.
+					<p>INDIGO Sky can share Internet connection available on one of its interfaces.
 					For example, if the Wi-Fi interface is configured in Access Point (AP) mode,
 					and the Ethernet interface is connected to a local network with Internet access,
 					this Internet access can be shared with the devices connected to the INDIGO Sky AP.</p>
@@ -191,7 +191,7 @@
 
 					<p>To enable or disable Internet sharing, set "Server->Main->Internet Sharing" to
 					"Enabled" or "Disabled" respectively.</p>
-					<p><b>NOTE:</b> Use this fearure with care and enable Internet sharing only after
+					<p><b>NOTE:</b> Use this feature with care and enable Internet sharing only after
 					changing the default Indigo AP password.</p>
 
 					<h2>Upgrade or downgrade INDIGO</h2>
@@ -206,6 +206,27 @@
 					If installation is successful, the INDIGO Sky will reboot afterwards automatically.</p>
 
 					<p><center><img width="50%" src="img/indigo-sky-upgrade.jpg" alt="Upgrading INDIGO from the INDIGO Sky web panel"></center></p>
+					<h2><a id="switch"></a>Switching between INDIGO 2 and INDIGO 3</h2>
+					<p>The images come in two flavours, one with INDIGO 2 and one with INDIGO 3, the latter with
+					<b>indigo3</b> in the file name. An installed SD card does not have to be rewritten to change
+					release: log in over SSH as described below and install the packages of the other one. The two
+					releases replace each other, so apt removes the previous packages as part of the operation.</p>
+
+					<p>To move to INDIGO 3:</p>
+					<p><mark>$ sudo apt-get update</mark></p>
+					<p><mark>$ sudo apt-get install indigo3</mark></p>
+
+					<p>To go back to INDIGO 2:</p>
+					<p><mark>$ sudo apt-get install indigo</mark></p>
+
+					<p>If the <a href="#desktop">optional desktop</a> is installed, switch it over as well, because
+					it carries its own builds of INDIGO Control Panel and Ain Imager:
+					<b>indigosky-desktop-indigo3</b> for INDIGO 3 and <b>indigosky-desktop</b> for INDIGO 2.</p>
+
+					<p><mark>$ sudo apt-get install indigosky-desktop-indigo3</mark></p>
+
+					<p>Reboot when the installation finishes.</p>
+
 					<h2>Timezone and Date</h2>
 					<p>INDIGO Sky timezone is UTC. This timezone is suitable for precise astronomical calculations and
 					representations of timestamps in FITS data.</p>
@@ -227,7 +248,7 @@
 					<p><center><img width="50%" src="img/indigosky3.jpg" alt="A Raspberry Pi with INDIGO Sky mounted on a telescope"/></center></p>
 
 					<h2>Remote control with INDIGO Control Panel</h2>
-					<p>The server can be configured with INDIGO Control Panel (avalilable on our <a href="downloads.html">Downloads page</a>).
+					<p>The server can be configured with INDIGO Control Panel (available on our <a href="downloads.html">Downloads page</a>).
 					In this case it should automatically detect and connect to INDIGO Sky.</p>
 					<p><center><img width="50%" src="img/icp_indigosky.jpg" alt="INDIGO Control Panel connected to an INDIGO Sky server"></center></p>
 
@@ -237,16 +258,28 @@
 					<p><mark>password: indigo</mark></p>
 					<p><b>NOTE:</b> Windows users need to install SSH client like <a href="https://www.putty.org/">PuTTY</a></p>
 
-					<h2>Use INDIGO Sky with mobile devices </h2>
+					<h2><a id="desktop"></a>Use INDIGO Sky with mobile devices</h2>
 					<p>There are still no native INDIGO clients for mobile devices but we offer a workaround - using a lightweight
 					desktop on the Raspberry Pi which can be accessed using a Remote desktop. This is not the best approach but
 					several similar distributions offer similar solutions. In contrast we do not want to bloat our operating
 					system image and load the tiny Raspberry Pi board with something most users will never need, therefore this
 					is optional.
-					<p> To enable this option, please login to the INDIGO Sky as descibed above and execute:</p>
+					<p> To enable this option, please login to the INDIGO Sky as described above and execute:</p>
 
 					<p><mark>$ sudo apt-get update</mark></p>
+					<p><mark>$ sudo apt-get install indigosky-desktop-indigo3</mark></p>
+
+					<p>on INDIGO 3, or</p>
+
 					<p><mark>$ sudo apt-get install indigosky-desktop</mark></p>
+
+					<p>on INDIGO 2. Take the one that matches the release on the system:
+					<b>indigosky-desktop-indigo3</b> brings the INDIGO 3 builds of INDIGO Control Panel and Ain
+					Imager, <b>indigosky-desktop</b> the INDIGO 2 ones. The two exclude each other, as do the
+					applications they install, so installing the wrong one would pull the whole system over to the
+					other release. If you later
+					<a href="#switch">switch between INDIGO 2 and INDIGO 3</a>, install the matching desktop package
+					as part of the switch.</p>
 
 					<p>This will install about 1GB of additional software including INDIGO Control Panel and Ain Imager,
 					so it will take some time to complete. When finished you can access your INDIGO Sky box with any VNC client.
@@ -257,13 +290,13 @@
 					<p>The credentials to access the desktop are standard. If your VNC client supports authentication with system
 					credentials (TLSplan) you can access the desktop with the credentials used for SSH and when you change the default
 					password you must use the changed one. If this authentication method is not supported by your client, VncAuth
-					authentication will be used with another passwrd, which also defauts to "indigo". In this case when the system
+					authentication will be used with another password, which also defaults to "indigo". In this case when the system
 					password is changed the VNC password will remain the same. You will have to change it on the console with the
 					command "vncpasswd".</p>
 					<p><b>NOTE:</b> With CPU intensive tasks on Raspberry Pi4 you may experience cooling issues.
-					One symptom is the degraded system responsiveness, because the tempearture raised above +80&deg;C and the CPU frequency
+					One symptom is the degraded system responsiveness, because the temperature raised above +80&deg;C and the CPU frequency
 					is being throttled down in order to cool. To avid this issue we highly recommend using a cooling solution. If you are
-					uing the official Pi4 case the <a target="_blank" href="https://www.raspberrypi.org/products/raspberry-pi-4-case-fan">Pi4 case fan</a>
+					using the official Pi4 case the <a target="_blank" href="https://www.raspberrypi.org/products/raspberry-pi-4-case-fan">Pi4 case fan</a>
 					should work.</p>
 
 					<p>To remove the remote desktop access and the related software you should execute the following commands:</p>
@@ -279,12 +312,12 @@
 
 					<h2 id="issues">Reporting issues</h2>
 					<h3><b>In case the server stops responding</b></h2>
-					<p>Please login to the	INDIGO Sky as descibed above and execute:</p>
+					<p>Please login to the	INDIGO Sky as described above and execute:</p>
 					<p><mark>$ indigo_deadlock_detector >indigo_deadlock.txt</mark></p>
 					<p>This will create a file named 'indigo_deadlock.txt', please send it to
 					<a href="mailto:indigo@cloudmakers.eu">indigo@cloudmakers.eu</a> accompanied by a description of the problem and
 					if possible, steps to reproduce it. We need this information to resolve the problem.</p>
-					<p>For more iformation about the tool please see <a href="https://github.com/indigo-astronomy/indigo_deadlock_detector/blob/master/README.md"> INDIGO deadlock detector README</a>.</p>
+					<p>For more information about the tool please see <a href="https://github.com/indigo-astronomy/indigo_deadlock_detector/blob/master/README.md"> INDIGO deadlock detector README</a>.</p>
 
 					<p><b>NOTE:</b> INDIGO deadlock detector is available by default in INDIGO Sky 2020-11-01 or newer. If you are
 					running older image please install it:</p>
@@ -297,7 +330,7 @@
 					In case some device or INDIGO framework does not behave as expected sending us "Trace log" from indigo will help us pinpoint and resolve the issue. To do so please follow the steps:
 					<ol>
 						<li>
-							Enable "Trace log". Open a browser and go to the INDIGO Sky control panel as descrived above (
+							Enable "Trace log". Open a browser and go to the INDIGO Sky control panel as described above (
 							<a href="http://indigosky.local:7624/ctrl.html">http://indigosky.local:7624/ctrl.html</a> or <b>http://x.x.x.x:7624/ctrl.html</b>)
 						</li>
 						<li>
@@ -313,7 +346,7 @@
 						</li>
 					</ol>
 					It is a good idea to set "Log level" back "Error" when the log is obtained. Trace logs can grow fast and use a lot of disk space.
-					<p><b>NOTE:</b> replace <b>x.x.x.x</b> with the real INDIGO Sky IP address. The defult is <b>192.168.235.1</b>
+					<p><b>NOTE:</b> replace <b>x.x.x.x</b> with the real INDIGO Sky IP address. The default is <b>192.168.235.1</b>
 
 					<br>
 					<br>
@@ -322,7 +355,7 @@
 						<li>
 							Stop all other instances of INDIGO server and start it so that it will save the trace log (switch -vvv) in the file <b>indigo.log</b> with the command:
 							<p><mark>$ indigo_server -vvv [drivers] >indigo.log 2>&1</mark></p>
-							<p><b>NOTE:</b> You may need to specify the full path to INDIGO server. If you ommit drivers it will load the drivers that were loaded last time.
+							<p><b>NOTE:</b> You may need to specify the full path to INDIGO server. If you omit drivers it will load the drivers that were loaded last time.
 						</li>
 						<li>
 							Reproduce the problem.

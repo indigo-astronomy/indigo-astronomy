@@ -114,7 +114,7 @@
 		<h2>What are the differences between INDIGO and INDI?</h2>
 		<p>The most important technical difference is the architecture. While in INDI drivers
 		and clients are connected only over a pipe or network connection and each of them is
-		a standalone proces, in INDIGO drivers, agents and clients are connected to a software
+		a standalone process, in INDIGO drivers, agents and clients are connected to a software
 		bus. In the best case (when both drivers and client are the same process) it may speed
 		up the operations 1000x compared to INDI and you still have the possibility to make
 		the bus distributed and to run every piece of the solution in a different process or
@@ -130,12 +130,12 @@
 		<h2>What are the differences between INDIGO and ASCOM/ALPACA?</h2>
 		<p>The most important difference is, that INDIGO is multiplatform, distributed and
 		asynchronous system by its nature, while ASCOM is Windows/.Net only framework for
-		synchronous control of local devices. ALPACA promises to be distibuted and platform
+		synchronous control of local devices. ALPACA promises to be distributed and platform
 		independant, however the reality is a bit different. The only publicly used implementation
 		is ASCOM 6.5 remote that exports ASCOM devices over the network. Native ALPACA drivers are
 		still rare. Even more the API of ALPACA is 1:1 mapping of the ASCOM API which makes it
-		diffucult to map other frameworks to ALPACA and straight forward for ASCOM. So in theory
-		ALPACA is multilpatform and independant but in practice it is very tighly related to ASCOM. 
+		difficult to map other frameworks to ALPACA and straight forward for ASCOM. So in theory
+		ALPACA is multiplatform and independant but in practice it is very tightly related to ASCOM. 
 
 		<a name="indigo_and_alpaca"></a>
 		<h2>Can I access INDIGO devices with ASCOM application?</h2>
@@ -144,7 +144,7 @@
 		impossible and some advanced features are not available, because they can not be mapped
 		to Alpaca. Alpaca is specifically designed to accomodate ASCOM not INDIGO. However, we
 		made the mapping as good as we were able to and in the end indigo_agent_alpaca passes
-		the ASCOM comformance tests.</p>
+		the ASCOM conformance tests.</p>
 
 		<a name="drivers"></a>
 				<h2>Can INDIGO client or application use INDI driver?</h2>
