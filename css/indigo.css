@@ -591,3 +591,28 @@ details.why[open] > summary::after {
 #intro h1, .page-hero h1 { max-width: none; }
 #intro h1 { font-size: clamp(1.9rem, 4.4vw, 3.2rem); }
 #intro .container { padding-right: min(14vw, 8rem); }
+
+/* The driver and agent tables carry all three platform icons in a single cell.
+   Every icon keeps a fixed-width slot, so the penguins line up under the
+   penguins and the apples under the apples, and a platform that is not
+   supported simply leaves its slot empty. */
+#driver-table th.os, #agent-table th.os,
+#driver-table td.os, #agent-table td.os {
+	width: 1px;
+	white-space: nowrap;
+	text-align: left;
+	padding-left: .6rem;
+	padding-right: .6rem;
+}
+
+.os-slot {
+	display: inline-block;
+	width: 1.3em;
+	text-align: center;
+}
+
+.os-slot [class^="icon-"]:before,
+.os-slot [class*=" icon-"]:before {
+	margin-left: 0;
+	margin-right: 0;
+}
