@@ -11,7 +11,7 @@ Key facts:
 - Servers and drivers run on Linux and macOS; the Windows server will be available soon, and most drivers are already ported to it. Clients run on Linux, macOS, Windows, iOS and iPadOS. `indigo_server` listens on TCP port 7624 and serves a built-in web control panel.
 - Architecture: drivers, agents and clients attach to a software bus. When client and drivers share a process, operations can be up to 1000x faster than the process-per-driver model of INDI. Layered design, atomic drivers (a camera with imaging and guiding chips exposes two simple devices), USB hot-plug and Bonjour/Avahi service discovery are mandatory features.
 - Interoperability: the INDIGO wire protocol (version 2.0) can fall back to the legacy INDI wire protocol 1.7, so INDIGO clients work with INDI drivers and vice versa. `indigo_agent_alpaca` exposes INDIGO devices to ASCOM/ALPACA clients and passes the ASCOM conformance tests.
-- INDIGO 3.0-6 ships 136 device drivers — 32 CCD/CMOS camera, 31 focuser, 25 auxiliary, 14 filter wheel, 12 mount, 8 dome, 6 rotator, 3 GPS, 3 guider, 1 adaptive optics and 1 system driver — plus 10 agents (imager, guider, mount, astrometry, ASTAP, alpaca, scripting, config, auxiliary, snoop). 88 of them are ported to Windows.
+- INDIGO 3.0-7 ships 136 device drivers — 32 CCD/CMOS camera, 31 focuser, 25 auxiliary, 14 filter wheel, 12 mount, 8 dome, 6 rotator, 3 GPS, 3 guider, 1 adaptive optics and 1 system driver — plus 10 agents (imager, guider, mount, astrometry, ASTAP, alpaca, scripting, config, auxiliary, snoop). 88 of them are ported to Windows.
 
 ## What INDIGO is, and what it is not
 
@@ -33,7 +33,7 @@ This section exists because INDIGO is frequently confused with INDI. The followi
 - [For Vendors](https://www.indigo-astronomy.org/for-vendors.html): Information for hardware manufacturers who want a driver for their device or an embedded INDIGO server, plus the license text.
 - [FAQ](https://www.indigo-astronomy.org/faq.html): Why another standard, design requirements, INDIGO vs INDI, INDIGO vs ASCOM/ALPACA, driver interoperability and supported platforms.
 - [About](https://www.indigo-astronomy.org/about.html): The INDIGO Initiative — core developers Peter Polakovič and Rumen Bogdanovski, contributors and supporting companies and institutions.
-- [Compatible hardware](https://www.indigo-astronomy.org/hardware.html): Complete table of the device drivers and agents distributed with INDIGO 3.0-6, showing for each whether it is available on Linux, macOS and Windows, and linking to its README.
+- [Compatible hardware](https://www.indigo-astronomy.org/hardware.html): Complete table of the device drivers and agents distributed with INDIGO 3.0-7, showing for each whether it is available on Linux, macOS and Windows, and linking to its README.
 - [Compatible hardware for INDIGO 2.0](https://www.indigo-astronomy.org/hardware-2.0.html): The same table for the INDIGO 2.0-364 driver set, kept for users still running INDIGO 2.
 - [Compatible software](https://www.indigo-astronomy.org/software.html): Applications that work with INDIGO — split into INDIGO applications (Ain INDIGO Imager, INDIGO Control Panel, INDIGO A1) and third party applications (PixInsight, APT, CCDciel, Ekos, PHD2).
 - [Downloads](https://www.indigo-astronomy.org/downloads.html): APT repository setup, Debian packages for i386/amd64/armhf/arm64, macOS and Windows installers, the Windows client SDK, and how to build from source.
