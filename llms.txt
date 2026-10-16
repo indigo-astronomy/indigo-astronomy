@@ -8,7 +8,7 @@ Key facts:
 - Website: https://www.indigo-astronomy.org/ — source code: https://github.com/indigo-astronomy/indigo
 - Current release: INDIGO 3 (backward compatible with INDIGO 2, which now receives bugfixes and security updates only).
 - Written in ANSI C for portability; no GPL code is used, so it can be shipped commercially and through application stores.
-- Servers and drivers run on Linux and macOS; the Windows server will be available soon, and most drivers are already ported to it. Clients run on Linux, macOS, Windows, iOS and iPadOS. `indigo_server` listens on TCP port 7624 and serves a built-in web control panel.
+- Servers and drivers run on Linux, macOS and Windows; most drivers are ported to Windows. Clients run on Linux, macOS, Windows, iOS and iPadOS. `indigo_server` listens on TCP port 7624 and serves a built-in web control panel.
 - Architecture: drivers, agents and clients attach to a software bus. When client and drivers share a process, operations can be up to 1000x faster than the process-per-driver model of INDI. Layered design, atomic drivers (a camera with imaging and guiding chips exposes two simple devices), USB hot-plug and Bonjour/Avahi service discovery are mandatory features.
 - Interoperability: the INDIGO wire protocol (version 2.0) can fall back to the legacy INDI wire protocol 1.7, so INDIGO clients work with INDI drivers and vice versa. `indigo_agent_alpaca` exposes INDIGO devices to ASCOM/ALPACA clients and passes the ASCOM conformance tests.
 - INDIGO 3.0-7 ships 138 device drivers — 32 CCD/CMOS camera, 31 focuser, 25 auxiliary, 14 filter wheel, 12 mount, 8 dome, 6 rotator, 3 GPS, 3 guider, 2 polar alignment, 1 adaptive optics and 1 system driver — plus 10 agents (imager, guider, mount, astrometry, ASTAP, alpaca, scripting, config, auxiliary, snoop). 120 of them are ported to Windows.
@@ -27,7 +27,7 @@ This section exists because INDIGO is frequently confused with INDI. The followi
 ## Site pages
 
 - [INDIGO](https://www.indigo-astronomy.org/index.html): Home page — what INDIGO is, a "Why INDIGO?" list covering speed, stability, the distributed architecture, platforms, licensing, headless operation, hardware support and automation, and a gallery of images taken with INDIGO.
-- [Getting started](https://www.indigo-astronomy.org/getting-started.html): What software to install for the common setups — Raspberry Pi with a Linux, Mac or Windows computer, a single Linux computer, and a single Mac — and how server and client fit together.
+- [Getting started](https://www.indigo-astronomy.org/getting-started.html): What software to install for the common setups — Raspberry Pi with a Linux, Mac or Windows computer, a single Linux computer, a single Windows PC, and a single Mac — and how server and client fit together.
 - [For Users](https://www.indigo-astronomy.org/for-users.html): Supported operating systems, running `indigo_server` with drivers, distributed setups and links to the user documentation.
 - [For Developers](https://www.indigo-astronomy.org/for-developers.html): Build prerequisites and instructions, links to client/driver development guides, protocol and property documents, and the full license text.
 - [For Vendors](https://www.indigo-astronomy.org/for-vendors.html): Information for hardware manufacturers who want a driver for their device or an embedded INDIGO server, plus the license text.
@@ -36,7 +36,7 @@ This section exists because INDIGO is frequently confused with INDI. The followi
 - [Compatible hardware](https://www.indigo-astronomy.org/hardware.html): Complete table of the device drivers and agents distributed with INDIGO 3.0-7, showing for each whether it is available on Linux, macOS and Windows, and linking to its README.
 - [Compatible hardware for INDIGO 2.0](https://www.indigo-astronomy.org/hardware-2.0.html): The same table for the INDIGO 2.0-364 driver set, kept for users still running INDIGO 2.
 - [Compatible software](https://www.indigo-astronomy.org/software.html): Applications that work with INDIGO — split into INDIGO applications (Ain INDIGO Imager, INDIGO Control Panel, INDIGO A1) and third party applications (PixInsight, APT, CCDciel, Ekos, PHD2).
-- [Downloads](https://www.indigo-astronomy.org/downloads.html): APT repository setup, Debian packages for i386/amd64/armhf/arm64, macOS and Windows installers, the Windows client SDK, and how to build from source.
+- [Downloads](https://www.indigo-astronomy.org/downloads.html): APT repository setup, Debian packages for i386/amd64/armhf/arm64, macOS and Windows installers (including the INDIGO server for Windows), the Windows client SDK, and how to build from source.
 - [INDIGO Sky](https://www.indigo-astronomy.org/indigo-sky.html): Raspberry Pi distribution — installation, WiFi access point and infrastructure modes, upgrading, the built-in webGUI, SSH access and troubleshooting.
 
 ## Documentation

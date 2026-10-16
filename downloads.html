@@ -83,8 +83,9 @@
 					</article>
 					<article class="card">
 						<div class="card__icon" aria-hidden="true">W</div>
-						<h2>Windows</h2>
-						<p>Ain Imager, INDIGO Control Panel and the client SDK for 64-bit Windows.</p>
+						<h2>Windows <span class="label label-success" style="font-size:0.5em;">New</span></h2>
+						<p>Infrastructure, Control Panel, Ain Imager, Astrometry and the client SDK for 64-bit
+						Windows.</p>
 						<p><a href="#windowsdl">Download for Windows &rarr;</a></p>
 					</article>
 				</div>
@@ -119,7 +120,7 @@
 
 				<h3><a id="indigo3dl"></a><b>INDIGO 3</b> <span class="label label-success" style="font-size:0.7em;">New</span></h3>
 				INDIGO 3 introduces significant improvements and new features. It is backward compatible with INDIGO 2 and
-				is available for Linux and macOS. INDIGO 3 server for Windows will be available soon (platesolver needs to be ported to Windows).
+				is available for Linux, macOS and Windows.
 
 				<h4><b>INDIGO 3 Infrastructure</b></h4>
 
@@ -202,10 +203,19 @@
 					<p>To install INDIGO on Apple computer, iPhones or iPads visit <a href="https://www.cloudmakers.eu">www.cloudmakers.eu</a> and install INDIGO A1 for macOS (free INDIGO Server with optional paid GUI for imaging, guiding, mount control and configurable dashboards) or INDIGO Control Panel. Client only INDIGO A1 and INDIGO Control Panel is also available for iPadOS and iOS.</p>
 
 					<h2><a id="windowsdl"></a>Microsoft Windows</h2>
-					<h4><b>INDIGO Control Panel</b></h4>
-					<p>INDIGO Control Panel is a GUI tool for managing and configuring INDIGO Infrastructure:</p>
+					<p>All installers are for 64-bit Windows. Install <a href="http://www.cloudmakers.eu/download/Bonjour64.msi">64bit Bonjour</a> first, so that the applications discover INDIGO servers on the network
+					by themselves. See <a href="getting-started.html#windows">Getting started</a> for what to install for your setup.</p>
+					<h4><a id="windows3dl"></a><b>INDIGO 3 Infrastructure</b> <span class="label label-success" style="font-size:0.7em;">New</span> <span class="label label-warning" style="font-size:0.7em;">Beta</span></h4>
+					<p>The INDIGO server with the drivers and agents. Install it to run a server on this Windows computer, it is not needed if you only connect to a server on another machine.
+					Install the vendors' low-level Windows (e.g. USB) drivers your devices need; ASCOM drivers are not needed.</p>
 					<ul>
-					<li>INDIGO Control Panel for 64-bit Windows (needs <a href="http://www.cloudmakers.eu/download/Bonjour64.msi">64bit Bonjour</a> to auto discover INDIGO Services): <a href="/download/INDIGO_Control_Panel-1.3-4-64bit-setup.exe">INDIGO_Control_Panel-1.3-4-64bit-setup.exe</a></li>
+					<li>INDIGO 3 Infrastructure for 64-bit Windows (needs <a href="http://www.cloudmakers.eu/download/Bonjour64.msi">64bit Bonjour</a> to announce INDIGO Services on the network): <a href="/download/indigo-windows-3.0-8-x64-setup.exe">indigo-windows-3.0-8-x64-setup.exe</a></li>
+					</ul>
+
+					<h4><b>INDIGO Control Panel</b></h4>
+					<p>INDIGO Control Panel is a GUI tool for managing and configuring INDIGO Infrastructure. It comes with INDIGO Server Manager to start and stop the local INDIGO server:</p>
+					<ul>
+					<li>INDIGO Control Panel for 64-bit Windows (needs <a href="http://www.cloudmakers.eu/download/Bonjour64.msi">64bit Bonjour</a> to auto discover INDIGO Services): <a href="/download/INDIGO_Control_Panel-1.3-5-64bit-setup.exe">INDIGO_Control_Panel-1.3-5-64bit-setup.exe</a></li>
 					</ul>
 
 					<h4><b>Ain INDIGO Imager</b></h4>
@@ -214,6 +224,12 @@
 					<ul>
 					<li>Ain Imager for 64-bit Windows, for INDIGO servers 3.0-8 and above: (needs <a href="http://www.cloudmakers.eu/download/Bonjour64.msi">64bit Bonjour</a> to auto discover INDIGO Services): <a href="/download/Ain_Imager-3.0-1-64bit-setup.exe">Ain_Imager-3.0-1-64bit-setup.exe</a></li>
 					<li>Ain Imager for 64-bit Windows, for INDIGO server 2.0: <a href="/download/Ain_Imager-2.13-0-64bit-setup.exe">Ain_Imager-2.13-0-64bit-setup.exe</a></li>
+					</ul>
+
+					<h4><b>Astrometry for Windows</b> <span class="label label-success" style="font-size:0.7em;">New</span></h4>
+					<p>Astrometry tools for local plate solving with the INDIGO server on Windows. Suitable astrometry index files are also required:</p>
+					<ul>
+					<li>Astrometry for 64-bit Windows: <a href="/download/astrometry-windows-0.95-setup.exe">astrometry-windows-0.95-setup.exe</a></li>
 					</ul>
 
 					<h4><b>INDIGO client SDK</b></h4>

@@ -78,30 +78,36 @@
 						</article>
 						<article class="card">
 							<div class="card__icon" aria-hidden="true">2</div>
+							<h2>A single Windows PC</h2>
+							<p>Everything on one Windows machine, with the INDIGO Server started from the Server Manager.</p>
+							<p><a href="#windows">What you need &rarr;</a></p>
+						</article>
+						<article class="card">
+							<div class="card__icon" aria-hidden="true">3</div>
 							<h2>A single Mac</h2>
 							<p>Everything on one Mac, with the INDIGO Server running in the background.</p>
 							<p><a href="#mac">What you need &rarr;</a></p>
 						</article>
 						<article class="card">
-							<div class="card__icon" aria-hidden="true">3</div>
+							<div class="card__icon" aria-hidden="true">4</div>
 							<h2>Raspberry Pi + Linux PC</h2>
 							<p>The server runs on the Pi at the telescope, the application on your Linux computer.</p>
 							<p><a href="#pi-linux">What you need &rarr;</a></p>
 						</article>
 						<article class="card">
-							<div class="card__icon" aria-hidden="true">4</div>
+							<div class="card__icon" aria-hidden="true">5</div>
 							<h2>Raspberry Pi + Mac</h2>
 							<p>The server runs on the Pi, and you control it from macOS, iPadOS or iOS.</p>
 							<p><a href="#pi-mac">What you need &rarr;</a></p>
 						</article>
 						<article class="card">
-							<div class="card__icon" aria-hidden="true">5</div>
+							<div class="card__icon" aria-hidden="true">6</div>
 							<h2>Raspberry Pi + Windows PC</h2>
 							<p>The server runs on the Pi, and you control it from Windows or from a browser.</p>
 							<p><a href="#pi-windows">What you need &rarr;</a></p>
 						</article>
 						<article class="card">
-							<div class="card__icon" aria-hidden="true">6</div>
+							<div class="card__icon" aria-hidden="true">7</div>
 							<h2>More complex setups</h2>
 							<p>Several servers, a remote observatory, or drivers linked straight into your own
 							application.</p>
@@ -126,10 +132,10 @@
 								<a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_SERVER_AND_DRIVERS_GUIDE.md">Guide
 								to indigo_server and INDIGO Drivers</a> and
 								<a target="_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_docs/INDIGO_AGENTS.md">INDIGO Agents</a>.</td>
-								<td>Linux and macOS. On Linux it is a package of its own, and a Raspberry Pi with
+								<td>Linux, macOS and Windows. On Linux it is a package of its own, and a Raspberry Pi with
 								<a href="indigo-sky.html">INDIGO Sky</a> is the usual choice. On macOS it is not
-								distributed separately: it comes as part of INDIGO A1, free of charge. Windows is not
-								released yet.</td>
+								distributed separately: it comes as part of INDIGO A1, free of charge. On Windows it has
+								an installer of its own.</td>
 								<td>Free and open source.</td>
 							</tr>
 							<tr>
@@ -182,6 +188,21 @@
 					to indigo_server and INDIGO Drivers</a> for the full detail. Then run <b>INDIGO Control
 					Panel</b> to load the drivers you need and configure them.</p>
 
+					<h2><a id="windows"></a>A single Windows PC</h2>
+					<p><b>Install:</b> the 64-bit installers from the <a href="downloads.html#windowsdl">Downloads</a>
+					page, in this order: <b>Bonjour</b>, so that the applications discover INDIGO servers on the network
+					by themselves, then the <b>INDIGO Server</b> for Windows with the drivers, then <b>INDIGO Control
+					Panel</b>, which also brings <b>INDIGO Server Manager</b>, and <b>Ain INDIGO Imager</b>, which also
+					brings Ain Viewer and Ain Guide Log Viewer. If you want to plate solve on this computer, add the
+					<b>Astrometry</b> tools for Windows and add suitable index files using <b>INDIGO Control Panel</b>.
+					Your equipment is plugged into this computer.</p>
+					<p><b>Hardware drivers:</b> some cameras, focusers, filter wheels and other devices need the
+					vendor's low-level Windows driver, typically a USB driver, so that Windows and INDIGO can talk to
+					them. Install it where the device requires one. ASCOM and ASCOM drivers are not used by INDIGO and are not
+					needed.</p>
+					<p><b>To run:</b> open <b>INDIGO Server Manager</b>, choose the drivers you need from its menu and then start the INDIGO server. Connect to it from
+					<b>INDIGO Control Panel</b> to configure them or load more drivers, and from <b>Ain INDIGO Imager</b> to run the observation.</p>
+
 					<h2><a id="mac"></a>A single Mac</h2>
 					<p><b>Install:</b> <b>INDIGO A1</b> for macOS, from the
 					<a href="downloads.html#macosdl">Downloads</a> page. There is no separate INDIGO server for
@@ -216,8 +237,8 @@
 					configure, because service discovery is built into macOS and the Pi shows up on its own.</p>
 
 					<h2><a id="pi-windows"></a>Raspberry Pi + Windows PC</h2>
-					<p><b>On the Raspberry Pi:</b> write the <a href="indigo-sky.html">INDIGO Sky</a> image to an SD card. It is a ready made system with the INDIGO server, all the drivers and a web panel already set up, and on first boot it opens its own WiFi access point. Plug your cameras, mount and the rest of the equipment into the Pi. This is the way to use INDIGO from Windows today,
-					because the INDIGO server itself is not released for Windows yet.</p>
+					<p><b>On the Raspberry Pi:</b> write the <a href="indigo-sky.html">INDIGO Sky</a> image to an SD card. It is a ready made system with the INDIGO server, all the drivers and a web panel already set up, and on first boot it opens its own WiFi access point. Plug your cameras, mount and the rest of the equipment into the Pi. The Windows computer then only runs the
+					applications, so it does not have to stay at the telescope.</p>
 					<p><b>On the Windows computer:</b> install <b>Ain INDIGO Imager</b> to run the observation and
 					<b>INDIGO Control Panel</b> to load the drivers on the Pi and change device properties, both
 					from the <a href="downloads.html#windowsdl">Downloads</a> page. Install 64-bit <b>Bonjour</b>

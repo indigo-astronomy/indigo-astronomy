@@ -369,8 +369,7 @@ td:first-child { color: var(--indigo-900); font-family: ui-monospace, SFMono-Reg
 .row > *:not([class*="col-"]) { grid-column: 1 / -1; }
 
 /* Windows platform icon - the fontello set has no Windows glyph, so the logo is
-   an inlined SVG background image. It is grey while INDIGO for Windows is not
-   released. */
+   an inlined SVG mask, painted in the current text colour like the other icons. */
 span.icon-windows:before {
 	content: '';
 	display: inline-block;
@@ -378,8 +377,9 @@ span.icon-windows:before {
 	height: .8em;
 	margin-right: .2em;
 	vertical-align: -0.02em;
-	background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20fill%3D%27%23a0a0a0%27%20d%3D%27M0%203.5%209.5%202.2v9.3H0zM11%202%2024%200v11.5H11zM0%2012.5h9.5v9.3L0%2020.5zM11%2012.5h13V24l-13-1.8z%27%2F%3E%3C%2Fsvg%3E") no-repeat center;
-	background-size: contain;
+	background-color: currentColor;
+	-webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20fill%3D%27%23a0a0a0%27%20d%3D%27M0%203.5%209.5%202.2v9.3H0zM11%202%2024%200v11.5H11zM0%2012.5h9.5v9.3L0%2020.5zM11%2012.5h13V24l-13-1.8z%27%2F%3E%3C%2Fsvg%3E") no-repeat center / contain;
+	mask: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%3E%3Cpath%20fill%3D%27%23a0a0a0%27%20d%3D%27M0%203.5%209.5%202.2v9.3H0zM11%202%2024%200v11.5H11zM0%2012.5h9.5v9.3L0%2020.5zM11%2012.5h13V24l-13-1.8z%27%2F%3E%3C%2Fsvg%3E") no-repeat center / contain;
 }
 
 /* the site footer: a couple of link columns above the credits row */

@@ -161,9 +161,11 @@
 				INDIGO driver will simulate behavior of INDI driver with common base set of properties.</p>
 
 				<h2>Can INDIGO client or application use ASCOM driver?</h2>
-				<p>Partially, INDIGO client or application can use INDI Server for Windows as
-				ASCOM-to-INDI bridge out-of-the-box, but probably much more efficient ASCOM driver
-				wrapper for direct linking will come soon.</p>
+				<p>Yes, via ALPACA. ASCOM Remote, which is part of the ASCOM Platform, runs on the
+				Windows computer where the ASCOM drivers are installed and exposes the devices over the
+				network as ALPACA devices. The INDIGO ALPACA driver, indigo_system_alpaca, then connects
+				to them and makes them available as INDIGO devices to any INDIGO client or application.
+				The same driver also works with native ALPACA devices, with no ASCOM Remote needed.</p>
 
 		<a name="ain_vs_ekos"></a>
 		<h2>Are Ain INDIGO Imager and INDIGO A1 related to Ekos?</h2>
@@ -177,8 +179,8 @@
 
 		<a name="platforms"></a>
 				<h2>What platforms are supported?</h2>
-				<p>Currently on Linux and macOS both client and server components are supported. On Windows
-				only the client side is available so far, the server side will be available soon.</p>
+				<p>Both client and server components are supported on Linux, macOS and Windows. Client
+				applications also run on iOS and iPadOS.</p>
 				
 		<a name="docs"></a>
 				<h2>Where is the INDIGO documentation?</h2>
