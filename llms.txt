@@ -11,7 +11,7 @@ Key facts:
 - Servers and drivers run on Linux, macOS and Windows; most drivers are ported to Windows. Clients run on Linux, macOS, Windows, iOS and iPadOS. `indigo_server` listens on TCP port 7624 and serves a built-in web control panel.
 - Architecture: drivers, agents and clients attach to a software bus. When client and drivers share a process, operations can be up to 1000x faster than the process-per-driver model of INDI. Layered design, atomic drivers (a camera with imaging and guiding chips exposes two simple devices), USB hot-plug and Bonjour/Avahi service discovery are mandatory features.
 - Interoperability: the INDIGO wire protocol (version 2.0) can fall back to the legacy INDI wire protocol 1.7, so INDIGO clients work with INDI drivers and vice versa. `indigo_agent_alpaca` exposes INDIGO devices to ASCOM/ALPACA clients and passes the ASCOM conformance tests.
-- INDIGO 3.0-9 ships 139 device drivers — 32 CCD/CMOS camera, 31 focuser, 25 auxiliary, 14 filter wheel, 12 mount, 8 dome, 6 rotator, 3 GPS, 3 guider, 2 polar alignment, 1 adaptive optics and 2 system drivers — plus 10 agents (imager, guider, mount, astrometry, ASTAP, alpaca, scripting, config, auxiliary, snoop). 120 of them are ported to Windows.
+- INDIGO 3.0-9 ships 143 device drivers — 33 CCD/CMOS camera, 31 focuser, 28 auxiliary, 14 filter wheel, 12 mount, 8 dome, 6 rotator, 3 GPS, 3 guider, 2 polar alignment, 1 adaptive optics and 2 system drivers — plus 10 agents (imager, guider, mount, astrometry, ASTAP, alpaca, scripting, config, auxiliary, snoop). 123 of them are ported to Windows.
 
 ## What INDIGO is, and what it is not
 

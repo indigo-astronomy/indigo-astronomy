@@ -58,7 +58,7 @@
 			<img id="logo" src="img/logo.png" alt=""/>
 			<div class="container">
 						<h1><strong>Device Drivers &amp; Agents</strong></h1>
-						<p>INDIGO distribution contains <span class="driver-total">138</span> device drivers and <span class="agent-total">10</span> agents out of the box.</p>
+						<p>INDIGO distribution contains <span class="driver-total">143</span> device drivers and <span class="agent-total">10</span> agents out of the box.</p>
 			</div>
 		</div>
 
@@ -71,7 +71,7 @@
 							<div class="card__icon" aria-hidden="true">D</div>
 
 							<h2>Device drivers</h2>
-							<p><span class="driver-total">138</span> drivers for cameras, mounts, focusers, filter wheels, domes, rotators, adaptive optics, polar alignment, GPS and auxiliary devices.</p>
+							<p><span class="driver-total">143</span> drivers for cameras, mounts, focusers, filter wheels, domes, rotators, adaptive optics, polar alignment, GPS and auxiliary devices.</p>
 							<p><a href="#drivers">Browse the drivers &rarr;</a></p>
 						</article>
 						<article class="card">
@@ -83,7 +83,7 @@
 					</div>
 
 					<h2>Device drivers and agents distributed with INDIGO 3.0-9</h2>
-					<p>INDIGO 3.0-9 comes with <span class="driver-total">139</span> device drivers and <span class="agent-total">10</span> agents.
+					<p>INDIGO 3.0-9 comes with <span class="driver-total">143</span> device drivers and <span class="agent-total">10</span> agents.
 					The icons show on which platforms each of them is available:
 					<span class="icon-linux"></span> Linux, <span class="icon-apple"></span> macOS and
 					<span class="icon-windows"></span> Windows.</p>
@@ -97,7 +97,7 @@
 						<label for="driver-search">Search by manufacturer, device or driver
 							<input id="driver-search" type="search" placeholder="Try ZWO, mount, focuser&hellip;" autocomplete="off"/>
 						</label>
-						<span id="driver-count" aria-live="polite">138 results</span>
+						<span id="driver-count" aria-live="polite">143 results</span>
 					</div>
 					<table id="driver-table">
 						<caption class="sr-only">INDIGO 3.0-9 device drivers and the platforms they run on</caption>
@@ -157,6 +157,11 @@
 						<tr><td>indigo_ccd_iidc</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"></span></td>
 						<td>IIDC CCD driver
 						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/ccd_iidc/README.md">Read more »</a>
+						</td></tr>
+
+						<tr><td>indigo_ccd_libcamera</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"></span><span class="os-slot"></span></td>
+						<td>libcamera CCD driver (including Raspberry Pi CSI cameras)
+						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_linux_drivers/ccd_libcamera/README.md">Read more »</a>
 						</td></tr>
 
 						<tr><td>indigo_ccd_mallin</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"><span class="icon-windows"></span></span></td>
@@ -649,6 +654,11 @@
 						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/polaralign_simulator/README.md">Read more »</a>
 						</td></tr>
 
+						<tr><td>indigo_aux_alto</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"><span class="icon-windows"></span></span></td>
+						<td>PrimaLuceLab ALTO motorized cover driver
+						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/aux_alto/README.md">Read more »</a>
+						</td></tr>
+
 						<tr><td>indigo_aux_arteskyflat</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"><span class="icon-windows"></span></span></td>
 						<td>Artesky Flat Box USB driver
 						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/aux_arteskyflat/README.md">Read more »</a>
@@ -699,6 +709,11 @@
 						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/aux_geoptikflat/README.md">Read more »</a>
 						</td></tr>
 
+						<tr><td>indigo_aux_giotto</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"><span class="icon-windows"></span></span></td>
+						<td>PrimaLuceLab GIOTTO flat panel driver
+						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/aux_giotto/README.md">Read more »</a>
+						</td></tr>
+
 						<tr><td>indigo_aux_joystick</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"></span></td>
 						<td>HID Joystick (Gaming Controller) driver
 						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/aux_joystick/README.md">Read more »</a>
@@ -722,6 +737,11 @@
 						<tr><td>indigo_aux_rts</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"><span class="icon-windows"></span></span></td>
 						<td>"RTS on COM" remote shutter driver
 						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/aux_rts/README.md">Read more »</a>
+						</td></tr>
+
+						<tr><td>indigo_aux_simulator</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"><span class="icon-windows"></span></span></td>
+						<td>Auxiliary device simulators (powerbox, weather station, SQM and flat panel)
+						<a class="pull-right" target= "_new" href="https://github.com/indigo-astronomy/indigo/blob/master/indigo_drivers/aux_simulator/README.md">Read more »</a>
 						</td></tr>
 
 						<tr><td>indigo_aux_skyalert</td><td class="os"><span class="os-slot"><span class="icon-linux"></span></span><span class="os-slot"><span class="icon-apple"></span></span><span class="os-slot"><span class="icon-windows"></span></span></td>
